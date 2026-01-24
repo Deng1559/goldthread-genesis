@@ -13,14 +13,32 @@ const Index = () => {
       <Header />
       
       <main className="flex-1">
-        <Hero />
-        <ProofBar />
-        <InfraVsExploration />
-        <OpportunityGrid />
-        <TechTeaser />
-        <div id="risks" className="scroll-mt-20">
-          {/* Risks section is included in InfraVsExploration */}
-        </div>
+        {/* Hero with Thesis */}
+        <section id="thesis" className="scroll-mt-20">
+          <Hero />
+        </section>
+
+        {/* Proof Section */}
+        <section id="proof" className="scroll-mt-20">
+          <ProofBar />
+        </section>
+
+        {/* Opportunity Section */}
+        <section id="opportunity" className="scroll-mt-20">
+          <InfraVsExploration />
+          <OpportunityGrid />
+        </section>
+
+        {/* Technology Section */}
+        <section id="technology" className="scroll-mt-20">
+          <TechTeaser />
+        </section>
+
+        {/* Risks Section */}
+        <section id="risks" className="scroll-mt-20">
+          {/* Risk content is embedded in InfraVsExploration - adding explicit section */}
+        </section>
+
         <FinalCTA />
       </main>
 
