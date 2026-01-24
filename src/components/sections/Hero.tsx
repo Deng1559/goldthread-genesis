@@ -82,7 +82,7 @@ export function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/access">
+          <Link to="/portfolio">
             <Button variant="hero" size="lg" className="w-full sm:w-auto">
               See the Opportunity
             </Button>
