@@ -81,40 +81,32 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.slice(0, -1).map((link) => (
-            link.href.startsWith("#") ? (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className={cn(
-                  "text-sm font-medium transition-colors focus-gold rounded-md px-2 py-1",
-                  showSolidHeader
-                    ? "text-charcoal hover:text-gold"
-                    : "text-white/90 hover:text-white"
-                )}
-              >
-                {link.label}
-              </a>
-            ) : (
+        <div className="hidden lg:flex items-center gap-6">
+          {NAV_LINKS.map((link) => {
+            const isActive = location.pathname === link.href;
+            return (
               <Link
                 key={link.label}
                 to={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors focus-gold rounded-md px-2 py-1",
+                  "font-playfair text-sm font-medium transition-colors focus-gold rounded-md px-2 py-1 relative",
                   showSolidHeader
-                    ? "text-charcoal hover:text-gold"
-                    : "text-white/90 hover:text-white"
+                    ? "text-navy hover:text-gold"
+                    : "text-white/90 hover:text-white",
+                  isActive && "text-gold after:absolute after:bottom-0 after:left-2 after:right-2 after:h-0.5 after:bg-gold"
                 )}
               >
                 {link.label}
               </Link>
-            )
-          ))}
+            );
+          })}
           <Link to="/access">
-            <Button variant="gold" size="default">
-              Request Data Room Access
+            <Button 
+              variant="gold" 
+              size="default"
+              className="font-inter ml-2 hover:shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5 transition-all duration-200"
+            >
+              Request Access
             </Button>
           </Link>
         </div>
@@ -134,41 +126,41 @@ export function Header() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Full Screen Drawer */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             id="mobile-menu"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="lg:hidden bg-white border-t border-border"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="lg:hidden fixed inset-0 top-16 bg-white z-40"
           >
-            <div className="container-wide py-4 flex flex-col gap-2">
-              {NAV_LINKS.slice(0, -1).map((link) => (
-                link.href.startsWith("#") ? (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-charcoal hover:text-gold py-2 px-3 rounded-md focus-gold transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={link.label}
-                    to={link.href}
-                    className="text-charcoal hover:text-gold py-2 px-3 rounded-md focus-gold transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                )
-              ))}
-              <Link to="/access" className="mt-2">
-                <Button variant="gold" className="w-full">
-                  Request Data Room Access
+            <div className="flex flex-col h-full px-6 py-8">
+              <nav className="flex flex-col gap-2 flex-1">
+                {NAV_LINKS.map((link) => {
+                  const isActive = location.pathname === link.href;
+                  return (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      className={cn(
+                        "font-playfair text-lg text-navy hover:text-gold py-3 px-4 rounded-md focus-gold transition-colors border-b border-border/50",
+                        isActive && "text-gold bg-gold/5"
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
+              </nav>
+              <Link to="/access" className="mt-auto">
+                <Button 
+                  variant="gold" 
+                  className="w-full font-inter text-base py-6 hover:shadow-lg hover:shadow-gold/25"
+                >
+                  Request Access
                 </Button>
               </Link>
             </div>

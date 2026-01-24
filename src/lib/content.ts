@@ -8,12 +8,11 @@ export const SITE_CONFIG = {
 };
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Projects", href: "/projects" },
+  { label: "The Gold Rush", href: "/" },
   { label: "Technology", href: "/technology" },
-  { label: "Why Invest", href: "/portfolio" },
-  { label: "Access", href: "/access" },
+  { label: "Portfolio", href: "/projects" },
+  { label: "Why Invest?", href: "/portfolio" },
+  { label: "About", href: "/about" },
 ];
 
 export const HERO_CONTENT = {
