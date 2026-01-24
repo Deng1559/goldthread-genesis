@@ -1,12 +1,29 @@
 // MineTeck Technology Content
-// All placeholder copy - risk-forward, verification-focused
+// MRU-focused, risk-forward, verification-focused
 
 export const TECHNOLOGY_PAGE_CONTENT = {
   hero: {
-    headline: "Recovery Technology",
-    subheadline: "Proven extraction methodology applied to historically documented deposits. Our approach prioritizes verification over claims.",
+    headline: "The MRU: Modular Recovery Unit",
+    subheadline: "EPA-validated zero-waste technology that unlocks historic gold deposits. Our approach removes regulatory and capital barriers—not environmental responsibility.",
   },
-  
+
+  mruOverview: {
+    title: "How MRU Technology Works",
+    intro: "The Modular Recovery Unit represents a fundamental shift in gold recovery economics. By achieving EPA certification for zero toxic discharge, we've eliminated the permitting timeline that historically blocked access to known gold deposits.",
+    features: [
+      "Zero-waste gold recovery with no toxic discharge",
+      "EPA TCLP/SPLP/ABA validation (1,000-year toxicity certification)",
+      "First new toll mill permit in Colorado in 20+ years",
+      "Deployable in 12 months vs. 7-15 years traditional",
+      "Modular CAPEX: $4M per unit vs. $400M traditional facility",
+      "95%+ water recycling rate exceeds regulatory requirements",
+    ],
+    quote: {
+      text: "Technology enables access — doesn't guarantee outcomes. Execution determines economics.",
+      attribution: "— Ferguson, MineTeck",
+    },
+  },
+
   processFlow: {
     title: "Recovery Process Overview",
     disclaimer: "Process diagram represents conceptual flow. Specific engineering details available in data room.",

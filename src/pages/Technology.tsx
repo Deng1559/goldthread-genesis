@@ -40,13 +40,95 @@ export default function Technology() {
               {content.hero.headline}
             </motion.h1>
             <motion.p
-              className="font-body text-lg text-white/80 max-w-2xl mx-auto"
+              className="font-body text-lg text-white/80 max-w-2xl mx-auto mb-8"
               variants={prefersReducedMotion ? {} : fadeUp}
               initial="hidden"
               animate="visible"
             >
               {content.hero.subheadline}
             </motion.p>
+          </div>
+        </section>
+
+        {/* MRU Overview Section */}
+        <section className="section-padding bg-background">
+          <div className="container-wide">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Left - Image Placeholders */}
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="space-y-4"
+              >
+                <div className="relative aspect-[16/10] bg-muted rounded-lg overflow-hidden border border-border">
+                  <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
+                    <div className="text-center">
+                      <span className="block text-muted-foreground/60 font-body text-sm mb-2">
+                        MRU (Modular Recovery Unit)
+                      </span>
+                      <span className="block text-muted-foreground/40 font-body text-xs">
+                        High-resolution image placeholder
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="relative aspect-[4/3] bg-muted rounded-lg overflow-hidden border border-border">
+                    <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
+                      <span className="text-muted-foreground/40 font-body text-xs text-center px-4">
+                        Processing detail
+                      </span>
+                    </div>
+                  </div>
+                  <div className="relative aspect-[4/3] bg-muted rounded-lg overflow-hidden border border-border">
+                    <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
+                      <span className="text-muted-foreground/40 font-body text-xs text-center px-4">
+                        Zero-waste output
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Right - Content */}
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  {content.mruOverview.title}
+                </h2>
+                <p className="font-body text-muted-foreground leading-relaxed mb-6">
+                  {content.mruOverview.intro}
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {content.mruOverview.features.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-gold" />
+                      <span className="font-body text-foreground text-sm leading-relaxed">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                {/* Quote Box */}
+                <div
+                  className="border-l-[3px] border-gold pl-4 py-4"
+                  style={{ backgroundColor: "#FFF8E7" }}
+                >
+                  <p className="font-display text-sm italic text-charcoal/80 leading-relaxed mb-1">
+                    "{content.mruOverview.quote.text}"
+                  </p>
+                  <p className="font-body text-xs text-charcoal/60">
+                    {content.mruOverview.quote.attribution}
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
