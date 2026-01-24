@@ -1,123 +1,98 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CTA_SECTIONS } from "@/lib/content";
-import { fadeUp, slideInLeft, slideInRight } from "@/lib/motion";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
+
+const INVESTOR_POINTS = [
+  "Accredited investors only",
+  "$50K–$250K typical commitments",
+  "3–5 year investment timeline",
+  "Full capital risk disclosed",
+];
+
+const PARTNER_POINTS = [
+  "Toll milling services",
+  "R&D collaboration (e.g., Colorado School of Mines)",
+  "JV inquiries welcome",
+];
 
 export function FinalCTA() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const prefersReducedMotion = useReducedMotion();
-
-  const { investors, partners } = CTA_SECTIONS;
-
   return (
     <section
-      id="access"
-      ref={ref}
-      className="section-padding bg-background"
-      aria-label="Access options"
+      className="py-16 md:py-24 bg-navy"
+      aria-label="Call to action"
     >
       <div className="container-wide">
-        {/* Section Header */}
-        <motion.div
-          className="text-center mb-12 md:mb-16"
-          variants={prefersReducedMotion ? {} : fadeUp}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-        >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Ready to Learn More?
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16 max-w-4xl mx-auto">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+            The New Colorado Gold Rush Is Real.{" "}
+            <span className="text-gold">Technology Made It Possible.</span>{" "}
+            Capital Makes It Accessible — For Some.
           </h2>
-          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-            Select the path that best describes your interest
+          <p className="font-body text-white/80 text-base md:text-lg leading-relaxed">
+            Permits secured. Technology validated by the EPA. Over $200M in contracted 
+            material ready for processing. Access to detailed investment documentation 
+            is limited to qualified participants who meet accreditation requirements.
           </p>
-        </motion.div>
-
-        {/* Two Column CTA Cards */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-          {/* Investors Card */}
-          <motion.div
-            className="bg-card border-2 border-gold/30 rounded-2xl p-8 md:p-10 hover:border-gold/60 transition-colors"
-            variants={prefersReducedMotion ? {} : slideInLeft}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
-            <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-6">
-              <Users className="w-7 h-7 text-gold" />
-            </div>
-            
-            <h3 className="font-display text-2xl font-bold text-gold mb-2">
-              {investors.title}
-            </h3>
-            <p className="font-body text-muted-foreground mb-6">
-              {investors.subtitle}
-            </p>
-
-            <ul className="space-y-3 mb-8">
-              {investors.points.map((point, index) => (
-                <li key={index} className="flex items-center gap-3 font-body text-foreground">
-                  <ArrowRight className="w-4 h-4 text-gold flex-shrink-0" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-
-            <Link to="/access#investors">
-              <Button variant="gold" size="lg" className="w-full">
-                {investors.cta}
-              </Button>
-            </Link>
-          </motion.div>
-
-          {/* Partners Card */}
-          <motion.div
-            className="bg-card border-2 border-navy/30 rounded-2xl p-8 md:p-10 hover:border-navy/60 transition-colors"
-            variants={prefersReducedMotion ? {} : slideInRight}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
-            <div className="w-14 h-14 rounded-full bg-navy/10 flex items-center justify-center mb-6">
-              <Handshake className="w-7 h-7 text-navy" />
-            </div>
-            
-            <h3 className="font-display text-2xl font-bold text-navy mb-2">
-              {partners.title}
-            </h3>
-            <p className="font-body text-muted-foreground mb-6">
-              {partners.subtitle}
-            </p>
-
-            <ul className="space-y-3 mb-8">
-              {partners.points.map((point, index) => (
-                <li key={index} className="flex items-center gap-3 font-body text-foreground">
-                  <ArrowRight className="w-4 h-4 text-navy flex-shrink-0" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-
-            <Link to="/access#partners">
-              <Button variant="navy" size="lg" className="w-full">
-                {partners.cta}
-              </Button>
-            </Link>
-          </motion.div>
         </div>
 
-        {/* Disclaimer */}
-        <motion.p
-          className="text-center text-sm text-muted-foreground mt-10 italic max-w-2xl mx-auto"
-          variants={prefersReducedMotion ? {} : fadeUp}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-        >
-          By requesting access, you confirm your status as an accredited investor or qualified partner.
-          All information is provided subject to our terms of use and legal review.
-        </motion.p>
+        {/* Two Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          {/* Investor Card */}
+          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg transition-shadow hover:shadow-xl">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-gold mb-4">
+              Qualified Investor Access
+            </h3>
+
+            <ul className="space-y-3 mb-8">
+              {INVESTOR_POINTS.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-gold" />
+                  <span className="font-body text-charcoal text-sm leading-relaxed">
+                    {point}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <Link to="/access#investors" className="block">
+              <Button
+                variant="default"
+                size="lg"
+                className="w-full bg-gold hover:bg-gold/90 text-charcoal font-body font-bold"
+              >
+                Request Data Room Access
+              </Button>
+            </Link>
+          </div>
+
+          {/* Partner Card */}
+          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg transition-shadow hover:shadow-xl">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-navy mb-4">
+              Partnership Opportunities
+            </h3>
+
+            <ul className="space-y-3 mb-8">
+              {PARTNER_POINTS.map((point, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-navy" />
+                  <span className="font-body text-charcoal text-sm leading-relaxed">
+                    {point}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <Link to="/access#partners" className="block">
+              <Button
+                variant="default"
+                size="lg"
+                className="w-full bg-navy hover:bg-navy/90 text-white font-body font-bold"
+              >
+                Contact Partnership Team
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
