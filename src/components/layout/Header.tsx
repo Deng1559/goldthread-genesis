@@ -66,15 +66,9 @@ export function Header() {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.slice(0, -1).map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
-              onClick={(e) => {
-                if (link.href.startsWith("#")) {
-                  e.preventDefault();
-                  handleNavClick(link.href);
-                }
-              }}
+              to={link.href}
               className={cn(
                 "text-sm font-medium transition-colors focus-gold rounded-md px-2 py-1",
                 isScrolled
@@ -83,7 +77,7 @@ export function Header() {
               )}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <Link to="/access">
             <Button variant="gold" size="default">
@@ -120,19 +114,13 @@ export function Header() {
           >
             <div className="container-wide py-4 flex flex-col gap-2">
               {NAV_LINKS.slice(0, -1).map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
-                  onClick={(e) => {
-                    if (link.href.startsWith("#")) {
-                      e.preventDefault();
-                      handleNavClick(link.href);
-                    }
-                  }}
+                  to={link.href}
                   className="text-charcoal hover:text-gold py-2 px-3 rounded-md focus-gold transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <Link to="/access" className="mt-2">
                 <Button variant="gold" className="w-full">
