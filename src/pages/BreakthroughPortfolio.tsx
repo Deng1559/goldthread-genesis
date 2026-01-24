@@ -179,12 +179,12 @@ export default function BreakthroughPortfolio() {
 
                 {/* CTA */}
                 <Button 
+                  asChild
                   variant="goldOutline" 
                   size="sm"
                   className="w-full"
-                  onClick={() => {}}
                 >
-                  Qualified Investors Only
+                  <Link to="/access">Qualified Investors Only</Link>
                 </Button>
               </div>
             ))}
