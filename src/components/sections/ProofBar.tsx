@@ -48,14 +48,14 @@ function Counter({ value, prefix = "", suffix = "", label, footnote, isInView }:
   };
 
   return (
-    <div className="text-center px-4 py-6">
-      <div className="font-mono text-3xl md:text-4xl lg:text-5xl font-semibold text-gold mb-2 tracking-tight">
+    <div className="text-center px-6 md:px-8 py-4">
+      <div className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-1 tracking-tight">
         {prefix}{formatNumber(displayValue)}{suffix}
       </div>
-      <div className="font-body text-white text-sm md:text-base font-medium mb-1">
+      <div className="font-body text-white text-base md:text-lg font-medium mb-1">
         {label}
       </div>
-      <div className="text-white/40 text-xs italic">
+      <div className="text-white/50 text-xs">
         {footnote}
       </div>
     </div>
@@ -71,12 +71,12 @@ export function ProofBar() {
     <section
       id="proof"
       ref={ref}
-      className="bg-navy py-12 md:py-16"
+      className="bg-navy h-[220px] flex items-center"
       aria-label="Key metrics"
     >
-      <div className="container-wide">
+      <div className="container-wide w-full">
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8"
+          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-4"
           initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
