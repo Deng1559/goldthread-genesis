@@ -1,112 +1,115 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { 
-  TrendingUp, 
-  Target, 
-  Shield, 
-  Package, 
-  Clock, 
-  Scale, 
-  Building, 
-  Users, 
-  Zap, 
-  ArrowRight 
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-const investmentPoints = [
+const sections = [
   {
-    number: "1",
-    icon: TrendingUp,
-    title: "A Structural Opportunity in Gold — Not a Speculative Bet",
-    content: `The gold market faces a structural imbalance. While gold prices remain strong, traditional mining models struggle with declining grades, extended permitting timelines, and rising capital requirements. At the same time, vast quantities of gold-bearing material already exist above ground—left behind by historical mining but inaccessible under legacy processing models.
-
-MineTeck is built to operate where conventional mining cannot.`,
-  },
-  {
-    number: "2",
-    icon: Target,
-    title: "Recovery, Not Exploration",
-    content: `MineTeck does not rely on discovery risk. Our model focuses on recovering gold from known material in defined jurisdictions, including historic tailings, waste piles, and environmentally constrained sites.
-
-This shifts investor exposure from geological uncertainty to execution against known inputs, shortening development timelines and reducing capital risk.`,
-  },
-  {
-    number: "3",
-    icon: Shield,
-    title: "Permitting as a Competitive Advantage",
-    content: `In jurisdictions like Colorado, permits—not gold—are the scarce asset. MineTeck advances projects designed to align with existing reclamation frameworks and modern environmental priorities, creating viable pathways where traditional mining has stalled for decades.
-
-This permitting alignment represents a durable competitive moat that is difficult to replicate.`,
-  },
-  {
-    number: "4",
-    icon: Package,
-    title: "Capital-Efficient, Modular Execution",
-    content: `MineTeck deploys modular, non-toxic recovery systems that can be tailored to site-specific conditions and scaled across multiple projects.`,
-    highlights: [
-      "Requires lower upfront capital",
-      "Enables faster deployment",
-      "Supports repeatable execution across a portfolio of sites",
+    headline: "Gold Has a Problem — And That's Where the Opportunity Is",
+    content: [
+      "Gold prices are strong. Demand is global.",
+      "Yet most gold never gets mined.",
+      "Why?",
+      "Because modern mining is slow, capital-intensive, environmentally constrained, and buried under years—sometimes decades—of permitting risk. Traditional exploration models no longer match today's regulatory or capital realities.",
     ],
-    conclusion: "The result is a recovery platform built for disciplined capital allocation.",
+    emphasis: "MineTeck exists precisely at this intersection: where gold value is real, but conventional mining can't operate.",
   },
   {
-    number: "5",
-    icon: Clock,
-    title: "Defined Projects, Shorter Timelines",
-    content: `MineTeck advances projects characterized by:`,
-    highlights: [
-      "Defined material volumes",
-      "Established regulatory context",
-      "Clear development pathways",
+    headline: "This Is Not Exploration. It's Execution.",
+    content: [
+      "MineTeck does not drill holes hoping to find something.",
+      "We recover gold from known material—tailings, waste piles, and legacy sites that already exist, already contain gold, and already sit within defined jurisdictions.",
     ],
-    conclusion: "By operating on legacy material rather than undeveloped deposits, MineTeck targets shorter time-to-production horizons relative to traditional mining investments.",
+    bullets: [
+      "Less geological uncertainty",
+      "Shorter development timelines",
+      "Capital deployed into execution, not speculation",
+    ],
+    emphasis: "This is exposure to gold through doing, not guessing.",
   },
   {
-    number: "6",
-    icon: Scale,
-    title: "Regulatory Alignment in a Changing Environment",
-    content: `Regulatory priorities increasingly favor remediation, reclamation, and non-toxic processing over new land disturbance.
-
-MineTeck's recovery-first model is structured to operate within these realities—turning historic environmental liabilities into productive recovery assets while reducing long-term risk.`,
+    headline: "In Colorado, Permits Are the Moat",
+    content: [
+      "Colorado is not short on gold.",
+      "It is short on approved pathways to process it.",
+      "For decades, regulatory barriers—not geology—have kept gold locked in place. MineTeck advances recovery models designed to operate with modern environmental and reclamation priorities, not against them.",
+    ],
+    emphasis: "Permitting alignment is not a checkbox here. It is the competitive advantage.",
   },
   {
-    number: "7",
-    icon: Building,
-    title: "An Infrastructure-Led Gold Platform",
-    content: `Rather than a single-asset mining story, MineTeck advances a portfolio-oriented recovery platform. This infrastructure-led approach supports diversification across projects, sites, and timelines while maintaining a consistent operational and governance framework.`,
+    headline: "Capital Efficiency Changes Everything",
+    content: [
+      "Traditional mining requires massive upfront capital before a dollar of revenue appears.",
+      "MineTeck takes a different approach:",
+    ],
+    bullets: [
+      "Modular recovery systems",
+      "Site-specific deployment",
+      "Repeatable execution across multiple projects",
+    ],
+    emphasis: "Lower capital intensity. Faster deployment. A model built for disciplined investors—not endless funding cycles.",
   },
   {
-    number: "8",
-    icon: Users,
-    title: "Structured for Sophisticated Investors",
-    content: `MineTeck is designed for accredited and sophisticated investors seeking:`,
-    highlights: [
-      "Exposure to gold through operating assets",
+    headline: "Shorter Paths to Production",
+    content: ["MineTeck advances projects defined by:"],
+    bullets: [
+      "Known material volumes",
+      "Documented site histories",
+      "Clear regulatory context",
+    ],
+    followUp: "By working with legacy material instead of undeveloped deposits, MineTeck targets meaningfully shorter paths to production compared to greenfield mining projects.",
+    emphasis: "Time matters. Capital velocity matters. This model respects both.",
+  },
+  {
+    headline: "Mining That Regulators Can Approve",
+    content: [
+      "The regulatory environment has changed.",
+      "Projects that reduce environmental liability, stabilize historic sites, and avoid toxic processing now stand a chance where others fail.",
+      "MineTeck's recovery-first model aligns with this shift—turning historic liabilities into productive assets while reducing long-term environmental risk.",
+    ],
+    emphasis: "This is mining that fits the moment.",
+  },
+  {
+    headline: "An Infrastructure Platform — Not a One-Off Project",
+    content: [
+      "MineTeck is not built around a single asset.",
+      "It is an infrastructure-led recovery platform designed to be applied across multiple sites, jurisdictions, and recovery opportunities—while maintaining consistent governance and operational discipline.",
+    ],
+    bullets: [
+      "Portfolio logic",
+      "Risk distribution",
+      "Repeatability",
+    ],
+    bulletPrefix: "For investors, this means:",
+  },
+  {
+    headline: "Built for Serious Investors",
+    content: ["MineTeck is structured for accredited and sophisticated investors who value:"],
+    bullets: [
+      "Tangible operating assets",
       "Defined risk parameters",
-      "Governance discipline and capital oversight",
-      "Participation through execution rather than speculation",
+      "Regulatory alignment",
+      "Governance discipline",
     ],
-    conclusion: "Engagement occurs through a structured, NDA-based diligence process.",
+    emphasis: "Participation is structured, deliberate, and NDA-based. This is not a public promotion. It is a qualified conversation.",
   },
   {
-    number: "9",
-    icon: Zap,
-    title: "Why Now",
-    content: `The convergence of four forces defines the opportunity:`,
-    highlights: [
-      "Persistent strength in gold prices",
-      "Increasing regulatory constraints on traditional mining",
-      "Growing emphasis on remediation-aligned projects",
-      "Advances in non-toxic, modular recovery technology",
+    headline: "Why Now",
+    content: ["This opportunity exists because several forces have converged:"],
+    bullets: [
+      "Gold prices remain structurally strong",
+      "Traditional mining faces mounting constraints",
+      "Regulators favor remediation-aligned recovery",
+      "Recovery technology has finally caught up",
     ],
-    conclusion: "MineTeck is positioned to operate within this convergence—not in opposition to it.",
+    emphasis: "These windows don't stay open forever.",
   },
   {
-    number: "10",
-    icon: ArrowRight,
-    title: "Participation Through Execution",
-    content: `This is not a story about future discovery. It is participation in the gold market through regulated recovery, capital discipline, and repeatable execution.`,
+    headline: "Participation Through Execution",
+    content: [
+      "MineTeck offers exposure to gold not through exploration stories—but through permitted recovery, disciplined capital deployment, and repeatable execution.",
+    ],
+    emphasis: "That difference is the opportunity.",
+    isFinal: true,
   },
 ];
 
@@ -116,65 +119,78 @@ export function ThesisSection() {
       <div className="container mx-auto px-6">
         
         {/* Section Header */}
-        <div className="max-w-4xl mx-auto text-center mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <span className="text-gold font-mono text-sm font-semibold tracking-wider uppercase mb-4 block">
+            For Accredited Investors
+          </span>
           <h2 className="font-playfair text-4xl md:text-5xl text-foreground mb-6">
             Why Invest in MineTeck
           </h2>
-          <p className="text-lg text-muted-foreground font-inter max-w-3xl mx-auto leading-relaxed">
-            A structural approach to gold exposure through infrastructure, execution, and regulatory alignment.
-          </p>
         </div>
 
-        {/* Investment Points */}
-        <div className="max-w-4xl mx-auto space-y-12">
-          {investmentPoints.map((point) => (
-            <div 
-              key={point.number}
-              className="bg-card rounded-2xl border border-border/50 p-8 md:p-10 shadow-sm"
-            >
-              {/* Header */}
-              <div className="flex items-start gap-5 mb-6">
-                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center">
-                  <point.icon className="w-7 h-7 text-gold" />
-                </div>
-                <div className="flex-1 pt-2">
-                  <span className="text-gold font-mono text-sm font-semibold mb-1 block">
-                    {point.number.padStart(2, '0')}
-                  </span>
-                  <h3 className="font-playfair text-xl md:text-2xl text-foreground leading-tight">
-                    {point.title}
-                  </h3>
-                </div>
-              </div>
+        {/* Content Sections */}
+        <div className="max-w-3xl mx-auto space-y-16">
+          {sections.map((section, index) => (
+            <div key={index} className="space-y-5">
+              {/* Headline */}
+              <h3 className="font-playfair text-2xl md:text-3xl text-foreground leading-tight">
+                {section.headline}
+              </h3>
 
-              {/* Content */}
-              <div className="pl-0 md:pl-[76px]">
-                <div className="font-inter text-muted-foreground leading-relaxed whitespace-pre-line">
-                  {point.content}
-                </div>
-
-                {/* Highlights if present */}
-                {point.highlights && (
-                  <ul className="mt-6 space-y-3">
-                    {point.highlights.map((highlight, idx) => (
-                      <li 
-                        key={idx}
-                        className="flex items-start gap-3 font-inter text-foreground"
-                      >
-                        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold mt-2.5" />
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
-                {/* Conclusion if present */}
-                {point.conclusion && (
-                  <p className="mt-6 font-inter text-foreground font-medium">
-                    {point.conclusion}
+              {/* Content paragraphs */}
+              <div className="space-y-4">
+                {section.content.map((paragraph, pIndex) => (
+                  <p 
+                    key={pIndex}
+                    className="font-inter text-muted-foreground leading-relaxed text-lg"
+                  >
+                    {paragraph}
                   </p>
-                )}
+                ))}
               </div>
+
+              {/* Bullet prefix if present */}
+              {section.bulletPrefix && (
+                <p className="font-inter text-muted-foreground leading-relaxed text-lg">
+                  {section.bulletPrefix}
+                </p>
+              )}
+
+              {/* Bullets */}
+              {section.bullets && (
+                <ul className="space-y-3 pl-1">
+                  {section.bullets.map((bullet, bIndex) => (
+                    <li 
+                      key={bIndex}
+                      className="flex items-start gap-4 font-inter text-foreground text-lg"
+                    >
+                      <span className="flex-shrink-0 w-2 h-2 rounded-full bg-gold mt-2.5" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {/* Follow up text */}
+              {section.followUp && (
+                <p className="font-inter text-muted-foreground leading-relaxed text-lg">
+                  {section.followUp}
+                </p>
+              )}
+
+              {/* Emphasis */}
+              {section.emphasis && (
+                <p className="font-inter text-foreground font-semibold text-lg md:text-xl leading-relaxed border-l-4 border-gold pl-6 py-2">
+                  {section.emphasis}
+                </p>
+              )}
+
+              {/* Divider (except for last item) */}
+              {!section.isFinal && index < sections.length - 1 && (
+                <div className="pt-8">
+                  <div className="h-px bg-border/60 w-24 mx-auto" />
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -185,7 +201,7 @@ export function ThesisSection() {
             <h3 className="font-playfair text-2xl md:text-3xl text-white mb-4">
               Ready to Learn More?
             </h3>
-            <p className="text-white/70 font-inter mb-8 max-w-xl mx-auto">
+            <p className="text-white/70 font-inter mb-8 max-w-xl mx-auto text-lg">
               Access detailed project information, financial models, and schedule a conversation with our team.
             </p>
             <Link to="/access">
