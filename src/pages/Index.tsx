@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { ProofBar } from "@/components/sections/ProofBar";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { InfraVsExploration } from "@/components/sections/InfraVsExploration";
 import { OpportunityGrid } from "@/components/sections/OpportunityGrid";
 import { TechTeaser } from "@/components/sections/TechTeaser";
@@ -13,14 +14,17 @@ const Index = () => {
       <Header />
       
       <main className="flex-1">
-        {/* Hero with Thesis */}
-        <section id="thesis" className="scroll-mt-20">
-          <Hero />
-        </section>
+        {/* Hero Section */}
+        <Hero />
 
         {/* Proof Section */}
         <section id="proof" className="scroll-mt-20">
           <ProofBar />
+        </section>
+
+        {/* Thesis/Comparison Section */}
+        <section id="thesis" className="scroll-mt-20">
+          <ComparisonTable />
         </section>
 
         {/* Opportunity Section */}
