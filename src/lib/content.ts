@@ -8,11 +8,9 @@ export const SITE_CONFIG = {
 };
 
 export const NAV_LINKS = [
-  { label: "Thesis", href: "#thesis" },
-  { label: "Proof", href: "#proof" },
-  { label: "Opportunity", href: "#opportunity" },
-  { label: "Technology", href: "#technology" },
-  { label: "Risks", href: "#risks" },
+  { label: "Projects", href: "/projects" },
+  { label: "Technology", href: "/technology" },
+  { label: "About", href: "/about" },
   { label: "Access", href: "/access" },
 ];
 
