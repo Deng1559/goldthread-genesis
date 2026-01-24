@@ -12,7 +12,7 @@ export const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
   { label: "Technology", href: "/technology" },
-  { label: "Investors", href: "/portfolio" },
+  { label: "Why Invest", href: "/portfolio" },
   { label: "Access", href: "/access" },
 ];
 
