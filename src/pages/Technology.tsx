@@ -117,7 +117,7 @@ export default function Technology() {
                 </ul>
                 {/* Quote Box */}
                 <div
-                  className="border-l-[3px] border-gold pl-4 py-4"
+                  className="border-l-[3px] border-gold pl-4 py-4 mb-6"
                   style={{ backgroundColor: "#FFF8E7" }}
                 >
                   <p className="font-display text-sm italic text-charcoal/80 leading-relaxed mb-1">
@@ -126,6 +126,22 @@ export default function Technology() {
                   <p className="font-body text-xs text-charcoal/60">
                     {content.mruOverview.quote.attribution}
                   </p>
+                </div>
+
+                {/* CTA Links */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link to="/access">
+                    <Button variant="gold" size="lg" className="w-full sm:w-auto">
+                      Request Data Room Access
+                    </Button>
+                  </Link>
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 text-navy hover:text-gold transition-colors font-body text-sm font-medium"
+                  >
+                    <ArrowRight className="w-4 h-4" />
+                    View EPA Test Data (PDF)
+                  </a>
                 </div>
               </motion.div>
             </div>
