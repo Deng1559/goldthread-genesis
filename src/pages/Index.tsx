@@ -4,9 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { OpportunityCards } from "@/components/sections/OpportunityCards";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
-import { InfraVsExploration } from "@/components/sections/InfraVsExploration";
-import { OpportunityGrid } from "@/components/sections/OpportunityGrid";
-import { TechTeaser } from "@/components/sections/TechTeaser";
+import { TechnologySection } from "@/components/sections/TechnologySection";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 const Index = () => {
@@ -31,20 +29,12 @@ const Index = () => {
           <ComparisonTable />
         </section>
 
-        {/* Opportunity Section */}
-        <section id="opportunity" className="scroll-mt-20">
-          <InfraVsExploration />
-          <OpportunityGrid />
-        </section>
-
         {/* Technology Section */}
-        <section id="technology" className="scroll-mt-20">
-          <TechTeaser />
-        </section>
+        <TechnologySection />
 
         {/* Risks Section */}
         <section id="risks" className="scroll-mt-20">
-          {/* Risk content is embedded in InfraVsExploration - adding explicit section */}
+          {/* Risk disclosure section - to be built */}
         </section>
 
         <FinalCTA />
