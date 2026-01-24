@@ -52,6 +52,9 @@
     --shadow-lg: 0 10px 15px -3px hsla(0 0% 0% / 0.1), 0 4px 6px -4px hsla(0 0% 0% / 0.1);
     --shadow-gold: 0 4px 14px -2px hsla(43 79% 46% / 0.3);
     --shadow-header: 0 2px 8px -2px hsla(0 0% 0% / 0.1);
+    
+    /* Sepia filter color */
+    --sepia: 40 60% 50%;
   }
 
   .dark {
@@ -111,6 +114,10 @@
 
   .bg-navy {
     background-color: hsl(var(--navy));
+  }
+
+  .bg-sepia {
+    background-color: hsl(var(--sepia));
   }
 
   .bg-forest {
