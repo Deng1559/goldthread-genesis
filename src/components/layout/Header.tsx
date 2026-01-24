@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,10 +24,22 @@ export function Header() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
     if (href.startsWith("#")) {
-      const element = document.querySelector(href);
-      element?.scrollIntoView({ behavior: "smooth" });
+      e.preventDefault();
+      
+      // If not on homepage, navigate there first
+      if (location.pathname !== "/") {
+        navigate("/");
+        // Wait for navigation then scroll
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          element?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      } else {
+        const element = document.querySelector(href);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -66,18 +79,34 @@ export function Header() {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.slice(0, -1).map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className={cn(
-                "text-sm font-medium transition-colors focus-gold rounded-md px-2 py-1",
-                isScrolled
-                  ? "text-charcoal hover:text-gold"
-                  : "text-white/90 hover:text-white"
-              )}
-            >
-              {link.label}
-            </Link>
+            link.href.startsWith("#") ? (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className={cn(
+                  "text-sm font-medium transition-colors focus-gold rounded-md px-2 py-1",
+                  isScrolled
+                    ? "text-charcoal hover:text-gold"
+                    : "text-white/90 hover:text-white"
+                )}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.href}
+                className={cn(
+                  "text-sm font-medium transition-colors focus-gold rounded-md px-2 py-1",
+                  isScrolled
+                    ? "text-charcoal hover:text-gold"
+                    : "text-white/90 hover:text-white"
+                )}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
           <Link to="/access">
             <Button variant="gold" size="default">
@@ -114,13 +143,24 @@ export function Header() {
           >
             <div className="container-wide py-4 flex flex-col gap-2">
               {NAV_LINKS.slice(0, -1).map((link) => (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  className="text-charcoal hover:text-gold py-2 px-3 rounded-md focus-gold transition-colors"
-                >
-                  {link.label}
-                </Link>
+                link.href.startsWith("#") ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="text-charcoal hover:text-gold py-2 px-3 rounded-md focus-gold transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-charcoal hover:text-gold py-2 px-3 rounded-md focus-gold transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
               <Link to="/access" className="mt-2">
                 <Button variant="gold" className="w-full">
