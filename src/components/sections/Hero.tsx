@@ -1,153 +1,99 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { HERO_CONTENT } from "@/lib/content";
-import { fadeUp, staggerContainer } from "@/lib/motion";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
 import heroHistoric from "@/assets/hero-historic.jpg";
 import heroModern from "@/assets/hero-modern.jpg";
 
+const HERO_STATS = [
+  { value: "$200M+", label: "in Contracted Material" },
+  { value: "12–24", label: "Months to Revenue" },
+  { value: "First", label: "Toll Mill Permit in 20 Years" },
+];
+
 export function Hero() {
-  const prefersReducedMotion = useReducedMotion();
-  const [imagePhase, setImagePhase] = useState(0); // 0 = historic, 1 = transition, 2 = modern
-
-  useEffect(() => {
-    if (prefersReducedMotion) return;
-    
-    const timer = setTimeout(() => {
-      setImagePhase(1);
-      setTimeout(() => setImagePhase(2), 1500);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [prefersReducedMotion]);
-
   return (
     <section
-      className="relative min-h-[95vh] flex items-center justify-center overflow-hidden"
+      className="relative h-[60vh] md:h-[70vh] lg:h-[95vh] flex items-center justify-center overflow-hidden"
       aria-label="Hero section"
     >
-      {/* Background Layers */}
-      <div className="absolute inset-0">
-        {/* Historic Layer (Sepia) */}
+      {/* Split-Screen Background */}
+      <div className="absolute inset-0 flex">
+        {/* Left Side - Historic (Sepia) */}
         <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms]"
+          className="w-1/2 h-full bg-cover bg-center relative"
           style={{
-            backgroundImage: `
-              linear-gradient(180deg, 
-                rgba(0,0,0,0.55) 0%, 
-                rgba(0,0,0,0.35) 40%, 
-                rgba(0,0,0,0.65) 100%
-              ),
-              url(${heroHistoric})
-            `,
-            opacity: imagePhase < 2 ? 1 : 0,
+            backgroundImage: `url(${heroHistoric})`,
           }}
           aria-hidden="true"
-        />
-        
-        {/* Modern Layer */}
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms]"
-          style={{
-            backgroundImage: `
-              linear-gradient(180deg, 
-                rgba(30, 58, 95, 0.75) 0%, 
-                rgba(30, 58, 95, 0.45) 40%, 
-                rgba(30, 58, 95, 0.8) 100%
-              ),
-              url(${heroModern})
-            `,
-            opacity: imagePhase === 2 ? 1 : 0,
-          }}
-          aria-hidden="true"
-        />
+        >
+          {/* Sepia overlay */}
+          <div className="absolute inset-0 bg-sepia mix-blend-color" />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
 
-        {/* Gold accent overlay */}
+        {/* Right Side - Modern (2025) */}
         <div
-          className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent"
+          className="w-1/2 h-full bg-cover bg-center relative"
+          style={{
+            backgroundImage: `url(${heroModern})`,
+          }}
+          aria-hidden="true"
+        >
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+
+        {/* Center blend gradient */}
+        <div 
+          className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-32 bg-gradient-to-r from-black/60 via-black/80 to-black/60"
           aria-hidden="true"
         />
       </div>
 
+      {/* Full overlay for text readability */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"
+        aria-hidden="true"
+      />
+
       {/* Content */}
-      <motion.div
-        className="relative z-10 container-wide text-center max-w-4xl mx-auto px-4"
-        variants={prefersReducedMotion ? {} : staggerContainer}
-        initial="hidden"
-        animate="visible"
-      >
+      <div className="relative z-10 container-wide text-center max-w-5xl mx-auto px-4">
         {/* Headline */}
-        <motion.h1
-          className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gold mb-6 leading-tight"
-          variants={prefersReducedMotion ? {} : fadeUp}
-        >
-          {HERO_CONTENT.headline}
-        </motion.h1>
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gold mb-4 leading-tight">
+          The New Colorado Gold Rush
+        </h1>
 
         {/* Subheadline */}
-        <motion.p
-          className="font-body text-lg sm:text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed"
-          variants={prefersReducedMotion ? {} : fadeUp}
-        >
-          {HERO_CONTENT.subheadline}
-        </motion.p>
+        <p className="font-body text-lg sm:text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto">
+          80 Years of Stranded Gold — Now Accessible
+        </p>
+
+        {/* Stats Row */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 lg:gap-16 mb-10">
+          {HERO_STATS.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="font-mono text-2xl sm:text-3xl lg:text-4xl font-bold text-gold mb-1">
+                {stat.value}
+              </div>
+              <div className="font-body text-sm sm:text-base text-white/80">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* CTAs */}
-        <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
-          variants={prefersReducedMotion ? {} : fadeUp}
-        >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/access">
             <Button variant="hero" size="lg" className="w-full sm:w-auto">
-              {HERO_CONTENT.primaryCta}
+              See the Opportunity
             </Button>
           </Link>
-          <a href="#thesis">
+          <Link to="/technology">
             <Button variant="heroOutline" size="lg" className="w-full sm:w-auto">
-              {HERO_CONTENT.secondaryCta}
+              How Technology Makes This Possible
             </Button>
-          </a>
-        </motion.div>
-
-        {/* Disclaimer */}
-        <motion.p
-          className="text-white/60 text-sm mb-12"
-          variants={prefersReducedMotion ? {} : fadeUp}
-        >
-          {HERO_CONTENT.disclaimer}
-        </motion.p>
-
-        {/* Quote Box */}
-        <motion.blockquote
-          className="border-l-4 border-gold/50 pl-6 py-4 text-left max-w-2xl mx-auto bg-charcoal/40 backdrop-blur-sm rounded-r-lg"
-          variants={prefersReducedMotion ? {} : fadeUp}
-        >
-          <p className="text-white/90 italic font-body text-lg mb-2">
-            "{HERO_CONTENT.quote.text}"
-          </p>
-          <cite className="text-gold text-sm not-italic">
-            {HERO_CONTENT.quote.attribution}
-          </cite>
-        </motion.blockquote>
-      </motion.div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.6 }}
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
-          <motion.div
-            className="w-1.5 h-3 bg-gold rounded-full"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          />
+          </Link>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
