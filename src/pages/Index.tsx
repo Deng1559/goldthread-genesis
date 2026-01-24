@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { OpportunityCards } from "@/components/sections/OpportunityCards";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { InfraVsExploration } from "@/components/sections/InfraVsExploration";
@@ -16,6 +17,9 @@ const Index = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <Hero />
+
+        {/* Opportunity Cards - directly below hero */}
+        <OpportunityCards />
 
         {/* Proof Section */}
         <section id="proof" className="scroll-mt-20">
