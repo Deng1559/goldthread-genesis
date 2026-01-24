@@ -12,6 +12,10 @@ export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // On subpages (not homepage), always show solid header
+  const isHomepage = location.pathname === "/";
+  const showSolidHeader = !isHomepage || isScrolled;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -48,7 +52,7 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
+        showSolidHeader
           ? "bg-white/95 backdrop-blur-md shadow-[var(--shadow-header)]"
           : "bg-transparent"
       )}
@@ -70,7 +74,7 @@ export function Header() {
           </div>
           <span className={cn(
             "font-display font-semibold text-xl transition-colors",
-            isScrolled ? "text-charcoal" : "text-white"
+            showSolidHeader ? "text-charcoal" : "text-white"
           )}>
             {SITE_CONFIG.name}
           </span>
@@ -86,7 +90,7 @@ export function Header() {
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={cn(
                   "text-sm font-medium transition-colors focus-gold rounded-md px-2 py-1",
-                  isScrolled
+                  showSolidHeader
                     ? "text-charcoal hover:text-gold"
                     : "text-white/90 hover:text-white"
                 )}
@@ -99,7 +103,7 @@ export function Header() {
                 to={link.href}
                 className={cn(
                   "text-sm font-medium transition-colors focus-gold rounded-md px-2 py-1",
-                  isScrolled
+                  showSolidHeader
                     ? "text-charcoal hover:text-gold"
                     : "text-white/90 hover:text-white"
                 )}
@@ -119,7 +123,7 @@ export function Header() {
         <button
           className={cn(
             "lg:hidden p-2 rounded-md focus-gold",
-            isScrolled ? "text-charcoal" : "text-white"
+            showSolidHeader ? "text-charcoal" : "text-white"
           )}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-expanded={isMobileMenuOpen}
