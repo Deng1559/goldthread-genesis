@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { Hero } from "@/components/sections/Hero";
+import { ProofBar } from "@/components/sections/ProofBar";
+import { InfraVsExploration } from "@/components/sections/InfraVsExploration";
+import { OpportunityGrid } from "@/components/sections/OpportunityGrid";
+import { TechTeaser } from "@/components/sections/TechTeaser";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-1">
+        <Hero />
+        <ProofBar />
+        <InfraVsExploration />
+        <OpportunityGrid />
+        <TechTeaser />
+        <div id="risks" className="scroll-mt-20">
+          {/* Risks section is included in InfraVsExploration */}
+        </div>
+        <FinalCTA />
+      </main>
+
+      <Footer />
     </div>
   );
 };
