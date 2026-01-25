@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { EightyYearSilence } from "@/components/sections/EightyYearSilence";
+import { ConvergenceSection } from "@/components/sections/ConvergenceSection";
 import { OpportunityCards } from "@/components/sections/OpportunityCards";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
@@ -20,7 +21,10 @@ const Index = () => {
         {/* The Eighty-Year Silence Section */}
         <EightyYearSilence />
 
-        {/* Opportunity Cards - directly below hero */}
+        {/* The Convergence Section */}
+        <ConvergenceSection />
+
+        {/* Opportunity Cards */}
         <OpportunityCards />
 
         {/* Proof Section */}
