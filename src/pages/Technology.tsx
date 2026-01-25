@@ -149,7 +149,7 @@ export default function Technology() {
         </section>
 
         {/* Process Flow */}
-        <section className="section-padding bg-background">
+        <section id="process" className="section-padding bg-background scroll-mt-20">
           <div className="container-wide">
             <SectionHeader
               eyebrow="Process Overview"
@@ -312,7 +312,7 @@ export default function Technology() {
         </section>
 
         {/* Environmental Validation */}
-        <section className="bg-forest py-16 md:py-24">
+        <section id="validation" className="bg-forest py-16 md:py-24 scroll-mt-20">
           <div className="container-wide">
             <SectionHeader
               eyebrow="ESG Commitment"
@@ -373,8 +373,8 @@ export default function Technology() {
           </div>
         </section>
 
-        {/* Verification Roadmap */}
-        <section className="section-padding bg-background">
+        {/* Verification Roadmap / Permitting */}
+        <section id="permitting" className="section-padding bg-background scroll-mt-20">
           <div className="container-wide">
             <SectionHeader
               eyebrow="Development Status"

@@ -41,8 +41,8 @@ export default function About() {
           </div>
         </section>
 
-        {/* Mission & Principles */}
-        <section className="section-padding bg-background">
+        {/* Mission & Principles - MineTeck Section */}
+        <section id="mineteck" className="section-padding bg-background scroll-mt-20">
           <div className="container-wide">
             <SectionHeader
               eyebrow="Our Approach"
@@ -107,8 +107,8 @@ export default function About() {
           </div>
         </section>
 
-        {/* Leadership Team */}
-        <section className="section-padding bg-muted/30">
+        {/* Leadership Team - Breakthrough Management */}
+        <section id="breakthrough" className="section-padding bg-muted/30 scroll-mt-20">
           <div className="container-wide">
             <SectionHeader
               eyebrow="Team"
@@ -260,8 +260,8 @@ export default function About() {
           </div>
         </section>
 
-        {/* Gated Content CTA */}
-        <section className="section-padding bg-background">
+        {/* Contact / Gated Content CTA */}
+        <section id="contact" className="section-padding bg-background scroll-mt-20">
           <div className="container-wide">
             <GatedBlock
               title="Complete Team & Governance Documentation"

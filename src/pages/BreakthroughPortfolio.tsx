@@ -13,8 +13,17 @@ export default function BreakthroughPortfolio() {
       <Header />
       <PortfolioHero />
       <HistoricalTimeline />
-      <ThesisSection />
-      <PortfolioGrid />
+      
+      {/* Why Now Section */}
+      <section id="why-now" className="scroll-mt-20">
+        <ThesisSection />
+      </section>
+      
+      {/* Fund Structure Section */}
+      <section id="structure" className="scroll-mt-20">
+        <PortfolioGrid />
+      </section>
+      
       <FergusonQuote />
       <InvestorCTA />
       <Footer />
