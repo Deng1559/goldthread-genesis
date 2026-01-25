@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { VideoSalesLetter } from "@/components/sections/VideoSalesLetter";
 import { RenaissanceTimeline } from "@/components/sections/RenaissanceTimeline";
 import { EightyYearSilence } from "@/components/sections/EightyYearSilence";
 import { ConvergenceSection } from "@/components/sections/ConvergenceSection";
@@ -18,6 +19,11 @@ const Index = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <Hero />
+
+        {/* Video Sales Letter Section */}
+        <section id="vsl">
+          <VideoSalesLetter />
+        </section>
 
         {/* Visual Timeline - The Renaissance Story */}
         <section id="breakthrough">
