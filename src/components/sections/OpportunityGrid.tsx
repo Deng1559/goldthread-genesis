@@ -64,7 +64,7 @@ function OpportunityCard({ title, description, tags, index }: OpportunityCardPro
         to="/access"
         className="inline-flex items-center gap-2 text-gold text-sm font-medium hover:gap-3 transition-all focus-gold rounded-md"
       >
-        Learn what we can share
+        Explore qualified access
         <ArrowRight className="w-4 h-4" />
       </Link>
     </motion.div>

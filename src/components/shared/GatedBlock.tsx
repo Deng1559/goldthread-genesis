@@ -20,7 +20,7 @@ export function GatedBlock({
   title = "Detailed Information Available",
   description = "Access to technical specifications, financial projections, and engineering reports requires investor verification.",
   items,
-  ctaText = "Request Data Room Access",
+  ctaText = "Submit Investor Inquiry",
   ctaHref = "/access",
   variant = "default",
   className,

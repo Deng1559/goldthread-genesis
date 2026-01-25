@@ -103,7 +103,7 @@ export function OpportunityCards() {
                     variant="default"
                     className="w-full bg-gold hover:bg-gold/90 text-charcoal font-body font-semibold"
                   >
-                    Learn More
+                    Explore Details
                   </Button>
                 </Link>
               </div>
