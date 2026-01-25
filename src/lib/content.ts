@@ -7,11 +7,12 @@ export const SITE_CONFIG = {
   legalEntity: "MineTeck Resources, LLC",
 };
 
+// Legacy NAV_LINKS kept for backwards compatibility
 export const NAV_LINKS = [
-  { label: "The Gold Rush", href: "/" },
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
   { label: "Technology", href: "/technology" },
-  { label: "Portfolio", href: "/projects" },
-  { label: "Why Invest?", href: "/portfolio" },
+  { label: "Invest", href: "/portfolio" },
   { label: "About", href: "/about" },
 ];
 
