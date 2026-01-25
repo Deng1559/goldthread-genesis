@@ -25,7 +25,7 @@ export function WhatThisIsnt() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="section-padding bg-charcoal">
+    <section id="what-this-isnt" className="section-padding bg-charcoal scroll-mt-20">
       <div className="container-wide">
         <motion.div
           variants={prefersReducedMotion ? {} : fadeUp}
