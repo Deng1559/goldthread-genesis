@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -56,14 +56,58 @@ const NAV_ITEMS: NavItem[] = [
   },
 ];
 
+// Custom hook for handling hash navigation
+function useHashNavigation() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    // Check if href contains a hash
+    const hasHash = href.includes("#");
+    
+    if (!hasHash) {
+      // Regular navigation, let Link handle it
+      return;
+    }
+
+    e.preventDefault();
+    
+    const [path, hash] = href.split("#");
+    const targetPath = path || "/";
+    const currentPath = location.pathname;
+
+    if (currentPath === targetPath) {
+      // Same page, just scroll to element
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Different page, navigate first then scroll
+      navigate(targetPath);
+      // Use setTimeout to wait for navigation and DOM update
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  };
+
+  return handleNavClick;
+}
+
 function DropdownMenu({ 
   items, 
   isOpen, 
-  onClose 
+  onClose,
+  onNavClick
 }: { 
   items: DropdownItem[]; 
   isOpen: boolean; 
   onClose: () => void;
+  onNavClick: (e: React.MouseEvent, href: string) => void;
 }) {
   return (
     <AnimatePresence>
@@ -80,7 +124,10 @@ function DropdownMenu({
               <Link
                 key={item.label}
                 to={item.href}
-                onClick={onClose}
+                onClick={(e) => {
+                  onNavClick(e, item.href);
+                  onClose();
+                }}
                 className="block px-4 py-2.5 text-sm font-inter text-white/80 hover:text-gold hover:bg-white/5 transition-colors"
               >
                 {item.label}
@@ -95,10 +142,12 @@ function DropdownMenu({
 
 function NavDropdown({ 
   item, 
-  isActive 
+  isActive,
+  onNavClick
 }: { 
   item: NavItem; 
   isActive: boolean;
+  onNavClick: (e: React.MouseEvent, href: string) => void;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -139,7 +188,8 @@ function NavDropdown({
         <DropdownMenu 
           items={item.dropdown} 
           isOpen={isOpen} 
-          onClose={() => setIsOpen(false)} 
+          onClose={() => setIsOpen(false)}
+          onNavClick={onNavClick}
         />
       )}
     </div>
@@ -151,6 +201,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const handleNavClick = useHashNavigation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -163,6 +214,18 @@ export function Header() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setOpenMobileDropdown(null);
+  }, [location]);
+
+  // Handle hash on initial load and route changes
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.getElementById(location.hash.slice(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
   }, [location]);
 
   const toggleMobileDropdown = (label: string) => {
@@ -210,7 +273,8 @@ export function Header() {
                 <NavDropdown 
                   key={item.label} 
                   item={item} 
-                  isActive={isActive || false} 
+                  isActive={isActive || false}
+                  onNavClick={handleNavClick}
                 />
               );
             }
@@ -303,6 +367,10 @@ export function Header() {
                                   <Link
                                     key={subItem.label}
                                     to={subItem.href}
+                                    onClick={(e) => {
+                                      handleNavClick(e, subItem.href);
+                                      setIsMobileMenuOpen(false);
+                                    }}
                                     className="block font-inter text-sm text-white/70 hover:text-gold py-2 px-4 rounded-md transition-colors"
                                   >
                                     {subItem.label}
