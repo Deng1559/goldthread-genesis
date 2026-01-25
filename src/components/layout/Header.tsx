@@ -33,6 +33,7 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "Technology",
     dropdown: [
+      { label: "The MRU", href: "/technology#mru" },
       { label: "Zero-Waste Process", href: "/technology#process" },
       { label: "Regulatory Validation", href: "/technology#validation" },
       { label: "Permitting Expertise", href: "/technology#permitting" },
