@@ -93,7 +93,6 @@ const PROFESSIONAL_AFFILIATIONS = [
 
 export default function AndrewFerguson() {
   const prefersReducedMotion = useReducedMotion();
-  const motionProps = prefersReducedMotion ? {} : fadeUp;
 
   return (
     <div className="min-h-screen bg-background">
@@ -105,7 +104,9 @@ export default function AndrewFerguson() {
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Headshot - Left */}
             <motion.div
-              {...motionProps}
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
               className="lg:col-span-2"
             >
               <div className="aspect-[3/4] bg-charcoal/50 border-2 border-gold/30 rounded-lg overflow-hidden">
@@ -122,7 +123,9 @@ export default function AndrewFerguson() {
 
             {/* Bio - Right */}
             <motion.div
-              {...motionProps}
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
               transition={{ delay: 0.1 }}
               className="lg:col-span-3"
             >
@@ -163,7 +166,7 @@ export default function AndrewFerguson() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.div {...motionProps} className="mb-12">
+            <motion.div variants={fadeUp} className="mb-12">
               <div className="flex items-center gap-3 mb-2">
                 <Wrench className="w-6 h-6 text-gold" />
                 <h2 className="font-display text-3xl text-foreground">Technical Expertise</h2>
@@ -173,7 +176,7 @@ export default function AndrewFerguson() {
 
             <div className="grid md:grid-cols-2 gap-12">
               {/* Technical Achievements */}
-              <motion.div {...motionProps}>
+              <motion.div variants={fadeUp}>
                 <h3 className="font-display text-xl text-foreground mb-6 border-b border-gold/30 pb-2">
                   Technical Achievements
                 </h3>
@@ -190,7 +193,7 @@ export default function AndrewFerguson() {
               </motion.div>
 
               {/* Engineering Background */}
-              <motion.div {...motionProps}>
+              <motion.div variants={fadeUp}>
                 <h3 className="font-display text-xl text-foreground mb-6 border-b border-gold/30 pb-2">
                   Engineering Background
                 </h3>
@@ -217,7 +220,7 @@ export default function AndrewFerguson() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.div {...motionProps} className="mb-12">
+            <motion.div variants={fadeUp} className="mb-12">
               <div className="flex items-center gap-3 mb-2">
                 <FileCheck className="w-6 h-6 text-gold" />
                 <h2 className="font-display text-3xl text-white">Permitting Expertise</h2>
@@ -227,7 +230,7 @@ export default function AndrewFerguson() {
 
             {/* Key Achievement Box */}
             <motion.div
-              {...motionProps}
+              variants={fadeUp}
               className="border-2 border-gold bg-navy/50 p-8 rounded-lg mb-12"
             >
               <h3 className="font-display text-2xl text-gold mb-6">
@@ -244,7 +247,7 @@ export default function AndrewFerguson() {
             </motion.div>
 
             {/* Regulatory Experience */}
-            <motion.div {...motionProps}>
+            <motion.div variants={fadeUp}>
               <h3 className="font-display text-xl text-white mb-6 border-b border-gold/30 pb-2">
                 Regulatory Relationships & Experience
               </h3>
@@ -272,7 +275,7 @@ export default function AndrewFerguson() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.div {...motionProps} className="mb-12">
+            <motion.div variants={fadeUp} className="mb-12">
               <h2 className="font-display text-3xl text-foreground mb-2">
                 Project Execution Track Record
               </h2>
@@ -283,7 +286,7 @@ export default function AndrewFerguson() {
               {PROJECT_TRACK_RECORD.map((project, index) => (
                 <motion.div
                   key={index}
-                  {...motionProps}
+                  variants={fadeUp}
                   className={`border rounded-lg p-6 ${
                     project.name.includes("[") 
                       ? "border-border/50 bg-muted/30" 
@@ -328,7 +331,7 @@ export default function AndrewFerguson() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.div {...motionProps} className="mb-12 text-center">
+            <motion.div variants={fadeUp} className="mb-12 text-center">
               <h2 className="font-display text-3xl text-gold mb-6">
                 The Unique Combination
               </h2>
@@ -343,7 +346,7 @@ export default function AndrewFerguson() {
               {UNIQUE_COMBINATION_FACTORS.map((factor, index) => (
                 <motion.div
                   key={index}
-                  {...motionProps}
+                  variants={fadeUp}
                   className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-gold/30 transition-colors"
                 >
                   <h3 className="font-display text-lg text-gold mb-3">{factor.title}</h3>
@@ -366,7 +369,7 @@ export default function AndrewFerguson() {
             className="grid md:grid-cols-3 gap-12"
           >
             {/* Contact */}
-            <motion.div {...motionProps}>
+            <motion.div variants={fadeUp}>
               <h3 className="font-display text-xl text-gold mb-4">Contact</h3>
               <div className="space-y-3">
                 <a 
@@ -387,7 +390,7 @@ export default function AndrewFerguson() {
             </motion.div>
 
             {/* Professional Affiliations */}
-            <motion.div {...motionProps}>
+            <motion.div variants={fadeUp}>
               <h3 className="font-display text-xl text-gold mb-4">Professional Affiliations</h3>
               <ul className="space-y-2">
                 {PROFESSIONAL_AFFILIATIONS.map((affiliation, index) => (
@@ -397,7 +400,7 @@ export default function AndrewFerguson() {
             </motion.div>
 
             {/* References */}
-            <motion.div {...motionProps}>
+            <motion.div variants={fadeUp}>
               <h3 className="font-display text-xl text-gold mb-4">References</h3>
               <p className="text-white/70 text-sm mb-4">
                 Professional and industry references available upon request for qualified investors 
