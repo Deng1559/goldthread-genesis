@@ -26,6 +26,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "The Breakthrough", href: "/#breakthrough" },
       { label: "The Convergence", href: "/#convergence" },
       { label: "Infrastructure Thesis", href: "/#infrastructure" },
+      { label: "Full Story", href: "/renaissance" },
     ],
   },
   { label: "Projects", href: "/projects" },
