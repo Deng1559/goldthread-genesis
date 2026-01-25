@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { EightyYearSilence } from "@/components/sections/EightyYearSilence";
 import { OpportunityCards } from "@/components/sections/OpportunityCards";
 import { ProofBar } from "@/components/sections/ProofBar";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
@@ -15,6 +16,9 @@ const Index = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <Hero />
+
+        {/* The Eighty-Year Silence Section */}
+        <EightyYearSilence />
 
         {/* Opportunity Cards - directly below hero */}
         <OpportunityCards />
