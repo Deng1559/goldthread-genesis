@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { RenaissanceTimeline } from "@/components/sections/RenaissanceTimeline";
 import { EightyYearSilence } from "@/components/sections/EightyYearSilence";
+import { BreakthroughSection } from "@/components/sections/BreakthroughSection";
 import { ConvergenceSection } from "@/components/sections/ConvergenceSection";
 import { InfrastructureComparison } from "@/components/sections/InfrastructureComparison";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -90,6 +91,9 @@ export default function Renaissance() {
         <section id="silence">
           <EightyYearSilence />
         </section>
+
+        {/* The Breakthrough - Zero-Waste Technology */}
+        <BreakthroughSection />
 
         {/* The Convergence */}
         <section id="convergence">
