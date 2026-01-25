@@ -63,25 +63,25 @@ const PROJECT_TRACK_RECORD = [
     name: "Gladstone Toll Mill",
     status: "Permitted",
     year: "2022",
-    detail: "First toll mill permit in 20+ years",
+    detail: "First toll mill permit in 20+ years • $4.0M CapEx",
   },
   {
-    name: "[Project 2]",
-    status: "[Status]",
-    year: "[Year]",
-    detail: "[TO BE PROVIDED]",
+    name: "Russell Gulch",
+    status: "Permitted Reclamation",
+    year: "Active",
+    detail: "Fastest to revenue • 70K+ tons @ 8 gpt • $1.25M CapEx",
   },
   {
-    name: "[Project 3]",
-    status: "[Status]",
-    year: "[Year]",
-    detail: "[TO BE PROVIDED]",
+    name: "Crown Mining",
+    status: "Lease Secured",
+    year: "Development",
+    detail: "Largest material volume • 500K+ tons @ 10 gpt • $3.6M CapEx",
   },
   {
-    name: "[Project 4]",
-    status: "[Status]",
-    year: "[Year]",
-    detail: "[TO BE PROVIDED]",
+    name: "B-Group Properties",
+    status: "Under Contract",
+    year: "Development",
+    detail: "Strategic adjacency to Gladstone • 400K tons @ 6 gpt • $4.5M CapEx",
   },
 ];
 
@@ -288,31 +288,29 @@ export default function AndrewFerguson() {
                   key={index}
                   variants={fadeUp}
                   className={`border rounded-lg p-4 md:p-6 ${
-                    project.name.includes("[") 
-                      ? "border-border/50 bg-muted/30" 
-                      : "border-gold/40 bg-gold/5"
+                    project.status === "Permitted" || project.status === "Permitted Reclamation"
+                      ? "border-gold/40 bg-gold/5" 
+                      : "border-border bg-muted/20"
                   }`}
                 >
                   <div className="flex justify-between items-start gap-2 mb-2 md:mb-3">
-                    <h3 className={`font-display text-base md:text-lg ${
-                      project.name.includes("[") ? "text-muted-foreground italic" : "text-foreground"
-                    }`}>
+                    <h3 className="font-display text-base md:text-lg text-foreground">
                       {project.name}
                     </h3>
                     <span className={`font-mono text-xs md:text-sm px-2 py-1 rounded shrink-0 ${
                       project.status === "Permitted" 
                         ? "bg-forest/20 text-forest" 
-                        : "bg-muted text-muted-foreground"
+                        : project.status === "Permitted Reclamation"
+                        ? "bg-forest/15 text-forest"
+                        : project.status === "Lease Secured"
+                        ? "bg-gold/20 text-gold"
+                        : "bg-navy/20 text-navy"
                     }`}>
                       {project.status}
                     </span>
                   </div>
                   <p className="font-mono text-xs md:text-sm text-muted-foreground mb-1 md:mb-2">{project.year}</p>
-                  <p className={`text-xs md:text-sm ${
-                    project.detail.includes("TO BE PROVIDED") 
-                      ? "italic text-muted-foreground" 
-                      : "text-foreground/80"
-                  }`}>
+                  <p className="text-xs md:text-sm text-foreground/80">
                     {project.detail}
                   </p>
                 </motion.div>
