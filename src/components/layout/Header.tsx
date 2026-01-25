@@ -22,10 +22,10 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "The Renaissance",
     dropdown: [
-      { label: "The 80-Year Silence", href: "/#silence" },
-      { label: "The Breakthrough", href: "/#breakthrough" },
-      { label: "The Convergence", href: "/#convergence" },
-      { label: "Infrastructure Thesis", href: "/#infrastructure" },
+      { label: "The 80-Year Silence", href: "/renaissance#silence" },
+      { label: "The Breakthrough", href: "/renaissance#breakthrough" },
+      { label: "The Convergence", href: "/renaissance#convergence" },
+      { label: "Infrastructure Thesis", href: "/renaissance#infrastructure" },
       { label: "Full Story", href: "/renaissance" },
     ],
   },
