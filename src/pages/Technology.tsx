@@ -132,7 +132,7 @@ export default function Technology() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/access">
                     <Button variant="gold" size="lg" className="w-full sm:w-auto">
-                      Request Data Room Access
+                      Submit Investor Inquiry
                     </Button>
                   </Link>
                   <a
@@ -501,7 +501,7 @@ export default function Technology() {
                 "Environmental assessments",
                 "Third-party validation reports",
               ]}
-              ctaText="Request Technical Access"
+              ctaText="Submit Technical Inquiry"
               ctaHref="/access"
             />
           </div>

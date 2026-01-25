@@ -16,7 +16,7 @@ export function InvestorCTA() {
           Available to accredited investors only. Verification required under SEC Reg D 506(c).
         </p>
         <Button asChild variant="gold" size="xl">
-          <Link to="/access">Request Portfolio Access</Link>
+          <Link to="/access">Submit Investor Inquiry</Link>
         </Button>
       </div>
     </section>

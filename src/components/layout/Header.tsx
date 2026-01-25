@@ -106,7 +106,7 @@ export function Header() {
               size="default"
               className="font-inter ml-2 hover:shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5 transition-all duration-200"
             >
-              Request Access
+              Investor Inquiry
             </Button>
           </Link>
         </div>
@@ -160,7 +160,7 @@ export function Header() {
                   variant="gold" 
                   className="w-full font-inter text-base py-6 hover:shadow-lg hover:shadow-gold/25"
                 >
-                  Request Access
+                  Investor Inquiry
                 </Button>
               </Link>
             </div>

@@ -199,7 +199,7 @@ export function ThesisSection() {
         <div className="max-w-3xl mx-auto mt-20 text-center">
           <div className="bg-navy rounded-2xl p-10 md:p-14">
             <h3 className="font-playfair text-2xl md:text-3xl text-white mb-4">
-              Ready to Learn More?
+              Qualified Investor Inquiry
             </h3>
             <p className="text-white/70 font-inter mb-8 max-w-xl mx-auto text-lg">
               Access detailed project information, financial models, and schedule a conversation with our team.
@@ -209,7 +209,7 @@ export function ThesisSection() {
                 size="lg" 
                 className="bg-gold hover:bg-gold/90 text-navy font-semibold px-8"
               >
-                Request Investor Information
+                Submit Investor Inquiry
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>

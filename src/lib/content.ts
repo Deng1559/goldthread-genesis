@@ -18,8 +18,8 @@ export const NAV_LINKS = [
 export const HERO_CONTENT = {
   headline: "The New Colorado Gold Rush",
   subheadline: "Applying modern recovery technology to historically proven gold deposits. A thesis-driven approach to resource extraction—grounded in infrastructure, not speculation.",
-  primaryCta: "Request Data Room Access",
-  secondaryCta: "Read the Investment Thesis",
+  primaryCta: "Submit Investor Inquiry",
+  secondaryCta: "Explore the Thesis",
   disclaimer: "For accredited investors only. Materials subject to legal review.",
   quote: {
     text: "The best opportunities in resource investment come not from discovery, but from applying new technology to known deposits.",
@@ -169,7 +169,7 @@ export const CTA_SECTIONS = {
       "Legal documentation and structure",
       "Management presentations",
     ],
-    cta: "Request Investor Access",
+    cta: "Submit Investor Inquiry",
     href: "/access#investors",
   },
   partners: {
