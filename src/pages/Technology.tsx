@@ -51,7 +51,7 @@ export default function Technology() {
         </section>
 
         {/* MRU Overview Section */}
-        <section className="section-padding bg-background">
+        <section id="mru" className="section-padding bg-background scroll-mt-20">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               {/* Left - Image Placeholders */}
@@ -99,8 +99,11 @@ export default function Technology() {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
+                <p className="font-mono text-gold text-sm uppercase tracking-wider mb-2">
+                  The Technology
+                </p>
                 <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  {content.mruOverview.title}
+                  The MRU: Modular Recovery Unit
                 </h2>
                 <p className="font-body text-muted-foreground leading-relaxed mb-6">
                   {content.mruOverview.intro}
