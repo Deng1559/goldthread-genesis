@@ -9,6 +9,8 @@ const HERO_STATS = [
   { value: "First", label: "Toll Mill Permit in 20 Years" },
 ];
 
+const OPENING_PARAGRAPH = "Between 1859 and 1917, Colorado's mining districts produced billions in gold — then regulatory gridlock shut it down for 80 years. The material never left. It just waited for technology to evolve, regulations to adapt, and five structural factors to align. That convergence has now occurred.";
+
 export function Hero() {
   return (
     <section
@@ -57,13 +59,18 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 container-wide text-center max-w-5xl mx-auto px-4">
         {/* Headline */}
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gold mb-4 leading-tight">
-          The New Colorado Gold Rush
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+          The Colorado Gold <span className="text-gold">Renaissance</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="font-body text-lg sm:text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto">
-          80 Years of Stranded Gold — Now Accessible
+        <p className="font-body text-lg sm:text-xl md:text-2xl text-white/90 mb-6 max-w-3xl mx-auto">
+          How Zero-Waste Technology Unlocked a Century of Stranded Gold Value
+        </p>
+
+        {/* Opening Paragraph */}
+        <p className="font-body text-base sm:text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed">
+          {OPENING_PARAGRAPH}
         </p>
 
         {/* Stats Row */}
@@ -84,7 +91,7 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/portfolio">
             <Button variant="hero" size="lg" className="w-full sm:w-auto">
-              See the Opportunity
+              Explore the Renaissance
             </Button>
           </Link>
           <Link to="/technology">
