@@ -42,8 +42,8 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "Invest",
     dropdown: [
-      { label: "Why Now?", href: "/portfolio#why-now" },
-      { label: "Fund Structure", href: "/portfolio#structure" },
+      { label: "Why Now?", href: "/why-invest#why-now" },
+      { label: "Fund Structure", href: "/why-invest#structure" },
       { label: "Inquiry Form", href: "/access" },
     ],
   },
