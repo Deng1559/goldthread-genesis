@@ -1,12 +1,12 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { RenaissanceTimeline } from "@/components/sections/RenaissanceTimeline";
 import { EightyYearSilence } from "@/components/sections/EightyYearSilence";
 import { ConvergenceSection } from "@/components/sections/ConvergenceSection";
 import { InfrastructureComparison } from "@/components/sections/InfrastructureComparison";
 import { OpportunityCards } from "@/components/sections/OpportunityCards";
 import { ProofBar } from "@/components/sections/ProofBar";
-import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { TechnologySection } from "@/components/sections/TechnologySection";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
@@ -19,14 +19,25 @@ const Index = () => {
         {/* Hero Section */}
         <Hero />
 
+        {/* Visual Timeline - The Renaissance Story */}
+        <section id="breakthrough">
+          <RenaissanceTimeline variant="compact" />
+        </section>
+
         {/* The Eighty-Year Silence Section */}
-        <EightyYearSilence />
+        <section id="silence" className="scroll-mt-20">
+          <EightyYearSilence />
+        </section>
 
         {/* The Convergence Section */}
-        <ConvergenceSection />
+        <section id="convergence" className="scroll-mt-20">
+          <ConvergenceSection />
+        </section>
 
         {/* Infrastructure vs Traditional Mining Comparison */}
-        <InfrastructureComparison />
+        <section id="infrastructure" className="scroll-mt-20">
+          <InfrastructureComparison />
+        </section>
 
         {/* Opportunity Cards */}
         <OpportunityCards />
@@ -36,18 +47,8 @@ const Index = () => {
           <ProofBar />
         </section>
 
-        {/* Thesis/Comparison Section */}
-        <section id="thesis" className="scroll-mt-20">
-          <ComparisonTable />
-        </section>
-
         {/* Technology Section */}
         <TechnologySection />
-
-        {/* Risks Section */}
-        <section id="risks" className="scroll-mt-20">
-          {/* Risk disclosure section - to be built */}
-        </section>
 
         <FinalCTA />
       </main>
