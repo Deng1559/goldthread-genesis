@@ -5,7 +5,19 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, staggerItem } from "@/lib/motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { ClipboardList, Droplets, Leaf, Microscope, ArrowRight } from "lucide-react";
+import { 
+  ClipboardList, 
+  Droplets, 
+  Leaf, 
+  Microscope, 
+  ArrowRight, 
+  Factory, 
+  Shovel, 
+  Truck, 
+  FolderKanban, 
+  FlaskConical, 
+  Handshake 
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const SERVICES = [
@@ -20,8 +32,6 @@ const SERVICES = [
       "Flowsheet Development",
       "Permitting & Protocol Consulting",
     ],
-    cta: "Schedule Consultation",
-    ctaHref: "/access",
   },
   {
     id: "clean-water",
@@ -34,8 +44,6 @@ const SERVICES = [
       "Sedimentation Systems",
       "Concentration Technology",
     ],
-    cta: "Schedule Consultation",
-    ctaHref: "/access",
   },
   {
     id: "remediation",
@@ -48,8 +56,6 @@ const SERVICES = [
       "Tailing Pond Reclamation",
       "Toxicity Solutions",
     ],
-    cta: "Start Remediation",
-    ctaHref: "/access",
   },
   {
     id: "laboratory",
@@ -63,8 +69,78 @@ const SERVICES = [
       "Resource Estimation",
       "Recovery Optimization",
     ],
-    cta: "Schedule Consultation",
-    ctaHref: "/access",
+  },
+  {
+    id: "toll-milling",
+    title: "Toll Milling Services",
+    icon: Factory,
+    description: "Process your ore at our permitted facilities without the capital burden of building your own mill. Our toll milling services provide access to state-of-the-art processing equipment and expertise.",
+    services: [
+      "Custom Ore Processing",
+      "Gravity Separation",
+      "Concentrate Production",
+      "Material Handling & Logistics",
+    ],
+  },
+  {
+    id: "reclamation",
+    title: "Reclamation & Remediation",
+    icon: Shovel,
+    description: "Meet regulatory requirements and restore land to productive use. Our comprehensive reclamation services address legacy mining impacts while often recovering valuable minerals in the process.",
+    services: [
+      "Site Reclamation Planning",
+      "Tailings Remediation",
+      "Land Restoration",
+      "Regulatory Compliance",
+    ],
+  },
+  {
+    id: "mru-deployment",
+    title: "Mobile Research Unit (MRU) Deployment",
+    icon: Truck,
+    description: "Bring processing capability directly to your site with our Mobile Research Unit. The MRU provides on-site testing and small-scale production without permanent infrastructure investment.",
+    services: [
+      "On-Site Ore Processing",
+      "Pilot-Scale Testing",
+      "Recovery Optimization",
+      "Proof-of-Concept Operations",
+    ],
+  },
+  {
+    id: "project-management",
+    title: "Project Management & Permitting",
+    icon: FolderKanban,
+    description: "Navigate the complex regulatory landscape with expert guidance. Our team manages the entire permitting process, from initial applications through final approvals and ongoing compliance.",
+    services: [
+      "Permit Application Management",
+      "Environmental Impact Assessment",
+      "Stakeholder Coordination",
+      "Compliance Monitoring",
+    ],
+  },
+  {
+    id: "material-testing",
+    title: "Material Testing & Validation",
+    icon: FlaskConical,
+    description: "Validate your resource before committing capital. Our comprehensive testing programs provide the data you need for informed decision-making on project viability and processing approach.",
+    services: [
+      "Ore Characterization",
+      "Recovery Rate Testing",
+      "Metallurgical Analysis",
+      "Economic Feasibility Studies",
+    ],
+  },
+  {
+    id: "technology-partnerships",
+    title: "Technology Deployment Partnerships",
+    icon: Handshake,
+    description: "Partner with MineTeck to deploy our proven zero-waste technology at your operations. We provide licensing, training, and ongoing support for successful technology implementation.",
+    services: [
+      "Technology Licensing",
+      "Implementation Support",
+      "Operator Training",
+      "Ongoing Technical Assistance",
+    ],
   },
 ];
 
@@ -116,13 +192,13 @@ const Services = () => {
                 delivering regulatory compliance and operational efficiency from day one.
               </motion.p>
               <motion.div variants={fadeUp}>
-                <Link to="/access">
+                <Link to="/access#services">
                   <Button
                     variant="gold"
                     size="lg"
                     className="font-inter font-semibold hover:shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5 transition-all duration-200"
                   >
-                    Schedule Consultation
+                    Request Services
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
@@ -169,12 +245,12 @@ const Services = () => {
                         </ul>
                       </CardContent>
                       <CardFooter>
-                        <Link to={service.ctaHref} className="w-full">
+                        <Link to="/access#services" className="w-full">
                           <Button
                             variant="outline"
                             className="w-full border-gold/50 text-gold hover:bg-gold hover:text-navy font-inter font-medium transition-all duration-200"
                           >
-                            {service.cta}
+                            Request Services
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </Button>
                         </Link>
@@ -211,13 +287,13 @@ const Services = () => {
                 optimizing your recovery rates and operational efficiency.
               </motion.p>
               <motion.div variants={fadeUp}>
-                <Link to="/access">
+                <Link to="/access#services">
                   <Button
                     variant="gold"
                     size="lg"
                     className="font-inter font-semibold hover:shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5 transition-all duration-200"
                   >
-                    Schedule Consultation
+                    Request Services
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
