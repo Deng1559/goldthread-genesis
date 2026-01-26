@@ -12,6 +12,7 @@ import About from "./pages/About";
 import AndrewFerguson from "./pages/AndrewFerguson";
 import BreakthroughPortfolio from "./pages/BreakthroughPortfolio";
 import Renaissance from "./pages/Renaissance";
+import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/about/andrew-ferguson" element={<AndrewFerguson />} />
           <Route path="/why-invest" element={<BreakthroughPortfolio />} />
           <Route path="/renaissance" element={<Renaissance />} />
+          <Route path="/services" element={<Services />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

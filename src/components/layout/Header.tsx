@@ -49,6 +49,16 @@ const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
+    label: "Services",
+    dropdown: [
+      { label: "Pre-Mining Consultation", href: "/services#pre-mining" },
+      { label: "Clean Water Solutions", href: "/services#clean-water" },
+      { label: "Environmental Remediation", href: "/services#remediation" },
+      { label: "Analysis & Laboratory", href: "/services#laboratory" },
+      { label: "Request Consultation", href: "/access" },
+    ],
+  },
+  {
     label: "About",
     dropdown: [
       { label: "Andrew Ferguson", href: "/about/andrew-ferguson" },
