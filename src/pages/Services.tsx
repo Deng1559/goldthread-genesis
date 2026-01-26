@@ -5,69 +5,39 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, staggerItem } from "@/lib/motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { ClipboardList, Droplets, Leaf, Microscope, ArrowRight, Factory, Shovel, Truck, FolderKanban, FlaskConical, Handshake } from "lucide-react";
+import { ClipboardList, Droplets, Leaf, Microscope, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-const SERVICES = [{
-  id: "pre-mining",
-  title: "Pre-Mining Consultation",
-  icon: ClipboardList,
-  description: "Launch your operation with environmental compliance built in. We develop zero-waste gravity circuits, custom flowsheets, and comminution designs that eliminate toxic chemicals while maximizing recovery rates.",
-  services: ["Mineral Viability Analysis", "Zero Waste Circuit Design", "Flowsheet Development", "Permitting & Protocol Consulting"]
-}, {
-  id: "clean-water",
-  title: "Clean Water Solutions",
-  icon: Droplets,
-  description: "Protect water resources with closed-loop systems. Our Zero Liquid Discharge (ZLD) technology eliminates wastewater, reduces freshwater consumption, and ensures compliance with the strictest environmental regulations.",
-  services: ["Zero Liquid Discharge (ZLD)", "Multi-Phase Filtration", "Sedimentation Systems", "Concentration Technology"]
-}, {
-  id: "remediation",
-  title: "Environmental Remediation",
-  icon: Leaf,
-  description: "Transform legacy liabilities into environmental assets. We remediate contaminated water, reclaim tailing ponds, and eliminate toxicity issues using proven technologies that restore environmental quality while often recovering additional minerals.",
-  services: ["Water Re-Circulation Systems", "Closed Circuit Filtration", "Tailing Pond Reclamation", "Toxicity Solutions"]
-}, {
-  id: "laboratory",
-  title: "Analysis & Laboratory",
-  icon: Microscope,
-  description: "Make informed decisions with precise analytical data. Our XRF technology and comprehensive laboratory testing provide rapid results for resource estimation, process optimization, and environmental compliance.",
-  services: ["XRF Sample Analysis", "Laboratory Testing", "Toxicity Assessment", "Resource Estimation", "Recovery Optimization"]
-}, {
-  id: "toll-milling",
-  title: "Toll Milling Services",
-  icon: Factory,
-  description: "Process your ore at our permitted facilities without the capital burden of building your own mill. Our toll milling services provide access to state-of-the-art processing equipment and expertise.",
-  services: ["Custom Ore Processing", "Gravity Separation", "Concentrate Production", "Material Handling & Logistics"]
-}, {
-  id: "reclamation",
-  title: "Reclamation & Remediation",
-  icon: Shovel,
-  description: "Meet regulatory requirements and restore land to productive use. Our comprehensive reclamation services address legacy mining impacts while often recovering valuable minerals in the process.",
-  services: ["Site Reclamation Planning", "Tailings Remediation", "Land Restoration", "Regulatory Compliance"]
-}, {
-  id: "mru-deployment",
-  title: "Mobile Research Unit (MRU) Deployment",
-  icon: Truck,
-  description: "Bring processing capability directly to your site with our Mobile Research Unit. The MRU provides on-site testing and small-scale production without permanent infrastructure investment.",
-  services: ["On-Site Ore Processing", "Pilot-Scale Testing", "Recovery Optimization", "Proof-of-Concept Operations"]
-}, {
-  id: "project-management",
-  title: "Project Management & Permitting",
-  icon: FolderKanban,
-  description: "Navigate the complex regulatory landscape with expert guidance. Our team manages the entire permitting process, from initial applications through final approvals and ongoing compliance.",
-  services: ["Permit Application Management", "Environmental Impact Assessment", "Stakeholder Coordination", "Compliance Monitoring"]
-}, {
-  id: "material-testing",
-  title: "Material Testing & Validation",
-  icon: FlaskConical,
-  description: "Validate your resource before committing capital. Our comprehensive testing programs provide the data you need for informed decision-making on project viability and processing approach.",
-  services: ["Ore Characterization", "Recovery Rate Testing", "Metallurgical Analysis", "Economic Feasibility Studies"]
-}, {
-  id: "technology-partnerships",
-  title: "Technology Deployment Partnerships",
-  icon: Handshake,
-  description: "Partner with MineTeck to deploy our proven zero-waste technology at your operations. We provide licensing, training, and ongoing support for successful technology implementation.",
-  services: ["Technology Licensing", "Implementation Support", "Operator Training", "Ongoing Technical Assistance"]
-}];
+
+const SERVICES = [
+  {
+    id: "pre-mining",
+    title: "Pre-Mining Consultation",
+    icon: ClipboardList,
+    description: "Launch your operation with environmental compliance built in. We develop zero-waste gravity circuits, custom flowsheets, and comminution designs that eliminate toxic chemicals while maximizing recovery rates.",
+    services: ["Mineral Viability Analysis", "Zero Waste Circuit Design", "Flowsheet Development", "Comminution Circuit Development", "Fraction Screening Analysis", "Permitting & Protocol Consulting"]
+  },
+  {
+    id: "clean-water",
+    title: "Clean Water Solutions",
+    icon: Droplets,
+    description: "Protect water resources with closed-loop systems. Our Zero Liquid Discharge (ZLD) technology eliminates wastewater, reduces freshwater consumption, and ensures compliance with the strictest environmental regulations.",
+    services: ["Zero Liquid Discharge (ZLD)", "Multi-Phase Filtration", "Sedimentation", "Concentration"]
+  },
+  {
+    id: "remediation",
+    title: "Environmental Remediation",
+    icon: Leaf,
+    description: "Transform legacy liabilities into environmental assets. We remediate contaminated water, reclaim tailing ponds, and eliminate toxicity issues using proven technologies that restore environmental quality.",
+    services: ["Clean Water Re-Circulation Systems", "Closed Circuit Filtration Development", "Tailing Pond & Dam Reclamation", "Toxicity Solutions"]
+  },
+  {
+    id: "analysis",
+    title: "Analysis & Laboratory",
+    icon: Microscope,
+    description: "Make informed decisions with precise analytical data. Our XRF technology and comprehensive laboratory testing provide rapid results for resource estimation, process optimization, and environmental compliance.",
+    services: ["XRF Sample Analysis", "Laboratory Testing", "Toxicity Assessment", "Resource Estimation", "Recovery Optimization"]
+  }
+];
 const Services = () => {
   const prefersReducedMotion = useReducedMotion();
   const motionProps = prefersReducedMotion ? {} : {
