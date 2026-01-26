@@ -51,12 +51,10 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "Services",
     dropdown: [
-      { label: "Toll Milling", href: "/services#toll-milling" },
-      { label: "MRU Deployment", href: "/services#mru" },
       { label: "Pre-Mining Consultation", href: "/services#pre-mining" },
-      { label: "Reclamation & Remediation", href: "/services#reclamation" },
-      { label: "Project Management", href: "/services#project-management" },
-      { label: "Material Testing", href: "/services#testing" },
+      { label: "Clean Water Solutions", href: "/services#clean-water" },
+      { label: "Environmental Remediation", href: "/services#remediation" },
+      { label: "Analysis", href: "/services#analysis" },
       { label: "Request Services", href: "/access#services" },
     ],
   },
