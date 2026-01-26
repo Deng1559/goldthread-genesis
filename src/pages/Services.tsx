@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer, staggerItem } from "@/lib/motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -9,137 +9,57 @@ import {
   ClipboardList, 
   Droplets, 
   Leaf, 
-  Microscope, 
-  ArrowRight, 
-  Factory, 
-  Shovel, 
-  Truck, 
-  FolderKanban, 
   FlaskConical, 
-  Handshake 
+  ArrowRight 
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const SERVICES = [
   {
     id: "pre-mining",
-    title: "Pre-Mining Consultation",
+    title: "Pre Mining Operation Consultation",
     icon: ClipboardList,
-    description: "Launch your operation with environmental compliance built in. We develop zero-waste gravity circuits, custom flowsheets, and comminution designs that eliminate toxic chemicals while maximizing recovery rates.",
     services: [
+      "Zero Waste Gravity Circuit Designs",
       "Mineral Viability Analysis",
-      "Zero Waste Circuit Design",
       "Flowsheet Development",
-      "Permitting & Protocol Consulting",
+      "Comminution Circuit Development",
+      "Fraction Screening Analysis",
+      "Permitting and Protocol Consulting",
     ],
   },
   {
     id: "clean-water",
     title: "Clean Water Solutions",
     icon: Droplets,
-    description: "Protect water resources with closed-loop systems. Our Zero Liquid Discharge (ZLD) technology eliminates wastewater, reduces freshwater consumption, and ensures compliance with the strictest environmental regulations.",
     services: [
       "Zero Liquid Discharge (ZLD)",
-      "Multi-Phase Filtration",
-      "Sedimentation Systems",
-      "Concentration Technology",
+      "Multi Phase Filtration",
+      "Sedimentation",
+      "Concentration",
     ],
   },
   {
     id: "remediation",
     title: "Environmental Remediation",
     icon: Leaf,
-    description: "Transform legacy liabilities into environmental assets. We remediate contaminated water, reclaim tailing ponds, and eliminate toxicity issues using proven technologies that restore environmental quality while often recovering additional minerals.",
     services: [
-      "Water Re-Circulation Systems",
-      "Closed Circuit Filtration",
-      "Tailing Pond Reclamation",
+      "Clean Water Re-Circulation Systems",
+      "Closed Circuit Filtration Development",
+      "Tailing Pond and Dam Reclamation",
       "Toxicity Solutions",
     ],
   },
   {
-    id: "laboratory",
-    title: "Analysis & Laboratory",
-    icon: Microscope,
-    description: "Make informed decisions with precise analytical data. Our XRF technology and comprehensive laboratory testing provide rapid results for resource estimation, process optimization, and environmental compliance.",
+    id: "analysis",
+    title: "Analysis",
+    icon: FlaskConical,
     services: [
       "XRF Sample Analysis",
-      "Laboratory Testing",
-      "Toxicity Assessment",
+      "Laboratory",
+      "Toxicity Levels",
       "Resource Estimation",
       "Recovery Optimization",
-    ],
-  },
-  {
-    id: "toll-milling",
-    title: "Toll Milling Services",
-    icon: Factory,
-    description: "Process your ore at our permitted facilities without the capital burden of building your own mill. Our toll milling services provide access to state-of-the-art processing equipment and expertise.",
-    services: [
-      "Custom Ore Processing",
-      "Gravity Separation",
-      "Concentrate Production",
-      "Material Handling & Logistics",
-    ],
-  },
-  {
-    id: "reclamation",
-    title: "Reclamation & Remediation",
-    icon: Shovel,
-    description: "Meet regulatory requirements and restore land to productive use. Our comprehensive reclamation services address legacy mining impacts while often recovering valuable minerals in the process.",
-    services: [
-      "Site Reclamation Planning",
-      "Tailings Remediation",
-      "Land Restoration",
-      "Regulatory Compliance",
-    ],
-  },
-  {
-    id: "mru-deployment",
-    title: "Mobile Research Unit (MRU) Deployment",
-    icon: Truck,
-    description: "Bring processing capability directly to your site with our Mobile Research Unit. The MRU provides on-site testing and small-scale production without permanent infrastructure investment.",
-    services: [
-      "On-Site Ore Processing",
-      "Pilot-Scale Testing",
-      "Recovery Optimization",
-      "Proof-of-Concept Operations",
-    ],
-  },
-  {
-    id: "project-management",
-    title: "Project Management & Permitting",
-    icon: FolderKanban,
-    description: "Navigate the complex regulatory landscape with expert guidance. Our team manages the entire permitting process, from initial applications through final approvals and ongoing compliance.",
-    services: [
-      "Permit Application Management",
-      "Environmental Impact Assessment",
-      "Stakeholder Coordination",
-      "Compliance Monitoring",
-    ],
-  },
-  {
-    id: "material-testing",
-    title: "Material Testing & Validation",
-    icon: FlaskConical,
-    description: "Validate your resource before committing capital. Our comprehensive testing programs provide the data you need for informed decision-making on project viability and processing approach.",
-    services: [
-      "Ore Characterization",
-      "Recovery Rate Testing",
-      "Metallurgical Analysis",
-      "Economic Feasibility Studies",
-    ],
-  },
-  {
-    id: "technology-partnerships",
-    title: "Technology Deployment Partnerships",
-    icon: Handshake,
-    description: "Partner with MineTeck to deploy our proven zero-waste technology at your operations. We provide licensing, training, and ongoing support for successful technology implementation.",
-    services: [
-      "Technology Licensing",
-      "Implementation Support",
-      "Operator Training",
-      "Ongoing Technical Assistance",
     ],
   },
 ];
@@ -170,14 +90,13 @@ const Services = () => {
             >
               <motion.h1
                 variants={fadeUp}
-                className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
+                className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-4"
               >
-                Eco-Friendly Mining{" "}
-                <span className="text-gold">Solutions</span>
+                Customized Mining Solutions
               </motion.h1>
               <motion.p
                 variants={fadeUp}
-                className="font-display text-xl md:text-2xl text-gold/80 tracking-wide mb-6"
+                className="font-display text-xl md:text-2xl text-white/90 tracking-wide mb-6"
               >
                 Design · Develop · Deploy
               </motion.p>
@@ -185,11 +104,9 @@ const Services = () => {
                 variants={fadeUp}
                 className="font-inter text-lg text-white/80 leading-relaxed mb-8"
               >
-                MineTeck analyzes and designs customized flowsheets to safely and 
-                responsibly recover precious metals without toxic chemicals or 
-                environmental harm. Our zero-waste approach combines proven gravity 
-                separation technology with advanced water management systems, 
-                delivering regulatory compliance and operational efficiency from day one.
+                MineTeck will analyze and design a customized flowsheet, to safely, 
+                responsibly recover your precious metals without toxic chemicals or 
+                harm to the environment.
               </motion.p>
               <motion.div variants={fadeUp}>
                 <Link to="/access#services">
@@ -218,43 +135,45 @@ const Services = () => {
               {SERVICES.map((service) => {
                 const IconComponent = service.icon;
                 return (
-                  <motion.div key={service.id} variants={staggerItem}>
+                  <motion.div 
+                    key={service.id} 
+                    id={service.id}
+                    variants={staggerItem}
+                    className="scroll-mt-24"
+                  >
                     <Card className="h-full bg-card border-border hover:border-gold/30 transition-colors duration-300 group">
-                      <CardHeader className="pb-4">
-                        <div className="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
-                          <IconComponent className="w-7 h-7 text-gold" />
+                      <CardContent className="p-8">
+                        <div className="flex items-start gap-4 mb-6">
+                          <div className="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors">
+                            <IconComponent className="w-7 h-7 text-gold" />
+                          </div>
+                          <h2 className="font-display text-xl md:text-2xl font-bold text-foreground pt-2">
+                            {service.title}
+                          </h2>
                         </div>
-                        <CardTitle className="font-display text-xl md:text-2xl text-foreground">
-                          {service.title}
-                        </CardTitle>
-                        <CardDescription className="font-inter text-muted-foreground leading-relaxed">
-                          {service.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="pb-4">
-                        <ul className="space-y-2">
+                        
+                        <ul className="space-y-3 mb-8">
                           {service.services.map((item) => (
                             <li
                               key={item}
-                              className="flex items-center gap-2 font-inter text-sm text-foreground/80"
+                              className="flex items-start gap-3 font-inter text-foreground/80"
                             >
-                              <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                              <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0" />
                               {item}
                             </li>
                           ))}
                         </ul>
-                      </CardContent>
-                      <CardFooter>
-                        <Link to="/access#services" className="w-full">
+
+                        <Link to="/access#services">
                           <Button
                             variant="outline"
-                            className="w-full border-gold/50 text-gold hover:bg-gold hover:text-navy font-inter font-medium transition-all duration-200"
+                            className="border-gold/50 text-gold hover:bg-gold hover:text-navy font-inter font-medium transition-all duration-200 group/btn"
                           >
                             Request Services
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                           </Button>
                         </Link>
-                      </CardFooter>
+                      </CardContent>
                     </Card>
                   </motion.div>
                 );
