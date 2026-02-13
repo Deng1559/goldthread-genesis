@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { OpportunityCarousel } from "@/components/sections/OpportunityCarousel";
 import heroHistoric from "@/assets/hero-historic.jpg";
 import heroModern from "@/assets/hero-modern.jpg";
 
@@ -14,7 +15,7 @@ const OPENING_PARAGRAPH = "Between 1859 and 1917, Colorado's mining districts pr
 export function Hero() {
   return (
     <section
-      className="relative h-[60vh] md:h-[70vh] lg:h-[95vh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[80vh] md:min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden py-16"
       aria-label="Hero section"
     >
       {/* Split-Screen Background */}
@@ -86,6 +87,9 @@ export function Hero() {
             </div>
           ))}
         </div>
+
+        {/* Opportunity Carousel */}
+        <OpportunityCarousel />
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
