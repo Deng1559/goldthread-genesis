@@ -44,9 +44,9 @@ export const PROOF_METRICS = [
     footnote: "Projected timeline",
   },
   {
-    value: 1,
+    value: 0,
     prefix: "",
-    suffix: "ST AND ONLY TOLL MILL",
+    suffix: "FIRST",
     label: "Permit in 20 Years",
     footnote: "Colorado regulatory milestone",
   },
