@@ -69,7 +69,7 @@ export const PROJECT_CARDS: ProjectCardData[] = [
     name: "Russell Gulch",
     status: "Permitted Reclamation",
     capital: "$1.25M",
-    timeline: "6–9 months",
+    timeline: "3-6 months",
     projectType: "Tailings Reprocessing",
     mruStatus: "Proven",
     material: "70K+ tons @ 4 gpt. Fastest to Revenue",
