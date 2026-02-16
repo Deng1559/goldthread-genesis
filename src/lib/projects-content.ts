@@ -150,7 +150,7 @@ export const PROJECTS: ProjectData[] = [
     known: {
       title: "Known & Verified",
       items: [
-        "12 acres of material at 6–10 gpt",
+        "12 acres of material at 4-6 gpt",
         "Existing permit status confirmed",
         "MRU technology performance validated",
         "Revenue model: $17M/yr toll + $40M own processing",
