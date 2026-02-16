@@ -81,7 +81,7 @@ export const PROJECT_CARDS: ProjectCardData[] = [
     status: "Lease Secured",
     capital: "$3.6M",
     timeline: "18–24 months",
-    projectType: "Underground / Open Pit",
+    projectType: "New Mill to Process near-by piles",
     mruStatus: "Scalable",
     material: "500K+ tons @ 10 gpt",
     differentiator: "Largest Material Volume",
