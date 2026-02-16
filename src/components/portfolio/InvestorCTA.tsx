@@ -20,7 +20,7 @@ const FUND_BENEFITS = [
 const FUND_TERMS = [
   { label: "Target", value: "10% preferred annual return + equity upside" },
   { label: "Structure", value: "Asset-backed with real property security" },
-  { label: "Minimum", value: "$500K (accredited investors only)" },
+  { label: "Minimum", value: "$50K (accredited investors only)" },
 ];
 
 export function InvestorCTA() {
@@ -99,12 +99,10 @@ export function InvestorCTA() {
           <div className="mt-10 text-center">
             <div className="h-px w-48 bg-gold/30 mx-auto mb-8" />
             <p className="font-body text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-4">
-              The gold never left Colorado. It just waited for prices to rise, technology to evolve, 
-              regulations to adapt, and five factors to align.
+              The gold never left Colorado. It just waited for prices to rise, technology to evolve, regulations to
+              adapt, and five factors to align.
             </p>
-            <p className="font-body text-gold font-medium text-lg">
-              That convergence has now occurred.
-            </p>
+            <p className="font-body text-gold font-medium text-lg">That convergence has now occurred.</p>
             <div className="h-px w-48 bg-gold/30 mx-auto mt-8" />
           </div>
         </motion.div>
