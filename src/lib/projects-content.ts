@@ -88,13 +88,13 @@ export const PROJECT_CARDS: ProjectCardData[] = [
   },
   {
     slug: "b-group",
-    name: "B-Group Properties",
+    name: "Stanley Rd",
     status: "Under Contract",
     capital: "$4.5M",
     timeline: "18–24 months",
-    projectType: "Processing Site",
-    mruStatus: "Adjacent to Gladstone",
-    material: "400K tons @ 6 gpt",
+    projectType: "Large Resource, plus Mill Site, plus Mines",
+    mruStatus: "Under Contract",
+    material: "200K tons @ 4-6 gpt",
     differentiator: "Strategic Adjacency to Mill",
   },
 ];
@@ -324,7 +324,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     slug: "b-group",
-    name: "B-Group Properties",
+    name: "Stanley Rd",
     tagline: "Strategic adjacency to Gladstone mill",
     status: "Evaluation",
     overview:
