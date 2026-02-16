@@ -15,7 +15,7 @@ export const TECHNOLOGY_PAGE_CONTENT = {
       "EPA TCLP/SPLP/ABA validation (1,000-year toxicity certification)",
       "First new toll mill permit in Colorado in 20+ years",
       "Deployable in 12 months vs. 7-15 years traditional",
-      "Modular CAPEX: $4M per unit vs. $400M traditional facility",
+      "Modular CAPEX: $2M vs $20M to $40M Traditional",
       "95%+ water recycling rate exceeds regulatory requirements",
     ],
     quote: {

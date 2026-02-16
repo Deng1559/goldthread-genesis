@@ -7,7 +7,7 @@ const MRU_FEATURES = [
   "EPA TCLP/SPLP/ABA validation (1,000-year toxicity certification)",
   "First new permit in Colorado in 20+ years",
   "Deployable in 12 months",
-  "Modular CAPEX: $4M vs $400M traditional",
+  "Modular CAPEX: $2M vs $20M to $40M Traditional",
 ];
 
 export function TechnologySection() {
