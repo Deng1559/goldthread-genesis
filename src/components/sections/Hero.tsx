@@ -97,7 +97,7 @@ const PROOF_STATS = [
   { value: "$200M+", label: "in Contracted Material" },
   { value: "12–24", label: "Months to Revenue" },
   { value: "$4,900+", label: "Gold Per Ounce (All-Time High)" },
-  { value: "First", label: "Toll Mill Permit in 20 Years" },
+  { value: "First and ONLY", label: "Toll Mill Permit in 20 Years" },
 ];
 
 const INTERVAL = 8000;
