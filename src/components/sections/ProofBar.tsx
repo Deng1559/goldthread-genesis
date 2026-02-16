@@ -50,7 +50,7 @@ function Counter({ value, prefix = "", suffix = "", label, footnote, isInView }:
   return (
     <div className="text-center px-6 md:px-8 py-4">
       <div className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-1 tracking-tight">
-        {prefix}{formatNumber(displayValue)}{suffix}
+        {prefix}{value > 0 ? formatNumber(displayValue) : ""}{suffix}
       </div>
       <div className="font-body text-white text-base md:text-lg font-medium mb-1">
         {label}
