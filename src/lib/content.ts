@@ -55,7 +55,7 @@ export const PROOF_METRICS = [
     prefix: "",
     suffix: "",
     label: "Permitted Projects",
-    footnote: "Active development pipeline",
+    footnote: "2 with More in Process",
   },
 ];
 
