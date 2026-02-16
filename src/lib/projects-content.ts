@@ -77,7 +77,7 @@ export const PROJECT_CARDS: ProjectCardData[] = [
   },
   {
     slug: "crown",
-    name: "Crown Mining",
+    name: "The Quarry",
     status: "Lease Secured",
     capital: "$3.6M",
     timeline: "18–24 months",
@@ -255,7 +255,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     slug: "crown",
-    name: "Crown Mining",
+    name: "The Quarry",
     tagline: "Largest material volume in portfolio",
     status: "Evaluation",
     overview:
