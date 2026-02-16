@@ -20,7 +20,7 @@ export default function Technology() {
   const statusColors = {
     Complete: "bg-forest text-white",
     "In Progress": "bg-gold text-white",
-    Pending: "bg-muted text-muted-foreground",
+    Pending: "bg-muted text-muted-foreground"
   };
 
   return (
@@ -35,16 +35,16 @@ export default function Technology() {
               className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
               variants={prefersReducedMotion ? {} : fadeUp}
               initial="hidden"
-              animate="visible"
-            >
+              animate="visible">
+
               {content.hero.headline}
             </motion.h1>
             <motion.p
               className="font-body text-lg text-white/80 max-w-2xl mx-auto mb-8"
               variants={prefersReducedMotion ? {} : fadeUp}
               initial="hidden"
-              animate="visible"
-            >
+              animate="visible">
+
               {content.hero.subheadline}
             </motion.p>
           </div>
@@ -60,8 +60,8 @@ export default function Technology() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="space-y-4"
-              >
+                className="space-y-4">
+
                 <div className="relative aspect-[16/10] bg-muted rounded-lg overflow-hidden border border-border">
                   <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
                     <div className="text-center">
@@ -97,8 +97,8 @@ export default function Technology() {
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-              >
+                viewport={{ once: true }}>
+
                 <p className="font-mono text-gold text-sm uppercase tracking-wider mb-2">
                   The Technology
                 </p>
@@ -109,20 +109,20 @@ export default function Technology() {
                   {content.mruOverview.intro}
                 </p>
                 <ul className="space-y-3 mb-8">
-                  {content.mruOverview.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                  {content.mruOverview.features.map((feature, index) =>
+                  <li key={index} className="flex items-start gap-3">
                       <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-gold" />
                       <span className="font-body text-foreground text-sm leading-relaxed">
                         {feature}
                       </span>
                     </li>
-                  ))}
+                  )}
                 </ul>
                 {/* Quote Box */}
                 <div
                   className="border-l-[3px] border-gold pl-4 py-4 mb-6"
-                  style={{ backgroundColor: "#FFF8E7" }}
-                >
+                  style={{ backgroundColor: "#FFF8E7" }}>
+
                   <p className="font-display text-sm italic text-charcoal/80 leading-relaxed mb-1">
                     "{content.mruOverview.quote.text}"
                   </p>
@@ -138,13 +138,13 @@ export default function Technology() {
                       Submit Investor Inquiry
                     </Button>
                   </Link>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-navy hover:text-gold transition-colors font-body text-sm font-medium"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                    View EPA Test Data (PDF)
-                  </a>
+                  
+
+
+
+
+
+
                 </div>
               </motion.div>
             </div>
@@ -158,22 +158,22 @@ export default function Technology() {
               eyebrow="Process Overview"
               title={content.processFlow.title}
               subtitle={content.processFlow.disclaimer}
-              className="mb-12"
-            />
+              className="mb-12" />
+
 
             <motion.div
               variants={prefersReducedMotion ? {} : staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {content.processFlow.steps.map((step) => (
-                <motion.div
-                  key={step.number}
-                  variants={fadeUp}
-                  className="relative bg-card border border-border rounded-xl p-6"
-                >
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+              {content.processFlow.steps.map((step) =>
+              <motion.div
+                key={step.number}
+                variants={fadeUp}
+                className="relative bg-card border border-border rounded-xl p-6">
+
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center">
                       <span className="font-mono text-sm font-bold text-white">
@@ -187,11 +187,11 @@ export default function Technology() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
-                  {step.number < content.processFlow.steps.length && (
-                    <ChevronRight className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 text-muted-foreground/30" />
-                  )}
+                  {step.number < content.processFlow.steps.length &&
+                <ChevronRight className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 text-muted-foreground/30" />
+                }
                 </motion.div>
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -205,8 +205,8 @@ export default function Technology() {
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-              >
+                viewport={{ once: true }}>
+
                 <div className="bg-forest/5 border border-forest/20 rounded-xl p-6 md:p-8 h-full">
                   <div className="flex items-center gap-3 mb-6">
                     <CheckCircle2 className="h-6 w-6 text-forest" />
@@ -215,8 +215,8 @@ export default function Technology() {
                     </h3>
                   </div>
                   <div className="space-y-6">
-                    {content.proven.items.map((item, index) => (
-                      <div key={index}>
+                    {content.proven.items.map((item, index) =>
+                    <div key={index}>
                         <h4 className="font-semibold text-charcoal mb-1">
                           {item.title}
                         </h4>
@@ -224,7 +224,7 @@ export default function Technology() {
                           {item.description}
                         </p>
                       </div>
-                    ))}
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -234,8 +234,8 @@ export default function Technology() {
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-              >
+                viewport={{ once: true }}>
+
                 <div className="bg-gold/5 border border-gold/20 rounded-xl p-6 md:p-8 h-full">
                   <div className="flex items-center gap-3 mb-6">
                     <HelpCircle className="h-6 w-6 text-gold" />
@@ -244,8 +244,8 @@ export default function Technology() {
                     </h3>
                   </div>
                   <div className="space-y-6">
-                    {content.unvalidated.items.map((item, index) => (
-                      <div key={index}>
+                    {content.unvalidated.items.map((item, index) =>
+                    <div key={index}>
                         <h4 className="font-semibold text-charcoal mb-1">
                           {item.title}
                         </h4>
@@ -253,7 +253,7 @@ export default function Technology() {
                           {item.description}
                         </p>
                       </div>
-                    ))}
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -268,16 +268,16 @@ export default function Technology() {
               eyebrow="Engineering Estimates"
               title={content.metallurgyAssumptions.title}
               subtitle={content.metallurgyAssumptions.disclaimer}
-              className="mb-12"
-            />
+              className="mb-12" />
+
 
             <motion.div
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-xl overflow-hidden"
-            >
+              className="bg-card border border-border rounded-xl overflow-hidden">
+
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead className="bg-navy text-white">
@@ -294,8 +294,8 @@ export default function Technology() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-border">
-                    {content.metallurgyAssumptions.assumptions.map((assumption, index) => (
-                      <tr key={index} className="hover:bg-muted/50 transition-colors">
+                    {content.metallurgyAssumptions.assumptions.map((assumption, index) =>
+                    <tr key={index} className="hover:bg-muted/50 transition-colors">
                         <td className="px-6 py-4 font-medium text-charcoal">
                           {assumption.label}
                         </td>
@@ -306,7 +306,7 @@ export default function Technology() {
                           {assumption.note}
                         </td>
                       </tr>
-                    ))}
+                    )}
                   </tbody>
                 </table>
               </div>
@@ -321,32 +321,32 @@ export default function Technology() {
               eyebrow="ESG Commitment"
               title={content.environmental.title}
               subtitle={content.environmental.description}
-              className="mb-12 [&_h2]:text-white [&_p]:text-white/80 [&_p:first-child]:text-forest-light"
-            />
+              className="mb-12 [&_h2]:text-white [&_p]:text-white/80 [&_p:first-child]:text-forest-light" />
+
 
             <motion.div
               variants={prefersReducedMotion ? {} : staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="grid md:grid-cols-2 gap-6"
-            >
-              {content.environmental.points.map((point, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >
+              className="grid md:grid-cols-2 gap-6">
+
+              {content.environmental.points.map((point, index) =>
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+
                   <div className="flex items-start gap-4">
                     <div className={cn(
-                      "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center",
-                      point.verified ? "bg-white/20" : "bg-gold/20"
-                    )}>
-                      {point.verified ? (
-                        <CheckCircle2 className="h-5 w-5 text-white" />
-                      ) : (
-                        <HelpCircle className="h-5 w-5 text-gold" />
-                      )}
+                    "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center",
+                    point.verified ? "bg-white/20" : "bg-gold/20"
+                  )}>
+                      {point.verified ?
+                    <CheckCircle2 className="h-5 w-5 text-white" /> :
+
+                    <HelpCircle className="h-5 w-5 text-gold" />
+                    }
                     </div>
                     <div>
                       <div className="flex items-center gap-2 mb-2">
@@ -354,14 +354,14 @@ export default function Technology() {
                           {point.title}
                         </h4>
                         <Badge
-                          variant="outline"
-                          className={cn(
-                            "text-xs",
-                            point.verified
-                              ? "border-white/30 text-white"
-                              : "border-gold/50 text-gold"
-                          )}
-                        >
+                        variant="outline"
+                        className={cn(
+                          "text-xs",
+                          point.verified ?
+                          "border-white/30 text-white" :
+                          "border-gold/50 text-gold"
+                        )}>
+
                           {point.verified ? "Verified" : "Validation Pending"}
                         </Badge>
                       </div>
@@ -371,7 +371,7 @@ export default function Technology() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -383,22 +383,22 @@ export default function Technology() {
               eyebrow="Development Status"
               title={content.verificationRoadmap.title}
               subtitle={content.verificationRoadmap.disclaimer}
-              className="mb-12"
-            />
+              className="mb-12" />
+
 
             <motion.div
               variants={prefersReducedMotion ? {} : staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="space-y-4"
-            >
-              {content.verificationRoadmap.phases.map((phase, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  className="flex items-center gap-4 md:gap-8 bg-card border border-border rounded-xl p-4 md:p-6"
-                >
+              className="space-y-4">
+
+              {content.verificationRoadmap.phases.map((phase, index) =>
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="flex items-center gap-4 md:gap-8 bg-card border border-border rounded-xl p-4 md:p-6">
+
                   <div className="flex-shrink-0 w-16 text-center">
                     <span className="font-mono text-sm font-bold text-navy">
                       {phase.phase}
@@ -416,7 +416,7 @@ export default function Technology() {
                     {phase.status}
                   </Badge>
                 </motion.div>
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -428,16 +428,16 @@ export default function Technology() {
               eyebrow="Risk Management"
               title={content.riskRegister.title}
               subtitle={content.riskRegister.description}
-              className="mb-12"
-            />
+              className="mb-12" />
+
 
             <motion.div
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-xl overflow-hidden"
-            >
+              className="bg-card border border-border rounded-xl overflow-hidden">
+
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead className="bg-navy text-white">
@@ -460,8 +460,8 @@ export default function Technology() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-border">
-                    {content.riskRegister.risks.map((risk, index) => (
-                      <tr key={index} className="hover:bg-muted/50 transition-colors">
+                    {content.riskRegister.risks.map((risk, index) =>
+                    <tr key={index} className="hover:bg-muted/50 transition-colors">
                         <td className="px-4 py-4 font-medium text-charcoal">
                           <div className="flex items-center gap-2">
                             <AlertTriangle className="h-4 w-4 text-gold flex-shrink-0" />
@@ -483,7 +483,7 @@ export default function Technology() {
                           </Badge>
                         </td>
                       </tr>
-                    ))}
+                    )}
                   </tbody>
                 </table>
               </div>
@@ -498,20 +498,20 @@ export default function Technology() {
               title="Complete Technical Documentation"
               description="Full engineering reports, process specifications, and verification data are available to qualified investors and partners."
               items={[
-                "Detailed process flow diagrams",
-                "Metallurgical test results",
-                "Equipment specifications",
-                "Environmental assessments",
-                "Third-party validation reports",
-              ]}
+              "Detailed process flow diagrams",
+              "Metallurgical test results",
+              "Equipment specifications",
+              "Environmental assessments",
+              "Third-party validation reports"]
+              }
               ctaText="Submit Technical Inquiry"
-              ctaHref="/access"
-            />
+              ctaHref="/access" />
+
           </div>
         </section>
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
