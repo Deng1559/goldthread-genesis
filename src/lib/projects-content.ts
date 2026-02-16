@@ -72,7 +72,7 @@ export const PROJECT_CARDS: ProjectCardData[] = [
     timeline: "6–9 months",
     projectType: "Tailings Reprocessing",
     mruStatus: "Proven",
-    material: "70K+ tons @ 4 gpt",
+    material: "70K+ tons @ 4 gpt. Fastest to Revenue",
     differentiator: "Fastest to Revenue",
   },
   {
