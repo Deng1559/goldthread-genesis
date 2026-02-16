@@ -46,8 +46,8 @@ export const PROOF_METRICS = [
   {
     value: 1,
     prefix: "",
-    suffix: "st",
-    label: "Toll Mill Permit in 20 Years",
+    suffix: "ST AND ONLY TOLL MILL",
+    label: "Permit in 20 Years",
     footnote: "Colorado regulatory milestone",
   },
   {
