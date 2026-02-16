@@ -59,7 +59,7 @@ export const PROJECT_CARDS: ProjectCardData[] = [
     capital: "$4.0M",
     timeline: "12–18 months",
     projectType: "Toll Mill / Processing Site",
-    mruStatus: "Operational",
+    mruStatus: "Pilot Upscaling to Production Volume",
     material: "12 acres, 6–10 gpt",
     revenue: "$17M/yr toll + $40M own processing",
     differentiator: "First Toll Mill Permit Since 2002",
