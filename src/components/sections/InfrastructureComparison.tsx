@@ -10,7 +10,7 @@ const COMPARISON_DATA = [
 },
 {
   label: "Capital Required",
-  traditional: "$200M-$2B",
+  traditional: "$20M-$40M",
   infrastructure: "$2-8M per project"
 },
 {
