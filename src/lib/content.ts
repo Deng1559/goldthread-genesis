@@ -51,7 +51,7 @@ export const PROOF_METRICS = [
     footnote: "Colorado regulatory milestone",
   },
   {
-    value: 4,
+    value: 2,
     prefix: "",
     suffix: "",
     label: "Permitted Projects",
