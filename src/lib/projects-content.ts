@@ -56,19 +56,19 @@ export const PROJECT_CARDS: ProjectCardData[] = [
     slug: "gladstone",
     name: "Gladstone Toll Mill",
     status: "Permitted",
-    capital: "$4.0M",
+    capital: "$6.0M",
     timeline: "12–18 months",
     projectType: "Toll Mill / Processing Site",
     mruStatus: "Pilot Upscaling to Production Volume",
-    material: "12 acres, 4-6 gpt",
+    material: "12 acres, 6–10 gpt",
     revenue: "$17M/yr toll + $40M own processing",
-    differentiator: "First Toll Mill Permit Since 2002",
+    differentiator: "Only Toll Mill Permit Since 2002",
   },
   {
     slug: "russell-gulch",
     name: "Russell Gulch",
     status: "Permitted Reclamation",
-    capital: "$750K",
+    capital: "$1.25M",
     timeline: "6–9 months",
     projectType: "Tailings Reprocessing",
     mruStatus: "Proven",
@@ -104,8 +104,10 @@ export const PROJECTS_PAGE_CONTENT = {
     headline: "Four Projects. One Gold Rush.",
     subheadline: "Technology Proven at Gladstone. Replicating Across Colorado.",
   },
-  intro: "MineTeck's portfolio approach de-risks the single-site gamble. Each project represents a permitted or near-permitted site with above-ground material, pre-contracted processing agreements, and staggered revenue timelines. Our Modular Recovery Unit technology—proven at Gladstone—replicates across all sites.",
-  disclaimer: "All project information is provided for informational purposes only. Access to detailed financials, permits, and projections requires qualified investor verification.",
+  intro:
+    "MineTeck's portfolio approach de-risks the single-site gamble. Each project represents a permitted or near-permitted site with above-ground material, pre-contracted processing agreements, and staggered revenue timelines. Our Modular Recovery Unit technology—proven at Gladstone—replicates across all sites.",
+  disclaimer:
+    "All project information is provided for informational purposes only. Access to detailed financials, permits, and projections requires qualified investor verification.",
 };
 
 // Keep detailed project data for detail pages
@@ -115,11 +117,14 @@ export const PROJECTS: ProjectData[] = [
     name: "Gladstone Toll Mill",
     tagline: "First toll mill permit in Colorado since 2002",
     status: "Active",
-    overview: "The Gladstone site represents MineTeck's primary infrastructure asset. A permitted toll mill facility with operational MRU technology, this site eliminates the greenfield permitting timeline that typically constrains new mining operations in Colorado.",
+    overview:
+      "The Gladstone site represents MineTeck's primary infrastructure asset. A permitted toll mill facility with operational MRU technology, this site eliminates the greenfield permitting timeline that typically constrains new mining operations in Colorado.",
     siteContext: {
       location: "San Juan County, Colorado",
-      description: "Located in the historic San Juan mining district, the Gladstone site sits on a legacy mill location with established road access and proximity to regional utilities.",
-      historicalSignificance: "The site has documented production history dating to the late 1800s, with significant gold recovery during multiple operating periods.",
+      description:
+        "Located in the historic San Juan mining district, the Gladstone site sits on a legacy mill location with established road access and proximity to regional utilities.",
+      historicalSignificance:
+        "The site has documented production history dating to the late 1800s, with significant gold recovery during multiple operating periods.",
     },
     infrastructure: {
       title: "Existing Infrastructure",
@@ -183,11 +188,14 @@ export const PROJECTS: ProjectData[] = [
     name: "Russell Gulch",
     tagline: "Fastest path to revenue with proven MRU technology",
     status: "Development",
-    overview: "The Russell Gulch project targets historic tailings deposits with documented gold content. With permitted reclamation status and proven MRU technology, this represents MineTeck's fastest path to revenue generation.",
+    overview:
+      "The Russell Gulch project targets historic tailings deposits with documented gold content. With permitted reclamation status and proven MRU technology, this represents MineTeck's fastest path to revenue generation.",
     siteContext: {
       location: "Gilpin County, Colorado",
-      description: "Situated in the historic Central City mining district, Russell Gulch contains accumulated tailings from over a century of mining activity.",
-      historicalSignificance: "One of the earliest gold mining areas in Colorado, with production dating to the 1859 gold rush.",
+      description:
+        "Situated in the historic Central City mining district, Russell Gulch contains accumulated tailings from over a century of mining activity.",
+      historicalSignificance:
+        "One of the earliest gold mining areas in Colorado, with production dating to the 1859 gold rush.",
     },
     infrastructure: {
       title: "Site Infrastructure",
@@ -250,11 +258,14 @@ export const PROJECTS: ProjectData[] = [
     name: "Crown Mining",
     tagline: "Largest material volume in portfolio",
     status: "Evaluation",
-    overview: "The Crown Property represents MineTeck's largest material opportunity with 500K+ tons at 10 gpt. With lease secured and scalable MRU technology ready for deployment, this site anchors the long-term portfolio strategy.",
+    overview:
+      "The Crown Property represents MineTeck's largest material opportunity with 500K+ tons at 10 gpt. With lease secured and scalable MRU technology ready for deployment, this site anchors the long-term portfolio strategy.",
     siteContext: {
       location: "Clear Creek County, Colorado",
-      description: "The Crown Property spans multiple historic claim areas in a geologically favorable zone with documented high-grade mineralization.",
-      historicalSignificance: "Adjacent to historically productive mines with documented gold and silver production spanning over a century.",
+      description:
+        "The Crown Property spans multiple historic claim areas in a geologically favorable zone with documented high-grade mineralization.",
+      historicalSignificance:
+        "Adjacent to historically productive mines with documented gold and silver production spanning over a century.",
     },
     infrastructure: {
       title: "Available Infrastructure",
@@ -316,10 +327,12 @@ export const PROJECTS: ProjectData[] = [
     name: "B-Group Properties",
     tagline: "Strategic adjacency to Gladstone mill",
     status: "Evaluation",
-    overview: "The B-Group Properties provide strategic adjacency to the Gladstone toll mill, enabling efficient material processing and shared infrastructure. Under contract with 400K tons at 6 gpt, this represents meaningful portfolio expansion.",
+    overview:
+      "The B-Group Properties provide strategic adjacency to the Gladstone toll mill, enabling efficient material processing and shared infrastructure. Under contract with 400K tons at 6 gpt, this represents meaningful portfolio expansion.",
     siteContext: {
       location: "San Juan County, Colorado",
-      description: "Adjacent to Gladstone operations, the B-Group Properties leverage existing infrastructure and processing capacity.",
+      description:
+        "Adjacent to Gladstone operations, the B-Group Properties leverage existing infrastructure and processing capacity.",
       historicalSignificance: "Part of the broader San Juan mining district with documented production history.",
     },
     infrastructure: {
