@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import mruDiagram from "@/assets/mru-diagram.png";
+import mruMobileUnit from "@/assets/mru-mobile-unit.png";
 
 const MRU_FEATURES = [
   "Zero-waste gold recovery",
@@ -32,22 +33,9 @@ export function TechnologySection() {
               <img src={mruDiagram} alt="Mobile Research Unit (MRU) process flow diagram" className="w-full h-full object-contain" />
             </div>
 
-            {/* Secondary Images Row */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-[4/3] bg-muted rounded-lg overflow-hidden border border-border">
-                <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                  <span className="text-muted-foreground/40 font-body text-xs text-center px-4">
-                    Processing facility detail
-                  </span>
-                </div>
-              </div>
-              <div className="relative aspect-[4/3] bg-muted rounded-lg overflow-hidden border border-border">
-                <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                  <span className="text-muted-foreground/40 font-body text-xs text-center px-4">
-                    Zero-waste output demonstration
-                  </span>
-                </div>
-              </div>
+            {/* Secondary Image */}
+            <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border">
+              <img src={mruMobileUnit} alt="MineTeck Mobile Recovery Unit" className="w-full h-full object-contain" />
             </div>
           </div>
 
