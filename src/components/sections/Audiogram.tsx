@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const AUDIO_SRC = "/audio/andrew-gladstone-narration.mp3";
 const SYNC_OFFSET = -0.15;
@@ -38,9 +39,9 @@ const SCENES: Scene[] = [
     id: "s1", s: 0, e: 13.7,
     render: () => (
       <div className="flex flex-col items-center justify-center text-center">
-        <p className="font-sans text-white/70 font-light text-base md:text-lg max-w-xl">In every gold rush, most people chase the gold.</p>
+        <p className="font-sans text-white/70 font-light text-sm sm:text-base md:text-lg max-w-xl">In every gold rush, most people chase the gold.</p>
         <GoldLine />
-        <p className="font-display text-gold text-2xl md:text-4xl font-bold leading-tight">
+        <p className="font-display text-gold text-xl sm:text-2xl md:text-4xl font-bold leading-tight">
           The real money is in owning<br /><span className="text-gold">the infrastructure.</span>
         </p>
       </div>
@@ -61,12 +62,12 @@ const SCENES: Scene[] = [
     id: "s3", s: 30.7, e: 46.4,
     render: () => (
       <div className="flex flex-col items-center justify-center text-center">
-        <p className="font-sans text-white/70 text-base md:text-lg">The gold didn't run out.</p>
+        <p className="font-sans text-white/70 text-sm sm:text-base md:text-lg">The gold didn't run out.</p>
         <GoldLine />
-        <p className="font-display text-gold text-xl md:text-3xl font-bold leading-tight">
+        <p className="font-display text-gold text-lg sm:text-xl md:text-3xl font-bold leading-tight">
           Processing capacity<br /><span className="text-white/90">disappeared.</span>
         </p>
-        <p className="font-sans text-white/50 text-sm mt-4 max-w-lg">
+        <p className="font-sans text-white/50 text-xs sm:text-sm mt-3 sm:mt-4 max-w-lg">
           Environmental regulations closed every mill in the region.<br />No new permits issued in <span className="text-gold">20 years</span>.
         </p>
       </div>
@@ -76,7 +77,7 @@ const SCENES: Scene[] = [
     id: "s4", s: 46.4, e: 51.1,
     render: () => (
       <div className="flex flex-col items-center justify-center text-center">
-        <p className="font-display text-gold text-3xl md:text-5xl font-bold leading-tight" style={{ textShadow: "0 0 60px rgba(201,168,76,0.12)" }}>
+        <p className="font-display text-gold text-2xl sm:text-3xl md:text-5xl font-bold leading-tight" style={{ textShadow: "0 0 60px rgba(201,168,76,0.12)" }}>
           The permit<br /><span className="text-white">IS</span> the asset.
         </p>
       </div>
@@ -110,7 +111,7 @@ const SCENES: Scene[] = [
             <SyncReveal key={item.at} at={item.at} currentTime={currentTime}>
               <div className="flex items-start gap-3">
                 <span className="text-gold text-xs mt-0.5 flex-shrink-0">✦</span>
-                <span className="font-sans text-white/90 text-sm md:text-base">{item.text}</span>
+                <span className="font-sans text-white/90 text-xs sm:text-sm md:text-base">{item.text}</span>
               </div>
             </SyncReveal>
           ))}
@@ -123,7 +124,7 @@ const SCENES: Scene[] = [
     render: () => (
       <div className="flex flex-col items-center justify-center text-center">
         <p className="font-sans text-white/50 text-xs uppercase tracking-wider mb-4">Competitive Moat</p>
-        <p className="font-display text-gold text-2xl md:text-4xl font-bold leading-tight" style={{ textShadow: "0 0 40px rgba(201,168,76,0.12)" }}>
+        <p className="font-display text-gold text-xl sm:text-2xl md:text-4xl font-bold leading-tight" style={{ textShadow: "0 0 40px rgba(201,168,76,0.12)" }}>
           The <span className="underline decoration-gold/40 underline-offset-4">only</span> permitted toll mill<br />in Colorado.
         </p>
         <GoldLine />
@@ -136,7 +137,7 @@ const SCENES: Scene[] = [
     render: () => (
       <div className="flex flex-col items-center justify-center text-center">
         <p className="font-sans text-white/50 text-xs uppercase tracking-wider mb-4">Location</p>
-        <p className="font-display text-gold text-2xl md:text-3xl font-bold" style={{ textShadow: "0 0 40px rgba(201,168,76,0.12)" }}>Gladstone, Colorado</p>
+        <p className="font-display text-gold text-xl sm:text-2xl md:text-3xl font-bold" style={{ textShadow: "0 0 40px rgba(201,168,76,0.12)" }}>Gladstone, Colorado</p>
         <GoldLine />
         <p className="font-sans text-white/60 text-sm max-w-md">
           Heart of the historic Clear Creek mining district.<br />Direct access to <span className="text-gold">4,000+ abandoned mines</span> within a 50-mile radius.
@@ -149,9 +150,9 @@ const SCENES: Scene[] = [
     render: () => (
       <div className="flex flex-col items-center justify-center text-center">
         <p className="font-sans text-white/50 text-xs uppercase tracking-wider mb-4">Revenue Model</p>
-        <p className="font-display text-gold text-2xl md:text-3xl font-bold" style={{ textShadow: "0 0 40px rgba(201,168,76,0.12)" }}>Toll Processing</p>
+        <p className="font-display text-gold text-xl sm:text-2xl md:text-3xl font-bold" style={{ textShadow: "0 0 40px rgba(201,168,76,0.12)" }}>Toll Processing</p>
         <GoldLine />
-        <p className="font-sans text-white/70 text-base md:text-lg max-w-xl">
+        <p className="font-sans text-white/70 text-sm sm:text-base md:text-lg max-w-xl">
           Miners bring their ore. <span className="text-gold font-semibold">We process it.</span><br />Recurring revenue without the mining risk.
         </p>
       </div>
@@ -180,7 +181,7 @@ const SCENES: Scene[] = [
           { at: 156.5, text: "INFRASTRUCTURE CREATES LEVERAGE" },
         ].map((item) => (
           <SyncReveal key={item.at} at={item.at} currentTime={currentTime}>
-            <span className="font-display text-gold font-bold text-xl md:text-3xl tracking-wider" style={{ textShadow: "0 0 40px rgba(201,168,76,0.12)" }}>
+            <span className="font-display text-gold font-bold text-base sm:text-xl md:text-3xl tracking-wider" style={{ textShadow: "0 0 40px rgba(201,168,76,0.12)" }}>
               {item.text}
             </span>
           </SyncReveal>
@@ -192,7 +193,7 @@ const SCENES: Scene[] = [
     id: "s12", s: 162.0, e: 166.5,
     render: () => (
       <div className="flex flex-col items-center justify-center text-center">
-        <p className="font-display text-gold text-3xl md:text-5xl font-bold tracking-wider" style={{ textShadow: "0 0 60px rgba(201,168,76,0.12)" }}>
+        <p className="font-display text-gold text-2xl sm:text-3xl md:text-5xl font-bold tracking-wider" style={{ textShadow: "0 0 60px rgba(201,168,76,0.12)" }}>
           OWN THE SHOVELS
         </p>
       </div>
@@ -228,6 +229,7 @@ function fmt(s: number): string {
 }
 
 export function Audiogram() {
+  const isMobile = useIsMobile();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const rafRef = useRef<number>(0);
   const waveRafRef = useRef<number>(0);
@@ -375,26 +377,26 @@ export function Audiogram() {
   const pct = (currentTime / TOTAL) * 100;
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-navy/95 relative overflow-hidden">
+    <section className="py-10 md:py-20 lg:py-24 bg-navy/95 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,160,23,0.05)_0%,transparent_50%)]" />
 
       <div className="container-narrow px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-gold mb-3 md:mb-4">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gold mb-2 md:mb-4">
               The Story Behind the Renaissance
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto">
               Listen: How Zero-Waste Technology Unlocked a Century of Stranded Value
             </p>
           </div>
 
           {/* Audiogram Container */}
-          <div className="max-w-[800px] mx-auto mb-6 md:mb-8">
+          <div className="max-w-[800px] mx-auto mb-4 md:mb-8">
             <div
               className="relative overflow-hidden rounded-lg shadow-2xl shadow-black/40 border border-white/10"
-              style={{ background: "#0a0a14", aspectRatio: "16/9" }}
+              style={{ background: "#0a0a14", aspectRatio: isMobile ? '3/4' : '16/9' }}
             >
               {/* Background glow */}
               <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 40%, rgba(201,168,76,0.04) 0%, transparent 70%)" }} />
@@ -403,7 +405,7 @@ export function Audiogram() {
               {SCENES.map((scene) => (
                 <div
                   key={scene.id}
-                  className="absolute inset-0 flex flex-col items-center justify-center p-6 md:p-12 transition-opacity duration-1000"
+                  className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 md:p-12 transition-opacity duration-1000"
                   style={{
                     opacity: activeSceneId === scene.id ? 1 : 0,
                     pointerEvents: activeSceneId === scene.id ? "auto" : "none",
@@ -416,7 +418,7 @@ export function Audiogram() {
 
               {/* Waveform */}
               {started && (
-                <div className="absolute bottom-16 left-0 right-0 flex items-end justify-center gap-[2px] h-6 px-4 pointer-events-none">
+                <div className="absolute bottom-14 sm:bottom-16 left-0 right-0 flex items-end justify-center gap-[2px] h-5 sm:h-6 px-4 pointer-events-none">
                   {Array.from({ length: BAR_COUNT }).map((_, i) => (
                     <div
                       key={i}
@@ -434,7 +436,7 @@ export function Audiogram() {
               {/* Progress Bar */}
               {started && (
                 <div
-                  className="absolute bottom-10 left-0 right-0 h-1 cursor-pointer z-30"
+                  className="absolute bottom-9 sm:bottom-10 left-0 right-0 h-1 cursor-pointer z-30"
                   style={{ background: "rgba(255,255,255,0.1)" }}
                   onClick={handleSeek}
                 >
@@ -447,15 +449,15 @@ export function Audiogram() {
 
               {/* Controls */}
               {started && (
-                <div className="absolute bottom-2 left-0 right-0 flex items-center justify-center gap-3 z-30">
+                <div className="absolute bottom-1 sm:bottom-2 left-0 right-0 flex items-center justify-center gap-2 sm:gap-3 z-30">
                   <button
                     onClick={togglePlay}
-                    className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs transition-colors"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-white text-xs transition-colors"
                     style={{ background: "rgba(255,255,255,0.1)" }}
                   >
                     {playing ? "⏸" : "▶"}
                   </button>
-                  <span className="font-mono text-white/50 text-xs tabular-nums">
+                  <span className="font-mono text-white/50 text-[10px] sm:text-xs tabular-nums">
                     {fmt(currentTime)} / {fmt(TOTAL)}
                   </span>
                 </div>
@@ -464,24 +466,24 @@ export function Audiogram() {
               {/* Start Overlay */}
               {!started && (
                 <div
-                  className="absolute inset-0 z-50 flex flex-col items-center justify-center cursor-pointer"
+                  className="absolute inset-0 z-50 flex flex-col items-center justify-center cursor-pointer px-4"
                   style={{ background: "rgba(10,10,20,0.95)", backdropFilter: "blur(4px)" }}
                   onClick={handleOverlayClick}
                 >
-                  <p className="font-sans text-white/50 text-xs uppercase tracking-widest mb-4">
+                  <p className="font-sans text-white/50 text-[10px] sm:text-xs uppercase tracking-widest mb-3 sm:mb-4">
                     A 3-Minute Investment Brief by Andrew Ferguson
                   </p>
-                  <h3 className="font-display text-center text-xl md:text-3xl font-bold leading-tight mb-6">
+                  <h3 className="font-display text-center text-lg sm:text-xl md:text-3xl font-bold leading-tight mb-4 sm:mb-6">
                     The <span className="text-gold">Only</span> Toll Mill in Colorado.<br />
                     The First in <span className="text-gold">20 Years.</span>
                   </h3>
                   <button
-                    className="w-16 h-16 rounded-full flex items-center justify-center text-gold text-2xl transition-colors"
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-gold text-xl sm:text-2xl transition-colors"
                     style={{ border: "2px solid #C9A84C", background: "rgba(201,168,76,0.15)" }}
                   >
                     ▶
                   </button>
-                  <p className="font-sans text-white/30 text-xs tracking-wider mt-4">Click to listen · 3:01</p>
+                  <p className="font-sans text-white/30 text-[10px] sm:text-xs tracking-wider mt-3 sm:mt-4">Tap to listen · 3:01</p>
                 </div>
               )}
             </div>
@@ -489,7 +491,7 @@ export function Audiogram() {
 
           {/* Description */}
           <div className="text-center">
-            <p className="text-white/80 text-sm md:text-base lg:text-lg max-w-2xl mx-auto">
+            <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto">
               Andrew Ferguson, Founder &amp; CEO of MineTeck, explains the regulatory gridlock
               that kept billions in gold untouchable for 80 years—and how his team solved it.{" "}
               <span className="text-white/50">(3 minutes)</span>
