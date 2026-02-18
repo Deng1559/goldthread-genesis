@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
+import mruDiagram from "@/assets/mru-diagram.png";
+import mruMobileUnit from "@/assets/mru-mobile-unit.png";
 
 const MRU_FEATURES = [
-"Zero-waste gold recovery",
-"EPA TCLP/SPLP/ABA validation (1,000-year toxicity certification)",
-"First new permit in Colorado in 20+ years",
-"Deployable in 12 months",
-"Modular CAPEX: $2M vs $20M to $40M Traditional"];
-
+  "Zero-waste gold recovery",
+  "EPA TCLP/SPLP/ABA validation (1,000-year toxicity certification)",
+  "First new permit in Colorado in 20+ years",
+  "Deployable in 12 months",
+  "Modular CAPEX: $2M vs $20M to $40M Traditional",
+];
 
 export function TechnologySection() {
   return (
@@ -27,35 +29,13 @@ export function TechnologySection() {
           {/* Left Column - Visuals (60% = 3/5) */}
           <div className="lg:col-span-3 space-y-4">
             {/* Main Image Placeholder */}
-            <div className="relative aspect-[16/10] bg-muted rounded-lg overflow-hidden border border-border">
-              <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="block text-muted-foreground/60 font-body text-sm mb-2">
-                    MRU (Modular Recovery Unit)
-                  </span>
-                  <span className="block text-muted-foreground/40 font-body text-xs">
-                    High-resolution image placeholder
-                  </span>
-                </div>
-              </div>
+            <div className="relative aspect-[16/10] bg-white rounded-lg overflow-hidden border border-border">
+              <img src={mruDiagram} alt="Mobile Research Unit (MRU) process flow diagram" className="w-full h-full object-contain" />
             </div>
 
-            {/* Secondary Images Row */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-[4/3] bg-muted rounded-lg overflow-hidden border border-border">
-                <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                  <span className="text-muted-foreground/40 font-body text-xs text-center px-4">
-                    Processing facility detail
-                  </span>
-                </div>
-              </div>
-              <div className="relative aspect-[4/3] bg-muted rounded-lg overflow-hidden border border-border">
-                <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                  <span className="text-muted-foreground/40 font-body text-xs text-center px-4">
-                    Zero-waste output demonstration
-                  </span>
-                </div>
-              </div>
+            {/* Secondary Image */}
+            <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border">
+              <img src={mruMobileUnit} alt="MineTeck Mobile Recovery Unit" className="w-full h-full object-contain" />
             </div>
           </div>
 
@@ -71,21 +51,21 @@ export function TechnologySection() {
 
             {/* Feature List */}
             <ul className="space-y-3 mb-8">
-              {MRU_FEATURES.map((feature, index) =>
-              <li key={index} className="flex items-start gap-3">
-                  
+              {MRU_FEATURES.map((feature, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-gold" />
                   <span className="font-body text-foreground text-sm leading-relaxed">
                     {feature}
                   </span>
                 </li>
-              )}
+              ))}
             </ul>
 
             {/* Ferguson Quote Box */}
             <div
               className="border-l-[3px] border-gold pl-4 py-4 mb-8"
-              style={{ backgroundColor: "#FFF8E7" }}>
-
+              style={{ backgroundColor: "#FFF8E7" }}
+            >
               <p className="font-display text-sm italic text-charcoal/80 leading-relaxed">
                 "Technology enables access — doesn't guarantee outcomes. 
                 Execution determines economics."
@@ -97,8 +77,8 @@ export function TechnologySection() {
               <FileText className="w-4 h-4 text-gold" />
               <a
                 href="#"
-                className="font-body text-sm text-navy hover:text-gold transition-colors underline underline-offset-2">
-
+                className="font-body text-sm text-navy hover:text-gold transition-colors underline underline-offset-2"
+              >
                 View EPA Test Data (PDF)
               </a>
             </div>
@@ -108,14 +88,14 @@ export function TechnologySection() {
               <Button
                 variant="default"
                 size="lg"
-                className="w-full bg-navy hover:bg-navy/90 text-white font-body font-semibold">
-
+                className="w-full bg-navy hover:bg-navy/90 text-white font-body font-semibold"
+              >
                 Explore Full Technology Details
               </Button>
             </Link>
           </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }
