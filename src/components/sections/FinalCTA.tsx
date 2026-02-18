@@ -3,19 +3,19 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const FUND_BENEFITS = [
-  "Permitted infrastructure (not speculative exploration)",
-  "Contracted resources with documented values",
-  "12-24 month revenue timelines (not 7-15 years)",
-  "Zero-waste technology with regulatory validation",
-  "Portfolio diversification across 4+ projects",
-];
+"Permitted infrastructure (not speculative exploration)",
+"Contracted resources with documented values",
+"12-24 month revenue timelines (not 7-15 years)",
+"Zero-waste technology with regulatory validation",
+"Portfolio diversification across 4+ projects"];
+
 
 export function FinalCTA() {
   return (
     <section
       className="py-16 md:py-24 bg-navy"
-      aria-label="Qualified investor inquiry"
-    >
+      aria-label="Qualified investor inquiry">
+
       <div className="container-wide px-4">
         {/* Main CTA Card */}
         <div className="max-w-3xl mx-auto text-center">
@@ -31,14 +31,14 @@ export function FinalCTA() {
 
           {/* Benefits List */}
           <ul className="space-y-3 mb-8 text-left max-w-xl mx-auto">
-            {FUND_BENEFITS.map((benefit, index) => (
-              <li key={index} className="flex items-start gap-3">
+            {FUND_BENEFITS.map((benefit, index) =>
+            <li key={index} className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-gold" />
                 <span className="font-body text-white/85 text-base md:text-lg">
                   {benefit}
                 </span>
               </li>
-            ))}
+            )}
           </ul>
 
           {/* Investment Terms */}
@@ -50,7 +50,7 @@ export function FinalCTA() {
               </div>
               <div>
                 <p className="font-body text-white/60 text-sm uppercase tracking-wide mb-1">Minimum Investment</p>
-                <p className="font-display text-white text-xl font-semibold">$500K <span className="text-white/70 text-sm font-normal">(accredited only)</span></p>
+                <p className="font-display text-white text-xl font-semibold">$50K (accredited only)<span className="text-white/70 text-sm font-normal">(accredited only)</span></p>
               </div>
             </div>
           </div>
@@ -60,8 +60,8 @@ export function FinalCTA() {
             <Button
               variant="default"
               size="lg"
-              className="bg-gold hover:bg-gold/90 text-charcoal font-body font-bold text-lg px-10 py-6 h-auto hover:shadow-lg hover:shadow-gold/25 transition-all"
-            >
+              className="bg-gold hover:bg-gold/90 text-charcoal font-body font-bold text-lg px-10 py-6 h-auto hover:shadow-lg hover:shadow-gold/25 transition-all">
+
               Submit Investor Inquiry
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
@@ -73,6 +73,6 @@ export function FinalCTA() {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
