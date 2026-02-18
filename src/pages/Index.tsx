@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { VideoSalesLetter } from "@/components/sections/VideoSalesLetter";
+import { Audiogram } from "@/components/sections/Audiogram";
 import { RenaissanceTimeline } from "@/components/sections/RenaissanceTimeline";
 import { EightyYearSilence } from "@/components/sections/EightyYearSilence";
 import { ConvergenceSection } from "@/components/sections/ConvergenceSection";
@@ -20,9 +20,9 @@ const Index = () => {
         {/* Hero Section */}
         <Hero />
 
-        {/* Video Sales Letter Section */}
+        {/* Audiogram Section */}
         <section id="vsl">
-          <VideoSalesLetter />
+          <Audiogram />
         </section>
 
         {/* Visual Timeline - The Renaissance Story */}
