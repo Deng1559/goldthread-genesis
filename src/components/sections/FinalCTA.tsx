@@ -50,7 +50,7 @@ export function FinalCTA() {
               </div>
               <div>
                 <p className="font-body text-white/60 text-sm uppercase tracking-wide mb-1">Minimum Investment</p>
-                <p className="font-display text-white text-xl font-semibold">$50K (accredited only)<span className="text-white/70 text-sm font-normal">(accredited only)</span></p>
+                <p className="font-display text-white text-xl font-semibold">$50K <span className="text-white/70 text-sm font-normal">(accredited only)</span></p>
               </div>
             </div>
           </div>
