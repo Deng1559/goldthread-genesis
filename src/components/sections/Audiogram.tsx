@@ -292,6 +292,12 @@ export function Audiogram() {
   }, []);
 
   const startPlayback = useCallback(() => {
+    // Only play once per session
+    if (sessionStorage.getItem("audiogram-played")) {
+      setStarted(false);
+      return;
+    }
+
     if (!audioRef.current) {
       audioRef.current = new Audio(AUDIO_SRC);
       audioRef.current.preload = "auto";
@@ -304,6 +310,7 @@ export function Audiogram() {
 
     const audio = audioRef.current;
     audio.play().then(() => {
+      sessionStorage.setItem("audiogram-played", "true");
       setStarted(true);
       setPlaying(true);
       playingRef.current = true;
