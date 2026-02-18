@@ -230,11 +230,45 @@ function fmt(s: number): string {
 export function Audiogram() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const rafRef = useRef<number>(0);
+  const waveRafRef = useRef<number>(0);
+  const barsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const barTargets = useRef<number[]>(new Array(BAR_COUNT).fill(4));
+  const barCurrents = useRef<number[]>(new Array(BAR_COUNT).fill(4));
   const [playing, setPlaying] = useState(false);
   const [started, setStarted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const playingRef = useRef(false);
   const [autoplayAttempted, setAutoplayAttempted] = useState(false);
+
+  // Smooth waveform animation loop — runs independently from scene tick
+  const animateWaveform = useCallback(() => {
+    const isPlaying = playingRef.current;
+
+    for (let i = 0; i < BAR_COUNT; i++) {
+      // Pick new random targets periodically
+      if (isPlaying && Math.random() < 0.15) {
+        barTargets.current[i] = 4 + Math.random() * 18;
+      } else if (!isPlaying) {
+        barTargets.current[i] = 4;
+      }
+      // Lerp toward target
+      barCurrents.current[i] += (barTargets.current[i] - barCurrents.current[i]) * 0.18;
+      const el = barsRef.current[i];
+      if (el) {
+        el.style.height = `${barCurrents.current[i]}px`;
+      }
+    }
+
+    waveRafRef.current = requestAnimationFrame(animateWaveform);
+  }, []);
+
+  // Start/stop waveform animation with playback
+  useEffect(() => {
+    if (started) {
+      waveRafRef.current = requestAnimationFrame(animateWaveform);
+    }
+    return () => cancelAnimationFrame(waveRafRef.current);
+  }, [started, animateWaveform]);
 
   const activeSceneId = getSceneFor(currentTime);
 
@@ -323,6 +357,7 @@ export function Audiogram() {
   useEffect(() => {
     return () => {
       cancelAnimationFrame(rafRef.current);
+      cancelAnimationFrame(waveRafRef.current);
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current = null;
@@ -378,9 +413,10 @@ export function Audiogram() {
                   {Array.from({ length: BAR_COUNT }).map((_, i) => (
                     <div
                       key={i}
-                      className="w-[3px] rounded-sm transition-all duration-75"
+                      ref={(el) => { barsRef.current[i] = el; }}
+                      className="w-[3px] rounded-sm"
                       style={{
-                        height: playing ? `${4 + Math.random() * 18}px` : "4px",
+                        height: "4px",
                         background: "rgba(201,168,76,0.5)",
                       }}
                     />
