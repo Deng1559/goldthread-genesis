@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
+import mruDiagram from "@/assets/mru-diagram.png";
 
 const MRU_FEATURES = [
   "Zero-waste gold recovery",
@@ -27,17 +28,8 @@ export function TechnologySection() {
           {/* Left Column - Visuals (60% = 3/5) */}
           <div className="lg:col-span-3 space-y-4">
             {/* Main Image Placeholder */}
-            <div className="relative aspect-[16/10] bg-muted rounded-lg overflow-hidden border border-border">
-              <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="block text-muted-foreground/60 font-body text-sm mb-2">
-                    MRU (Modular Recovery Unit)
-                  </span>
-                  <span className="block text-muted-foreground/40 font-body text-xs">
-                    High-resolution image placeholder
-                  </span>
-                </div>
-              </div>
+            <div className="relative aspect-[16/10] bg-white rounded-lg overflow-hidden border border-border">
+              <img src={mruDiagram} alt="Mobile Research Unit (MRU) process flow diagram" className="w-full h-full object-contain" />
             </div>
 
             {/* Secondary Images Row */}
