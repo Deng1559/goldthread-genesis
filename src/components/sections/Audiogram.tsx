@@ -492,7 +492,7 @@ export function Audiogram() {
           {/* Description */}
           <div className="text-center">
             <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto">
-              Jay Lesser, Founder &amp; Technology Creator, explains the regulatory gridlock
+              Andrew Ferguson, CEO of Mineteck, explains the regulatory gridlock
               that kept billions in gold untouchable for 80 years—and how his team solved it.{" "}
               <span className="text-white/50">(3 minutes)</span>
             </p>
