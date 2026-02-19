@@ -61,7 +61,7 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "About",
     dropdown: [
-      { label: "Andrew Ferguson", href: "/about/andrew-ferguson" },
+      { label: "Jay Lesser", href: "/about/jay-lesser" },
       { label: "MineTeck", href: "/about#mineteck" },
       { label: "Breakthrough Management", href: "/about#breakthrough" },
       { label: "Contact", href: "/about#contact" },
