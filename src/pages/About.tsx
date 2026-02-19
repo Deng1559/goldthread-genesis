@@ -26,16 +26,16 @@ export default function About() {
               className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
               variants={prefersReducedMotion ? {} : fadeUp}
               initial="hidden"
-              animate="visible"
-            >
+              animate="visible">
+
               {content.hero.headline}
             </motion.h1>
             <motion.p
               className="font-body text-lg text-white/80 max-w-2xl mx-auto"
               variants={prefersReducedMotion ? {} : fadeUp}
               initial="hidden"
-              animate="visible"
-            >
+              animate="visible">
+
               {content.hero.subheadline}
             </motion.p>
           </div>
@@ -47,16 +47,16 @@ export default function About() {
             <SectionHeader
               eyebrow="Our Approach"
               title={content.mission.title}
-              className="mb-8"
-            />
+              className="mb-8" />
+
 
             <motion.div
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="max-w-3xl mx-auto mb-12"
-            >
+              className="max-w-3xl mx-auto mb-12">
+
               <p className="text-lg text-charcoal leading-relaxed text-center">
                 {content.mission.statement}
               </p>
@@ -67,14 +67,14 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {content.mission.principles.map((principle, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  className="bg-card border border-border rounded-xl p-6"
-                >
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+              {content.mission.principles.map((principle, index) =>
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="bg-card border border-border rounded-xl p-6">
+
                   <h4 className="font-display font-semibold text-gold mb-2">
                     {principle.title}
                   </h4>
@@ -82,30 +82,30 @@ export default function About() {
                     {principle.description}
                   </p>
                 </motion.div>
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
 
         {/* Management Risk Disclosure */}
-        <section className="py-12 bg-destructive/5 border-y border-destructive/20">
-          <div className="container-wide">
-            <div className="flex items-start gap-4 max-w-4xl mx-auto">
-              <AlertTriangle className="h-6 w-6 text-destructive flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="font-display font-bold text-destructive mb-2">
-                  {content.riskDisclosure.title}
-                </h3>
-                <p className="text-charcoal font-medium mb-2">
-                  {content.riskDisclosure.statement}
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {content.riskDisclosure.elaboration}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         {/* Leadership Team - Breakthrough Management */}
         <section id="breakthrough" className="section-padding bg-muted/30 scroll-mt-20">
@@ -114,22 +114,22 @@ export default function About() {
               eyebrow="Team"
               title={content.team.title}
               subtitle={content.team.disclaimer}
-              className="mb-12"
-            />
+              className="mb-12" />
+
 
             <motion.div
               variants={prefersReducedMotion ? {} : staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {content.team.members.map((member, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  className="bg-card border border-border rounded-xl p-6"
-                >
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+              {content.team.members.map((member, index) =>
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="bg-card border border-border rounded-xl p-6">
+
                   {/* Placeholder avatar */}
                   <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
                     <span className="font-display text-xl font-bold text-navy">
@@ -148,17 +148,17 @@ export default function About() {
                   </p>
                   
                   <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-navy hover:text-navy-light transition-colors focus-gold rounded-md"
-                    aria-label={`${member.name}'s LinkedIn profile`}
-                  >
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-navy hover:text-navy-light transition-colors focus-gold rounded-md"
+                  aria-label={`${member.name}'s LinkedIn profile`}>
+
                     <Linkedin className="h-4 w-4" />
                     <span>LinkedIn</span>
                   </a>
                 </motion.div>
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -170,22 +170,22 @@ export default function About() {
               eyebrow="Advisors"
               title={content.advisors.title}
               subtitle={content.advisors.disclaimer}
-              className="mb-12"
-            />
+              className="mb-12" />
+
 
             <motion.div
               variants={prefersReducedMotion ? {} : staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="grid md:grid-cols-2 gap-6"
-            >
-              {content.advisors.members.map((advisor, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  className="bg-card border border-border rounded-xl p-6 flex gap-4"
-                >
+              className="grid md:grid-cols-2 gap-6">
+
+              {content.advisors.members.map((advisor, index) =>
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="bg-card border border-border rounded-xl p-6 flex gap-4">
+
                   {/* Placeholder avatar */}
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
                     <span className="font-display text-lg font-bold text-gold">
@@ -205,7 +205,7 @@ export default function About() {
                     </p>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>
           </div>
         </section>
@@ -217,22 +217,22 @@ export default function About() {
               eyebrow="Accountability"
               title={content.governance.title}
               subtitle={content.governance.description}
-              className="mb-12"
-            />
+              className="mb-12" />
+
 
             <motion.div
               variants={prefersReducedMotion ? {} : staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
-              className="grid md:grid-cols-2 gap-6 mb-12"
-            >
-              {content.governance.points.map((point, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  className="flex items-start gap-4"
-                >
+              className="grid md:grid-cols-2 gap-6 mb-12">
+
+              {content.governance.points.map((point, index) =>
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="flex items-start gap-4">
+
                   <CheckCircle2 className="h-5 w-5 text-forest flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">
@@ -243,7 +243,7 @@ export default function About() {
                     </p>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </motion.div>
 
             <motion.div
@@ -251,8 +251,8 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-navy/5 border border-navy/20 rounded-xl p-6 max-w-3xl mx-auto"
-            >
+              className="bg-navy/5 border border-navy/20 rounded-xl p-6 max-w-3xl mx-auto">
+
               <p className="text-charcoal leading-relaxed text-center italic">
                 "{content.governance.philosophy}"
               </p>
@@ -267,19 +267,19 @@ export default function About() {
               title="Complete Team & Governance Documentation"
               description="Detailed backgrounds, track records, and governance documentation available to verified investors."
               items={[
-                "Full management biographies",
-                "Board composition and charters",
-                "Compensation philosophy",
-                "Reporting templates and schedules",
-              ]}
+              "Full management biographies",
+              "Board composition and charters",
+              "Compensation philosophy",
+              "Reporting templates and schedules"]
+              }
               ctaText="Request Access"
-              ctaHref="/access"
-            />
+              ctaHref="/access" />
+
           </div>
         </section>
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
