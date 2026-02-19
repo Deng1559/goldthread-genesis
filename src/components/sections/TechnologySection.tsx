@@ -3,15 +3,14 @@ import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import mruDiagram from "@/assets/mru-diagram.png";
 import mruMobileUnit from "@/assets/mru-mobile-unit.png";
-import mruNewUnit from "@/assets/mru-new-unit.png";
 
 const MRU_FEATURES = [
-  "Zero-waste gold recovery",
-  "EPA TCLP/SPLP/ABA validation (1,000-year toxicity certification)",
-  "First new permit in Colorado in 20+ years",
-  "Deployable in 12 months",
-  "Modular CAPEX: $2M vs $20M to $40M Traditional",
-];
+"Zero-waste gold recovery",
+"EPA TCLP/SPLP/ABA validation (1,000-year toxicity certification)",
+"First new permit in Colorado in 20+ years",
+"Deployable in 12 months",
+"Modular CAPEX: $2M vs $20M to $40M Traditional"];
+
 
 export function TechnologySection() {
   return (
@@ -35,60 +34,38 @@ export function TechnologySection() {
             </div>
 
             {/* Secondary Image */}
-            {/* Secondary Images */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border">
-                <img src={mruMobileUnit} alt="MineTeck Mobile Recovery Unit" className="w-full h-full object-contain" />
-              </div>
-              <div className="bg-white rounded-lg overflow-hidden border border-border">
-                <div className="relative aspect-[4/3]">
-                  <img src={mruNewUnit} alt="New Mobile Unit (MRU)" className="w-full h-full object-contain" />
-                </div>
-                <ul className="px-3 py-2 space-y-1">
-                  {[
-                    "Mobile Self-Contained / Water Recirculation",
-                    "Zero Liquid Discharge Toxin Capture Technology",
-                    "Clean / Zero Waste (No Tailings Pile)",
-                    "30TPH Capacity Demonstration Permit",
-                    "Flagship of Future Equipment Sales",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="flex-shrink-0 w-1 h-1 mt-1.5 rounded-full bg-gold" />
-                      <span className="font-body text-xs text-foreground/80 leading-tight">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border">
+              <img src={mruMobileUnit} alt="MineTeck Mobile Recovery Unit" className="w-full h-full object-contain" />
             </div>
           </div>
 
           {/* Right Column - Content (40% = 2/5) */}
           <div className="lg:col-span-2">
             {/* Intro Paragraph */}
-            <p className="font-body text-muted-foreground leading-relaxed mb-6">
-              The MRU (Modular Recovery Unit) removes the regulatory and capital 
-              barriers that have kept historic gold deposits inaccessible. Our 
-              EPA-validated process makes extraction economically viable at a 
-              fraction of traditional costs—with zero toxic discharge.
-            </p>
+            
+
+
+
+
+
 
             {/* Feature List */}
             <ul className="space-y-3 mb-8">
-              {MRU_FEATURES.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {MRU_FEATURES.map((feature, index) =>
+              <li key={index} className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-gold" />
                   <span className="font-body text-foreground text-sm leading-relaxed">
                     {feature}
                   </span>
                 </li>
-              ))}
+              )}
             </ul>
 
             {/* Ferguson Quote Box */}
             <div
               className="border-l-[3px] border-gold pl-4 py-4 mb-8"
-              style={{ backgroundColor: "#FFF8E7" }}
-            >
+              style={{ backgroundColor: "#FFF8E7" }}>
+
               <p className="font-display text-sm italic text-charcoal/80 leading-relaxed">
                 "Technology enables access — doesn't guarantee outcomes. 
                 Execution determines economics."
@@ -100,8 +77,8 @@ export function TechnologySection() {
               <FileText className="w-4 h-4 text-gold" />
               <a
                 href="#"
-                className="font-body text-sm text-navy hover:text-gold transition-colors underline underline-offset-2"
-              >
+                className="font-body text-sm text-navy hover:text-gold transition-colors underline underline-offset-2">
+
                 View EPA Test Data (PDF)
               </a>
             </div>
@@ -111,14 +88,14 @@ export function TechnologySection() {
               <Button
                 variant="default"
                 size="lg"
-                className="w-full bg-navy hover:bg-navy/90 text-white font-body font-semibold"
-              >
+                className="w-full bg-navy hover:bg-navy/90 text-white font-body font-semibold">
+
                 Explore Full Technology Details
               </Button>
             </Link>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
