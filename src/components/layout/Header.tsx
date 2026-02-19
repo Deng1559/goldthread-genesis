@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SITE_CONFIG } from "@/lib/content";
 import { cn } from "@/lib/utils";
+import mineteckLogo from "@/assets/mineteck-logo.png";
 
 interface DropdownItem {
   label: string;
@@ -266,12 +267,7 @@ export function Header() {
           className="flex items-center gap-2 focus-gold rounded-md"
           aria-label={`${SITE_CONFIG.name} - Home`}
         >
-          <div className="w-8 h-8 bg-gold rounded-sm flex items-center justify-center">
-            <span className="text-navy font-display font-bold text-lg">M</span>
-          </div>
-          <span className="font-display font-semibold text-xl text-white">
-            {SITE_CONFIG.name}
-          </span>
+          <img src={mineteckLogo} alt={SITE_CONFIG.name} className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
