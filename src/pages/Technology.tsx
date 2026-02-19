@@ -10,6 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { TECHNOLOGY_PAGE_CONTENT } from "@/lib/technology-content";
 import { fadeUp, staggerContainer } from "@/lib/motion";
+import mruProcessDiagram from "@/assets/mru-process-diagram.png";
+import mruNewUnit from "@/assets/mru-new-unit.png";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { cn } from "@/lib/utils";
 
@@ -62,33 +64,36 @@ export default function Technology() {
                 viewport={{ once: true }}
                 className="space-y-4">
 
-                <div className="relative aspect-[16/10] bg-muted rounded-lg overflow-hidden border border-border">
-                  <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                    <div className="text-center">
-                      <span className="block text-muted-foreground/60 font-body text-sm mb-2">
-                        MRU (Modular Recovery Unit)
-                      </span>
-                      <span className="block text-muted-foreground/40 font-body text-xs">
-                        High-resolution image placeholder
-                      </span>
-                    </div>
-                  </div>
+                {/* MRU Process Flow Diagram */}
+                <div className="relative bg-white rounded-lg overflow-hidden border border-border">
+                  <img src={mruProcessDiagram} alt="Mobile Research Unit (MRU) process flow diagram" className="w-full h-auto object-contain" />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="relative aspect-[4/3] bg-muted rounded-lg overflow-hidden border border-border">
-                    <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                      <span className="text-muted-foreground/40 font-body text-xs text-center px-4">
-                        Processing detail
-                      </span>
-                    </div>
-                  </div>
-                  <div className="relative aspect-[4/3] bg-muted rounded-lg overflow-hidden border border-border">
-                    <div className="absolute inset-0 bg-navy/10 flex items-center justify-center">
-                      <span className="text-muted-foreground/40 font-body text-xs text-center px-4">
-                        Zero-waste output
-                      </span>
-                    </div>
-                  </div>
+
+                {/* New Mobile Unit Photo */}
+                <div className="relative bg-white rounded-lg overflow-hidden border border-border">
+                  <img src={mruNewUnit} alt="Our New Mobile Unit (MRU)" className="w-full h-auto object-contain" />
+                </div>
+
+                {/* MRU Key Features */}
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-4">MRU Key Capabilities</h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {[
+                      "Mobile",
+                      "Self-Contained / Water Recirculation",
+                      "Zero Liquid Discharge",
+                      "Toxin Capture Technology",
+                      "Clean / Zero Waste (No Tailings Pile)",
+                      "30TPH Capacity",
+                      "Demonstration Permit",
+                      "Flagship of Future Equipment Sales",
+                    ].map((feature, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-forest flex-shrink-0 mt-0.5" />
+                        <span className="font-body text-sm text-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
 
