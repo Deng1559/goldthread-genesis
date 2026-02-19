@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FOOTER_CONTENT, SITE_CONFIG } from "@/lib/content";
+import mineteckLogo from "@/assets/mineteck-logo.png";
 
 export function Footer() {
   return (
@@ -16,14 +17,9 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           {/* Logo & Copyright */}
           <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-gold rounded-sm flex items-center justify-center">
-                <span className="text-white font-display font-bold text-sm">M</span>
-              </div>
-              <span className="font-display font-semibold text-lg">
-                {SITE_CONFIG.name}
-              </span>
-            </div>
+            <Link to="/" className="focus-gold rounded-md">
+              <img src={mineteckLogo} alt={SITE_CONFIG.name} className="h-10 w-auto" />
+            </Link>
             <p className="text-sm text-white/50">
               {FOOTER_CONTENT.copyright}
             </p>
