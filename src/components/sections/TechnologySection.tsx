@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import mruDiagram from "@/assets/mru-diagram.png";
 import mruMobileUnit from "@/assets/mru-mobile-unit.png";
+import mruNewUnit from "@/assets/mru-new-unit.png";
 
 const MRU_FEATURES = [
   "Zero-waste gold recovery",
@@ -34,8 +35,14 @@ export function TechnologySection() {
             </div>
 
             {/* Secondary Image */}
-            <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border">
-              <img src={mruMobileUnit} alt="MineTeck Mobile Recovery Unit" className="w-full h-full object-contain" />
+            {/* Secondary Images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border">
+                <img src={mruMobileUnit} alt="MineTeck Mobile Recovery Unit" className="w-full h-full object-contain" />
+              </div>
+              <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border">
+                <img src={mruNewUnit} alt="New Mobile Unit (MRU)" className="w-full h-full object-contain" />
+              </div>
             </div>
           </div>
 
