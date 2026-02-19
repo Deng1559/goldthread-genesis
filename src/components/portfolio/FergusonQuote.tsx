@@ -9,7 +9,7 @@ export function FergusonQuote() {
               That's what changes the economics."
             </p>
             <footer className="mt-6 text-muted-foreground font-inter">
-              — Andrew Ferguson, CEO, Breakthrough Management
+              — Jay Lesser, Founder & Technology Creator
             </footer>
           </blockquote>
         </div>

@@ -50,13 +50,13 @@ export function VideoSalesLetter() {
                     {/* Placeholder content */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                       <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-charcoal/60 border-2 border-gold/30 flex items-center justify-center mb-4">
-                        <span className="font-display text-2xl md:text-3xl text-gold">AF</span>
+                        <span className="font-display text-2xl md:text-3xl text-gold">JL</span>
                       </div>
                       <p className="text-white/50 font-mono text-xs md:text-sm">
                         [Video Thumbnail - TO BE PROVIDED]
                       </p>
                       <p className="text-white/40 text-xs mt-1">
-                        Andrew Ferguson • Colorado Mining District
+                        Jay Lesser • Colorado Mining District
                       </p>
                     </div>
                   </div>
@@ -106,7 +106,7 @@ export function VideoSalesLetter() {
           {/* Video Description */}
           <motion.div variants={fadeUp} className="text-center">
             <p className="text-white/80 text-sm md:text-base lg:text-lg max-w-2xl mx-auto mb-6">
-              Andrew Ferguson, Founder & CEO of MineTeck, explains the regulatory gridlock 
+              Jay Lesser, Founder & Technology Creator, explains the regulatory gridlock 
               that kept billions in gold untouchable for 80 years—and how his team solved it.{" "}
               <span className="text-white/50">(8 minutes)</span>
             </p>

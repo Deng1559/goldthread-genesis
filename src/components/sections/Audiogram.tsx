@@ -209,7 +209,7 @@ const SCENES: Scene[] = [
         <a href="/access" className="inline-block px-8 py-3 bg-gold text-navy font-medium text-sm uppercase tracking-wider rounded hover:brightness-110 transition-all">
           Review the Opportunity →
         </a>
-        <div className="font-sans text-white/30 text-xs tracking-wider mt-4">Thank you for your time. — Andrew Ferguson</div>
+        <div className="font-sans text-white/30 text-xs tracking-wider mt-4">Thank you for your time. — Jay Lesser</div>
       </div>
     ),
   },
@@ -471,7 +471,7 @@ export function Audiogram() {
                   onClick={handleOverlayClick}
                 >
                   <p className="font-sans text-white/50 text-[10px] sm:text-xs uppercase tracking-widest mb-3 sm:mb-4">
-                    A 3-Minute Investment Brief by Andrew Ferguson
+                    A 3-Minute Investment Brief by Jay Lesser
                   </p>
                   <h3 className="font-display text-center text-lg sm:text-xl md:text-3xl font-bold leading-tight mb-4 sm:mb-6">
                     The <span className="text-gold">Only</span> Toll Mill in Colorado.<br />
@@ -492,7 +492,7 @@ export function Audiogram() {
           {/* Description */}
           <div className="text-center">
             <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto">
-              Andrew Ferguson, Founder &amp; CEO of MineTeck, explains the regulatory gridlock
+              Jay Lesser, Founder &amp; Technology Creator, explains the regulatory gridlock
               that kept billions in gold untouchable for 80 years—and how his team solved it.{" "}
               <span className="text-white/50">(3 minutes)</span>
             </p>
