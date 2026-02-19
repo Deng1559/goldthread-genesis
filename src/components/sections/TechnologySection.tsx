@@ -40,8 +40,24 @@ export function TechnologySection() {
               <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border">
                 <img src={mruMobileUnit} alt="MineTeck Mobile Recovery Unit" className="w-full h-full object-contain" />
               </div>
-              <div className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden border border-border">
-                <img src={mruNewUnit} alt="New Mobile Unit (MRU)" className="w-full h-full object-contain" />
+              <div className="bg-white rounded-lg overflow-hidden border border-border">
+                <div className="relative aspect-[4/3]">
+                  <img src={mruNewUnit} alt="New Mobile Unit (MRU)" className="w-full h-full object-contain" />
+                </div>
+                <ul className="px-3 py-2 space-y-1">
+                  {[
+                    "Mobile Self-Contained / Water Recirculation",
+                    "Zero Liquid Discharge Toxin Capture Technology",
+                    "Clean / Zero Waste (No Tailings Pile)",
+                    "30TPH Capacity Demonstration Permit",
+                    "Flagship of Future Equipment Sales",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-1 h-1 mt-1.5 rounded-full bg-gold" />
+                      <span className="font-body text-xs text-foreground/80 leading-tight">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
