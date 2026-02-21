@@ -20,9 +20,21 @@ export function Footer() {
             <Link to="/" className="focus-gold rounded-md">
               <img src={mineteckLogo} alt={SITE_CONFIG.name} className="h-10 w-auto" />
             </Link>
-            <p className="text-sm text-white/50">
-              {FOOTER_CONTENT.copyright}
-            </p>
+            <div className="text-sm text-white/50 flex flex-col gap-1">
+              <p>{FOOTER_CONTENT.copyright}</p>
+              <p>
+                Made by{" "}
+                <a 
+                  href={FOOTER_CONTENT.madeBy.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors underline underline-offset-4"
+                >
+                  {FOOTER_CONTENT.madeBy.label}
+                </a>{" "}
+                {new Date().getFullYear()}
+              </p>
+            </div>
           </div>
 
           {/* Links */}
