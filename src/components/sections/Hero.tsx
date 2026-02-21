@@ -7,8 +7,7 @@ import {
 } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import heroHistoric from "@/assets/hero-historic.jpg";
-import heroModern from "@/assets/hero-modern.jpg";
+import heroTollMill from "@/assets/hero-toll-mill.png";
 
 /* ── Card Data ─────────────────────────────────────────── */
 
@@ -194,7 +193,7 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden" aria-label="Hero section">
       {/* ── Background ────────────────────── */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{ backgroundImage: `url(${heroModern})` }} aria-hidden="true" />
+        <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{ backgroundImage: `url(${heroTollMill})`, backgroundSize: "cover", backgroundPosition: "center" }} aria-hidden="true" />
         <div
           className="absolute inset-0"
           style={{ background: "linear-gradient(180deg, rgba(10,15,20,0.75) 0%, rgba(10,15,20,0.85) 60%, rgba(10,15,20,0.95) 100%)" }}
