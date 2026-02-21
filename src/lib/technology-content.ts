@@ -55,8 +55,8 @@ export const TECHNOLOGY_PAGE_CONTENT = {
       },
       {
         number: 6,
-        title: "Tailings Management",
-        description: "Responsible residue handling with ongoing monitoring and reclamation planning.",
+        title: "Clean Byproduct Output",
+        description: "Our process produces no tailings. The byproduct is a clean, commercially useable material.",
       },
     ],
   },
