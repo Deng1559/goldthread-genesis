@@ -192,7 +192,7 @@ export const FOOTER_CONTENT = {
   links: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Use", href: "/terms" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contact", href: "mailto:info@mineteck.com" },
   ],
   copyright: `© ${new Date().getFullYear()} MineTeck Resources, LLC. All rights reserved.`,
 };
