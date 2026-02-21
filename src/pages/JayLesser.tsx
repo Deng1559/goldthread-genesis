@@ -392,7 +392,7 @@ export default function JayLesser() {
                   href="#"
                   className="flex items-center gap-2 text-white/70 hover:text-gold transition-colors text-sm md:text-base">
 
-                  <Linkedin className="w-4 h-4 shrink-0" />
+                  
                   
                 </a>
               </div>
