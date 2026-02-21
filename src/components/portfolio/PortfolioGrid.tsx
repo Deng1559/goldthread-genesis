@@ -24,7 +24,7 @@ const portfolioProjects = [
   mruStatus: "Proven"
 },
 {
-  name: "Crown Mining",
+  name: "The Quarry",
   location: "Central City, CO",
   status: "Lease Secured",
   statusColor: "bg-amber-100 text-amber-800",
