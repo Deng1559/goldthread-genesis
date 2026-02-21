@@ -184,13 +184,19 @@ analyzing gravity separation techniques, and implementing water filtration and
 circulation systems. He has also conducted ore deposit exploration, geochemical
 
 mapping, and developed testing and toxicity protocols.</p>
-              <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">
-                To earn regulatory confidence, Jay employed a battery of testing protocols rarely used in mining — the
-                Toxic Characteristic Leaching Procedure (TCLP), Synthetic Precipitation Leaching Procedure (SPLP), and
-                Acid-Base Accounting (ABA) tests. The results were groundbreaking: his processed material demonstrated
-                zero waste and zero toxicity for a projected 1,000 years, fundamentally redefining what responsible
-                mining can look like.
-              </p>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">Since 1995, Mr. Lesser has served as the CEO of Alpine Companies LLC. Over the
+
+course of his 26-year tenure, he has undertaken extensive research and development in
+
+particle size analysis, sub-soil compaction grouting, and mixture design for low and high
+
+viscosity applications. Mr. Lesser has successfully completed over 34,000 residential
+
+and commercial projects, totaling 180,000 cubic yards of materials. His portfolio
+
+includes high-profile projects such as Union Station, DIA Airport, E-470 Expansion, and
+
+Martin Marietta Aerospace.</p>
               <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
                 Through his company Mining Research & Development (MRD), Jay now consults on gravity concentration
                 systems and environmentally responsible milling operations. His vision for the Gladstone facility is to
@@ -285,12 +291,10 @@ mapping, and developed testing and toxicity protocols.</p>
                 Gladstone Toll Mill — Idaho Springs, Colorado
               </h3>
               <ul className="space-y-2 md:space-y-3">
-                {GLADSTONE_ACHIEVEMENTS.map((achievement, index) =>
-                <li key={index} className="flex gap-2 md:gap-3">
+                {GLADSTONE_ACHIEVEMENTS.map((achievement, index) => <li key={index} className="flex gap-2 md:gap-3">
                     <Award className="w-4 md:w-5 h-4 md:h-5 text-gold shrink-0 mt-0.5" />
                     <span className="text-white/90 text-sm md:text-base">{achievement}</span>
-                  </li>
-                )}
+                  </li>)}
               </ul>
             </motion.div>
           </motion.div>
@@ -307,28 +311,24 @@ mapping, and developed testing and toxicity protocols.</p>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              {PROJECT_TRACK_RECORD.map((project, index) =>
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className={`border rounded-lg p-4 md:p-6 ${
-                project.status === "Permitted" || project.status === "Permitted Reclamation" ?
-                "border-gold/40 bg-gold/5" :
-                "border-border bg-muted/20"}`
-                }>
+              {PROJECT_TRACK_RECORD.map((project, index) => <motion.div key={index} variants={fadeUp} className={`border rounded-lg p-4 md:p-6 ${
+                  project.status === "Permitted" || project.status === "Permitted Reclamation" ?
+                  "border-gold/40 bg-gold/5" :
+                  "border-border bg-muted/20"}`
+                  }>
 
                   <div className="flex justify-between items-start gap-2 mb-2 md:mb-3">
                     <h3 className="font-display text-base md:text-lg text-foreground">{project.name}</h3>
                     <span
-                    className={`font-mono text-xs md:text-sm px-2 py-1 rounded shrink-0 ${
-                    project.status === "Permitted" ?
-                    "bg-forest/20 text-forest" :
-                    project.status === "Permitted Reclamation" ?
-                    "bg-forest/15 text-forest" :
-                    project.status === "Lease Secured" ?
-                    "bg-gold/20 text-gold" :
-                    "bg-navy/20 text-navy"}`
-                    }>
+                      className={`font-mono text-xs md:text-sm px-2 py-1 rounded shrink-0 ${
+                      project.status === "Permitted" ?
+                      "bg-forest/20 text-forest" :
+                      project.status === "Permitted Reclamation" ?
+                      "bg-forest/15 text-forest" :
+                      project.status === "Lease Secured" ?
+                      "bg-gold/20 text-gold" :
+                      "bg-navy/20 text-navy"}`
+                      }>
 
                       {project.status}
                     </span>
