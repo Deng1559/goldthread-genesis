@@ -173,13 +173,17 @@ repair, restoration, pressure grouting, and particle size analysis. He has worke
 wide range of projects, including commercial, residential, and infrastructure
 
 undertakings.</p>
-              <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">
-                As co-owner of the Gladstone Toll Mill in Idaho Springs, Colorado, Jay achieved what many considered
-                impossible — securing the first fully permitted toll mill in the state in over 20 years, and the first
-                ever permitted on a major Colorado waterway. This unprecedented accomplishment required years of
-                rigorous engagement with the Department of Reclamation and Mine Safety (DRMS), the EPA, and
-                environmental stakeholder groups.
-              </p>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">As the Co-Founder of Salisbury Gladstone Toll Mill since March 2020, Mr. Lesser has
+
+been instrumental in designing and establishing protocols for the Gladstone Permit and
+
+Toll Mill. His responsibilities include developing a self-contained hard rock milling circuit,
+
+analyzing gravity separation techniques, and implementing water filtration and
+
+circulation systems. He has also conducted ore deposit exploration, geochemical
+
+mapping, and developed testing and toxicity protocols.</p>
               <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">
                 To earn regulatory confidence, Jay employed a battery of testing protocols rarely used in mining — the
                 Toxic Characteristic Leaching Procedure (TCLP), Synthetic Precipitation Leaching Procedure (SPLP), and
@@ -248,12 +252,10 @@ undertakings.</p>
                   Environmental Testing Protocols
                 </h3>
                 <ul className="space-y-3 md:space-y-4">
-                  {TESTING_PROTOCOLS.map((item, index) =>
-                  <li key={index} className="flex gap-2 md:gap-3">
+                  {TESTING_PROTOCOLS.map((item, index) => <li key={index} className="flex gap-2 md:gap-3">
                       <Award className="w-4 md:w-5 h-4 md:h-5 text-gold shrink-0 mt-0.5" />
                       <span className="text-sm md:text-base text-foreground/80">{item}</span>
-                    </li>
-                  )}
+                    </li>)}
                 </ul>
                 <p className="text-sm text-muted-foreground mt-4 italic">
                   Results: Zero waste and zero toxicity projected for 1,000 years
@@ -277,9 +279,7 @@ undertakings.</p>
             </motion.div>
 
             {/* Key Achievement Box */}
-            <motion.div
-              variants={fadeUp}
-              className="border-2 border-gold bg-navy/50 p-5 md:p-8 rounded-lg mb-8 md:mb-12">
+            <motion.div variants={fadeUp} className="border-2 border-gold bg-navy/50 p-5 md:p-8 rounded-lg mb-8 md:mb-12">
 
               <h3 className="font-display text-xl md:text-2xl text-gold mb-4 md:mb-6">
                 Gladstone Toll Mill — Idaho Springs, Colorado
