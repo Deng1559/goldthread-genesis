@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Download, Linkedin, Mail, Award, FileCheck, Wrench, Users, Quote } from "lucide-react";
+import { Download, Linkedin, Mail, Award, FileCheck, Wrench, Quote } from "lucide-react";
+import jayLesserImg from "@/assets/jay-lesser.jpg";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -99,14 +100,8 @@ export default function JayLesser() {
               variants={fadeUp}
               className="w-full max-w-[280px] mx-auto lg:max-w-none lg:mx-0 lg:col-span-2">
 
-              <div className="aspect-[3/4] bg-charcoal/50 border-2 border-gold/30 rounded-lg overflow-hidden">
-                {/* DEV NOTE: Add professional headshot when available. Recommended: 400x500px minimum, neutral background. */}
-                <div className="w-full h-full flex items-center justify-center text-white/40">
-                  <div className="text-center p-6 md:p-8">
-                    <Users className="w-16 md:w-24 h-16 md:h-24 mx-auto mb-3 md:mb-4 opacity-50" />
-                    <p className="font-mono text-xs md:text-sm">[Professional Photo TBD]</p>
-                  </div>
-                </div>
+              <div className="aspect-[3/4] border-2 border-gold/30 rounded-lg overflow-hidden">
+                <img src={jayLesserImg} alt="Harold 'Jay' Lesser" className="w-full h-full object-cover" />
               </div>
             </motion.div>
 
