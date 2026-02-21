@@ -195,4 +195,5 @@ export const FOOTER_CONTENT = {
     { label: "Contact", href: "mailto:info@mineteck.com" },
   ],
   copyright: `© ${new Date().getFullYear()} MineTeck Resources, LLC. All rights reserved.`,
+  madeBy: { label: "www.klicksmartai.ca", href: "https://www.klicksmartai.ca" },
 };
