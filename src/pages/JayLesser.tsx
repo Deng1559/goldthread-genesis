@@ -197,12 +197,15 @@ and commercial projects, totaling 180,000 cubic yards of materials. His portfoli
 includes high-profile projects such as Union Station, DIA Airport, E-470 Expansion, and
 
 Martin Marietta Aerospace.</p>
-              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-                Through his company Mining Research & Development (MRD), Jay now consults on gravity concentration
-                systems and environmentally responsible milling operations. His vision for the Gladstone facility is to
-                create the world's most eco-friendly milling solution — one that doesn't just minimize harm, but
-                actively reverses and restores existing environmental hazards.
-              </p>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">Mr. Lesser holds various licenses and certifications, including a Class-A Commercial &amp;
+
+Residential License, safety and security certifications for classified projects, a CDOT
+
+Certification for Infrastructure Projects, and a Colorado Real Estate Broker&#39;s License.
+
+His skills extend to the fabrication of air and hydraulic rock drilling equipment for
+
+concrete and hard rock applications.</p>
             </motion.div>
           </motion.div>
         </div>
@@ -311,10 +314,7 @@ Martin Marietta Aerospace.</p>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              {PROJECT_TRACK_RECORD.map((project, index) => <motion.div key={index} variants={fadeUp} className={`border rounded-lg p-4 md:p-6 ${
-                  project.status === "Permitted" || project.status === "Permitted Reclamation" ?
-                  "border-gold/40 bg-gold/5" :
-                  "border-border bg-muted/20"}`
+              {PROJECT_TRACK_RECORD.map((project, index) => <motion.div key={index} variants={fadeUp} className={`border rounded-lg p-4 md:p-6 ${project.status === "Permitted" || project.status === "Permitted Reclamation" ? "border-gold/40 bg-gold/5" : "border-border bg-muted/20"}`
                   }>
 
                   <div className="flex justify-between items-start gap-2 mb-2 md:mb-3">
