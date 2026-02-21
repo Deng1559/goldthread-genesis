@@ -30,11 +30,13 @@ const GLADSTONE_ACHIEVEMENTS = [
 const UNIQUE_COMBINATION_FACTORS = [
   {
     title: "Technology Visionary",
-    description: "Perfected gravity concentration to achieve the lowest cost, zero-chemical mineral processing in the industry",
+    description:
+      "Perfected gravity concentration to achieve the lowest cost, zero-chemical mineral processing in the industry",
   },
   {
     title: "Regulatory Pioneer",
-    description: "Secured permits that hadn't been granted in 20+ years through relentless environmental accountability",
+    description:
+      "Secured permits that hadn't been granted in 20+ years through relentless environmental accountability",
   },
   {
     title: "Environmental Champion",
@@ -42,11 +44,13 @@ const UNIQUE_COMBINATION_FACTORS = [
   },
   {
     title: "Relationship Capital",
-    description: "Earned the respect of regulatory bodies and special interest groups through dedication to environmental responsibility",
+    description:
+      "Earned the respect of regulatory bodies and special interest groups through dedication to environmental responsibility",
   },
   {
     title: "Restorative Vision",
-    description: "Building the world's most eco-friendly milling solution — one that actively reverses existing environmental hazards",
+    description:
+      "Building the world's most eco-friendly milling solution — one that actively reverses existing environmental hazards",
   },
 ];
 
@@ -115,19 +119,20 @@ export default function JayLesser() {
               className="lg:col-span-3 text-center lg:text-left"
             >
               <p className="text-sm font-medium text-gold uppercase tracking-wider mb-2">
-                Founder & Technology Creator
+                Founder/Partner of Mineteck LLC & Technology Creator
               </p>
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-2 md:mb-3">
                 Harold "Jay" Lesser
               </h1>
               <p className="text-base md:text-lg text-white/60 mb-6 md:mb-8">
-                Owner/Operator, Mining Research & Development (MRD)<br />
-                Co-Owner, Gladstone Toll Mill
+                Owner/Operator, Mining Research & Development (MRD)
+                <br />
+                Founder/Architect of the Gladstone Toll Mill
               </p>
               <p className="text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8">
-                Harold M. Lesser II — known as Jay — is a visionary entrepreneur whose pioneering 
-                work in gravity concentration technology is revolutionizing the mining industry's 
-                approach to sustainability and cost-efficiency.
+                Harold M. Lesser II — known as Jay — is a visionary entrepreneur whose pioneering work in gravity
+                concentration technology is revolutionizing the mining industry's approach to sustainability and
+                cost-efficiency.
               </p>
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 md:gap-4">
                 <Button variant="goldOutline" className="gap-2 w-full sm:w-auto">
@@ -156,33 +161,29 @@ export default function JayLesser() {
           >
             <motion.div variants={fadeUp} className="prose prose-lg max-w-none">
               <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">
-                Jay perfected gravity concentration as a mining beneficiation technology, achieving 
-                the lowest installed and operating costs in the industry. His breakthrough: gravity 
-                concentration operates entirely without chemicals or reagents, minimizing the 
-                ecological footprint of mineral processing to near zero.
+                Jay perfected gravity concentration as a mining beneficiation technology, achieving the lowest installed
+                and operating costs in the industry. His breakthrough: gravity concentration operates entirely without
+                chemicals or reagents, minimizing the ecological footprint of mineral processing to near zero.
               </p>
               <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">
-                As co-owner of the Gladstone Toll Mill in Idaho Springs, Colorado, Jay achieved 
-                what many considered impossible — securing the first fully permitted toll mill in 
-                the state in over 20 years, and the first ever permitted on a major Colorado waterway. 
-                This unprecedented accomplishment required years of rigorous engagement with the 
-                Department of Reclamation and Mine Safety (DRMS), the EPA, and environmental 
-                stakeholder groups.
+                As co-owner of the Gladstone Toll Mill in Idaho Springs, Colorado, Jay achieved what many considered
+                impossible — securing the first fully permitted toll mill in the state in over 20 years, and the first
+                ever permitted on a major Colorado waterway. This unprecedented accomplishment required years of
+                rigorous engagement with the Department of Reclamation and Mine Safety (DRMS), the EPA, and
+                environmental stakeholder groups.
               </p>
               <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">
-                To earn regulatory confidence, Jay employed a battery of testing protocols rarely 
-                used in mining — the Toxic Characteristic Leaching Procedure (TCLP), Synthetic 
-                Precipitation Leaching Procedure (SPLP), and Acid-Base Accounting (ABA) tests. 
-                The results were groundbreaking: his processed material demonstrated zero waste and 
-                zero toxicity for a projected 1,000 years, fundamentally redefining what responsible 
+                To earn regulatory confidence, Jay employed a battery of testing protocols rarely used in mining — the
+                Toxic Characteristic Leaching Procedure (TCLP), Synthetic Precipitation Leaching Procedure (SPLP), and
+                Acid-Base Accounting (ABA) tests. The results were groundbreaking: his processed material demonstrated
+                zero waste and zero toxicity for a projected 1,000 years, fundamentally redefining what responsible
                 mining can look like.
               </p>
               <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-                Through his company Mining Research & Development (MRD), Jay now consults on gravity 
-                concentration systems and environmentally responsible milling operations. His vision 
-                for the Gladstone facility is to create the world's most eco-friendly milling 
-                solution — one that doesn't just minimize harm, but actively reverses and restores 
-                existing environmental hazards.
+                Through his company Mining Research & Development (MRD), Jay now consults on gravity concentration
+                systems and environmentally responsible milling operations. His vision for the Gladstone facility is to
+                create the world's most eco-friendly milling solution — one that doesn't just minimize harm, but
+                actively reverses and restores existing environmental hazards.
               </p>
             </motion.div>
           </motion.div>
@@ -202,9 +203,9 @@ export default function JayLesser() {
             <blockquote className="border-l-4 border-gold pl-6 md:pl-8">
               <Quote className="w-8 h-8 text-gold/40 mb-4" />
               <p className="font-display text-xl md:text-2xl text-foreground italic leading-relaxed">
-                "Jay earned the respect of regulatory bodies and special interest groups through his 
-                dedication to environmental responsibility — reconstructing the way the industry 
-                thinks about tailings long after the work has been completed."
+                "Jay earned the respect of regulatory bodies and special interest groups through his dedication to
+                environmental responsibility — reconstructing the way the industry thinks about tailings long after the
+                work has been completed."
               </p>
             </blockquote>
           </motion.div>
@@ -214,18 +215,15 @@ export default function JayLesser() {
       {/* Technical Expertise Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-background">
         <div className="container-narrow px-4 md:px-6">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="mb-8 md:mb-12">
               <div className="flex items-center gap-2 md:gap-3 mb-2">
                 <Wrench className="w-5 md:w-6 h-5 md:h-6 text-gold" />
                 <h2 className="font-display text-2xl md:text-3xl text-foreground">Technical Expertise</h2>
               </div>
-              <p className="text-base md:text-lg text-muted-foreground">Gravity Concentration & Zero-Waste Process Development</p>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Gravity Concentration & Zero-Waste Process Development
+              </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
@@ -269,12 +267,7 @@ export default function JayLesser() {
       {/* Permitting Expertise Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-charcoal">
         <div className="container-narrow px-4 md:px-6">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="mb-8 md:mb-12">
               <div className="flex items-center gap-2 md:gap-3 mb-2">
                 <FileCheck className="w-5 md:w-6 h-5 md:h-6 text-gold" />
@@ -307,16 +300,9 @@ export default function JayLesser() {
       {/* Project Execution Track Record */}
       <section className="py-12 md:py-16 lg:py-20 bg-background">
         <div className="container-narrow px-4 md:px-6">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="mb-8 md:mb-12">
-              <h2 className="font-display text-2xl md:text-3xl text-foreground mb-2">
-                Project Execution Track Record
-              </h2>
+              <h2 className="font-display text-2xl md:text-3xl text-foreground mb-2">Project Execution Track Record</h2>
               <p className="text-base md:text-lg text-muted-foreground">Completed and Active Projects</p>
             </motion.div>
 
@@ -327,30 +313,28 @@ export default function JayLesser() {
                   variants={fadeUp}
                   className={`border rounded-lg p-4 md:p-6 ${
                     project.status === "Permitted" || project.status === "Permitted Reclamation"
-                      ? "border-gold/40 bg-gold/5" 
+                      ? "border-gold/40 bg-gold/5"
                       : "border-border bg-muted/20"
                   }`}
                 >
                   <div className="flex justify-between items-start gap-2 mb-2 md:mb-3">
-                    <h3 className="font-display text-base md:text-lg text-foreground">
-                      {project.name}
-                    </h3>
-                    <span className={`font-mono text-xs md:text-sm px-2 py-1 rounded shrink-0 ${
-                      project.status === "Permitted" 
-                        ? "bg-forest/20 text-forest" 
-                        : project.status === "Permitted Reclamation"
-                        ? "bg-forest/15 text-forest"
-                        : project.status === "Lease Secured"
-                        ? "bg-gold/20 text-gold"
-                        : "bg-navy/20 text-navy"
-                    }`}>
+                    <h3 className="font-display text-base md:text-lg text-foreground">{project.name}</h3>
+                    <span
+                      className={`font-mono text-xs md:text-sm px-2 py-1 rounded shrink-0 ${
+                        project.status === "Permitted"
+                          ? "bg-forest/20 text-forest"
+                          : project.status === "Permitted Reclamation"
+                            ? "bg-forest/15 text-forest"
+                            : project.status === "Lease Secured"
+                              ? "bg-gold/20 text-gold"
+                              : "bg-navy/20 text-navy"
+                      }`}
+                    >
                       {project.status}
                     </span>
                   </div>
                   <p className="font-mono text-xs md:text-sm text-muted-foreground mb-1 md:mb-2">{project.year}</p>
-                  <p className="text-xs md:text-sm text-foreground/80">
-                    {project.detail}
-                  </p>
+                  <p className="text-xs md:text-sm text-foreground/80">{project.detail}</p>
                 </motion.div>
               ))}
             </div>
@@ -361,19 +345,12 @@ export default function JayLesser() {
       {/* The Unique Combination */}
       <section className="py-12 md:py-16 lg:py-20 bg-navy">
         <div className="container-narrow px-4 md:px-6">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={fadeUp} className="mb-8 md:mb-12 text-center">
-              <h2 className="font-display text-2xl md:text-3xl text-gold mb-4 md:mb-6">
-                Why Jay Lesser
-              </h2>
+              <h2 className="font-display text-2xl md:text-3xl text-gold mb-4 md:mb-6">Why Jay Lesser</h2>
               <p className="text-base md:text-xl text-white/90 max-w-3xl mx-auto px-2">
-                A rare intersection of technical innovation, environmental accountability, 
-                and regulatory expertise that no one else in the industry has demonstrated.
+                A rare intersection of technical innovation, environmental accountability, and regulatory expertise that
+                no one else in the industry has demonstrated.
               </p>
             </motion.div>
 
@@ -407,15 +384,15 @@ export default function JayLesser() {
             <motion.div variants={fadeUp}>
               <h3 className="font-display text-lg md:text-xl text-gold mb-3 md:mb-4">Contact</h3>
               <div className="space-y-2 md:space-y-3">
-                <a 
-                  href="mailto:contact@mineteck.com" 
+                <a
+                  href="mailto:contact@mineteck.com"
                   className="flex items-center gap-2 text-white/70 hover:text-gold transition-colors text-sm md:text-base"
                 >
                   <Mail className="w-4 h-4 shrink-0" />
                   <span>[Email - TO BE PROVIDED]</span>
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="flex items-center gap-2 text-white/70 hover:text-gold transition-colors text-sm md:text-base"
                 >
                   <Linkedin className="w-4 h-4 shrink-0" />
@@ -428,8 +405,8 @@ export default function JayLesser() {
             <motion.div variants={fadeUp}>
               <h3 className="font-display text-lg md:text-xl text-gold mb-3 md:mb-4">References</h3>
               <p className="text-white/70 text-xs md:text-sm mb-3 md:mb-4">
-                Professional and industry references available upon request for qualified investors 
-                conducting due diligence.
+                Professional and industry references available upon request for qualified investors conducting due
+                diligence.
               </p>
               <Button variant="goldOutline" size="sm" asChild className="w-full sm:w-auto">
                 <a href="/access">Request References</a>
