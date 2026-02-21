@@ -79,20 +79,20 @@ export default function Technology() {
                   <h3 className="font-display text-lg font-bold text-foreground mb-4">MRU Key Capabilities</h3>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
-                      "Mobile",
-                      "Self-Contained / Water Recirculation",
-                      "Zero Liquid Discharge",
-                      "Toxin Capture Technology",
-                      "Clean / Zero Waste (No Tailings Pile)",
-                      "30TPH Capacity",
-                      "Demonstration Permit",
-                      "Flagship of Future Equipment Sales",
-                    ].map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
+                    "Mobile",
+                    "Self-Contained / Water Recirculation",
+                    "Zero Liquid Discharge",
+                    "Toxin Capture Technology",
+                    "Clean / Zero Waste (No Tailings Pile)",
+                    "30TPH Capacity",
+                    "Demonstration Permit",
+                    "Flagship of Future Equipment Sales"].
+                    map((feature, i) =>
+                    <li key={i} className="flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-forest flex-shrink-0 mt-0.5" />
                         <span className="font-body text-sm text-foreground">{feature}</span>
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
               </motion.div>
@@ -268,55 +268,55 @@ export default function Technology() {
 
         {/* Metallurgy Assumptions */}
         <section className="section-padding bg-background">
-          <div className="container-wide">
-            <SectionHeader
-              eyebrow="Engineering Estimates"
-              title={content.metallurgyAssumptions.title}
-              subtitle={content.metallurgyAssumptions.disclaimer}
-              className="mb-12" />
+          
 
 
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="bg-card border border-border rounded-xl overflow-hidden">
 
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-navy text-white">
-                    <tr>
-                      <th className="px-6 py-4 text-left font-display font-semibold">
-                        Parameter
-                      </th>
-                      <th className="px-6 py-4 text-left font-mono font-semibold">
-                        Value
-                      </th>
-                      <th className="px-6 py-4 text-left font-display font-semibold">
-                        Note
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-border">
-                    {content.metallurgyAssumptions.assumptions.map((assumption, index) =>
-                    <tr key={index} className="hover:bg-muted/50 transition-colors">
-                        <td className="px-6 py-4 font-medium text-charcoal">
-                          {assumption.label}
-                        </td>
-                        <td className="px-6 py-4 font-mono text-gold">
-                          {assumption.value}
-                        </td>
-                        <td className="px-6 py-4 text-sm text-muted-foreground">
-                          {assumption.note}
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            </motion.div>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </section>
 
         {/* Environmental Validation */}
