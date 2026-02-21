@@ -132,7 +132,7 @@ export const TECHNOLOGY_PAGE_CONTENT = {
       },
       {
         title: "Waste Minimization",
-        description: "Process designed to reduce waste volume compared to historic methods.",
+        description: "Our byproduct is not waste—it's commercially useable material, eliminating traditional tailings entirely.",
         verified: false,
       },
       {
