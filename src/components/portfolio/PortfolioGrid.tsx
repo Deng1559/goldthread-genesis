@@ -34,7 +34,7 @@ const portfolioProjects = [
   mruStatus: "Scalable"
 },
 {
-  name: "B-Group Properties",
+  name: "Stanley Road",
   location: "Clear Creek County, CO",
   status: "Under Contract",
   statusColor: "bg-purple-100 text-purple-800",

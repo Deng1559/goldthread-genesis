@@ -91,7 +91,7 @@ export const PROJECT_CARDS: ProjectCardData[] = [
   },
   {
     slug: "b-group",
-    name: "Stanley Rd",
+    name: "Stanley Road",
     status: "Under Contract",
     image: "stanley-rd",
     capital: "$4.5M",
@@ -328,15 +328,15 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     slug: "b-group",
-    name: "Stanley Rd",
+    name: "Stanley Road",
     tagline: "Strategic adjacency to Gladstone mill",
     status: "Evaluation",
     overview:
-      "The B-Group Properties provide strategic adjacency to the Gladstone toll mill, enabling efficient material processing and shared infrastructure. Under contract with 400K tons at 6 gpt, this represents meaningful portfolio expansion.",
+      "Stanley Road provides strategic adjacency to the Gladstone toll mill, enabling efficient material processing and shared infrastructure. Under contract with 400K tons at 6 gpt, this represents meaningful portfolio expansion.",
     siteContext: {
       location: "San Juan County, Colorado",
       description:
-        "Adjacent to Gladstone operations, the B-Group Properties leverage existing infrastructure and processing capacity.",
+        "Adjacent to Gladstone operations, Stanley Road leverages existing infrastructure and processing capacity.",
       historicalSignificance: "Part of the broader San Juan mining district with documented production history.",
     },
     infrastructure: {
@@ -382,7 +382,7 @@ export const PROJECTS: ProjectData[] = [
       "Capital allocation timing",
     ],
     gatedContent: {
-      title: "B-Group Portfolio Details",
+      title: "Stanley Road Portfolio Details",
       items: [
         "Acquisition term sheet",
         "Geological and material analysis",
