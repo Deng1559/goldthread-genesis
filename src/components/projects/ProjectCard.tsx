@@ -5,6 +5,18 @@ import { cn } from "@/lib/utils";
 import type { ProjectCardData } from "@/lib/projects-content";
 import { DollarSign, Clock, Settings, Cpu, Mountain, Star } from "lucide-react";
 
+import gladstoneImg from "@/assets/projects/gladstone-toll-mill.png";
+import russellImg from "@/assets/projects/russell-gulch.png";
+import quarryImg from "@/assets/projects/the-quarry.png";
+import stanleyImg from "@/assets/projects/stanley-rd.png";
+
+const projectImages: Record<string, string> = {
+  "gladstone-toll-mill": gladstoneImg,
+  "russell-gulch": russellImg,
+  "the-quarry": quarryImg,
+  "stanley-rd": stanleyImg,
+};
+
 interface ProjectCardProps {
   project: ProjectCardData;
 }
@@ -19,9 +31,17 @@ const statusStyles = {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="bg-white rounded-2xl border-0 shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full flex flex-col">
-      {/* Placeholder Image */}
-      <div className="h-48 bg-gradient-to-br from-navy/20 to-navy/5 flex items-center justify-center">
-        
+      {/* Project Image */}
+      <div className="h-48 overflow-hidden">
+        {project.image && projectImages[project.image] ? (
+          <img
+            src={projectImages[project.image]}
+            alt={project.name}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-navy/20 to-navy/5" />
+        )}
       </div>
 
       <CardContent className="p-6 flex flex-col flex-1">
