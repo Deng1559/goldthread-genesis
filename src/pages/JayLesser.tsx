@@ -386,7 +386,7 @@ export default function JayLesser() {
                   className="flex items-center gap-2 text-white/70 hover:text-gold transition-colors text-sm md:text-base">
 
                   <Mail className="w-4 h-4 shrink-0" />
-                  <span>[Email - TO BE PROVIDED]</span>
+                  <span>info@mineteck.com</span>
                 </a>
                 <a
                   href="#"
