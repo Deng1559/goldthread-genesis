@@ -125,7 +125,7 @@ export default function JayLesser() {
                 Harold "Jay" Lesser
               </h1>
               <p className="text-base md:text-lg text-white/60 mb-6 md:mb-8">
-                Founder/Architect of the Gladstone Toll Mill
+                Founder/Partner of MineTeck LLC;Founder/Architect of the Gladstone Toll Mill
               </p>
               <p className="text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8">
                 Harold M. Lesser II — known as Jay — is a visionary entrepreneur whose pioneering work in gravity
