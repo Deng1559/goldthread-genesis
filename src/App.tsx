@@ -14,6 +14,8 @@ import BreakthroughPortfolio from "./pages/BreakthroughPortfolio";
 import Renaissance from "./pages/Renaissance";
 import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/why-invest" element={<BreakthroughPortfolio />} />
           <Route path="/renaissance" element={<Renaissance />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
