@@ -9,6 +9,15 @@ import { ABOUT_PAGE_CONTENT } from "@/lib/about-content";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { cn } from "@/lib/utils";
+import andrewFergusonPhoto from "@/assets/andrew-ferguson.jpg";
+import brettStokesPhoto from "@/assets/brett-stokes.png";
+import jayLesserPhoto from "@/assets/jay-lesser.jpg";
+
+const TEAM_PHOTOS: Record<string, string> = {
+  "Andrew Ferguson": andrewFergusonPhoto,
+  "Brett Stokes": brettStokesPhoto,
+  "Harold (Jay) Lesser": jayLesserPhoto,
+};
 
 export default function About() {
   const prefersReducedMotion = useReducedMotion();
@@ -130,12 +139,19 @@ export default function About() {
                 variants={fadeUp}
                 className="bg-card border border-border rounded-xl p-6">
 
-                  {/* Placeholder avatar */}
-                  <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center mb-4">
-                    <span className="font-display text-xl font-bold text-navy">
-                      {member.name.split(" ").slice(-1)[0][0]}
-                    </span>
-                  </div>
+                  {TEAM_PHOTOS[member.name] ? (
+                    <img
+                      src={TEAM_PHOTOS[member.name]}
+                      alt={member.name}
+                      className="w-16 h-16 rounded-full object-cover object-top"
+                    />
+                  ) : (
+                    <div className="w-16 h-16 rounded-full bg-navy/10 flex items-center justify-center">
+                      <span className="font-display text-xl font-bold text-navy">
+                        {member.name.split(" ").slice(-1)[0][0]}
+                      </span>
+                    </div>
+                  )}
                   
                   <h4 className="font-display font-semibold text-charcoal">
                     {member.name}
