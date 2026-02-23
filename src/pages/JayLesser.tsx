@@ -101,7 +101,7 @@ export default function JayLesser() {
               className="w-full max-w-[280px] mx-auto lg:max-w-none lg:mx-0 lg:col-span-2">
 
               <div className="aspect-[3/4] bg-charcoal/50 border-2 border-gold/30 rounded-lg overflow-hidden">
-                <img src={jayLesserPhoto} alt="Harold 'Jay' Lesser" className="w-full h-full object-cover" />
+                <img src={jayLesserPhoto} alt="Harold 'Jay' Lesser" className="w-full h-full object-cover object-top" />
               </div>
             </motion.div>
 
