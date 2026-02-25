@@ -127,16 +127,16 @@ export default function JayLesser() {
                 concentration technology is revolutionizing the mining industry's approach to sustainability and
                 cost-efficiency.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 md:gap-4">
-                <Button variant="goldOutline" className="gap-2 w-full sm:w-auto">
-                  <Download className="w-4 h-4" />
-                  Download Full CV
-                </Button>
-                <Button variant="ghost" className="text-white/70 hover:text-white gap-2 w-full sm:w-auto">
-                  <Linkedin className="w-4 h-4" />
-                  LinkedIn Profile
-                </Button>
-              </div>
+              
+
+
+
+
+
+
+
+
+
             </motion.div>
           </div>
         </div>
