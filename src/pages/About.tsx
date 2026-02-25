@@ -12,11 +12,13 @@ import { cn } from "@/lib/utils";
 import andrewFergusonPhoto from "@/assets/andrew-ferguson.jpg";
 import brettStokesPhoto from "@/assets/brett-stokes.png";
 import jayLesserPhoto from "@/assets/jay-lesser.jpg";
+import gilbertJonesPhoto from "@/assets/gilbert-jones.jpg";
 
 const TEAM_PHOTOS: Record<string, string> = {
   "Andrew Ferguson": andrewFergusonPhoto,
   "Brett Stokes": brettStokesPhoto,
   "Harold (Jay) Lesser": jayLesserPhoto,
+  "Gilbert Jones": gilbertJonesPhoto,
 };
 
 export default function About() {
